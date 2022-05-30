@@ -53,11 +53,11 @@ def dosen_login():
     Label(screen3, text="Please enter details below to login").pack()
     Label(screen3, text="").pack()
     Label(screen3, text="Nama Lengkap").pack()
-    namadosen=Entry(screen3) #textvariable=login)
+    namadosen=Entry(screen3) #textvariable=)
     namadosen.pack()
     Label(screen3, text="").pack()
     Label(screen3, text="NID").pack()
-    niddosen=Entry(screen3) #textvariable=password_verify)
+    niddosen=Entry(screen3) #textvariable=)
     niddosen.pack()
     Label(screen3, text="").pack()
     Button(screen3, text="Login", width=10, height=1, command=logindosen_verify).pack()
@@ -69,12 +69,13 @@ def loginmahasiswa_verify():
     userData = pd.read_csv('datamahasiswa.csv')
     df = pd.DataFrame(userData)
 
-    inputnama = namamahasiswa.get().capitalize()
-    inputnim = nimmahasiswa.get().capitalize()
+    inputnama = namamahasiswa.get().upper()
+    inputnim = nimmahasiswa.get().upper()
 
     mc = (len(df[(df.Nama_Lengkap == inputnama) & (df.NIM == inputnim)]) > 0)
     if mc:
         labelhasil.configure(text="Berhasil")
+        menumahasiswa()
     else:
        labelhasil.configure(text="Gagal")
 
@@ -90,7 +91,7 @@ def logindosen_verify():
         labeldosen.configure(text="Sukses")
         menudosen()
     else:
-       labeldosen.configure(text="Gagal")
+        labeldosen.configure(text="Gagal")
 
 def menudosen():
     global screen4
@@ -158,5 +159,29 @@ def bio():
 
 def melihat_presensi():
     print()
+
+def menumahasiswa():
+    global screen6
+    screen6=Toplevel(screen)
+    screen6.geometry("500x550")
+    screen6.title("Membuat Presensi")
+    Button(screen6, text="Programa Komputer", width="30", height="2", command=prokom).pack()
+    Label(screen6, text="").pack()
+    Button(screen6, text="Kalkulus", width="30", height="2", command=kalkulus).pack()
+    Label(screen6, text="").pack()
+    Button(screen6, text="Fisika Dasar", width="30", height="2", command=fisdas).pack()
+    Label(screen6, text="").pack()
+    Button(screen6, text="Anggaran dan Estimasi Biaya", width="30", height="2", command=AEB).pack()
+    Label(screen6, text="").pack()
+    Button(screen6, text="Material Teknik", width="30", height="2", command=mattek).pack()
+    Label(screen6, text="").pack()
+    Button(screen6, text="Mekanika Teknik", width="30", height="2", command=mekatek).pack()
+    Label(screen6, text="").pack()
+    Button(screen6, text="Perancangan dan Desain", width="30", height="2", command=PRD).pack()
+    Label(screen6, text="").pack()
+    Button(screen6, text="Psikologi Industri", width="30", height="2", command=psikin).pack()
+    Label(screen6, text="").pack()
+    Button(screen6, text="Biologi", width="30", height="2", command=bio).pack()
+    Label(screen6, text="").pack()
 
 main_screen()
