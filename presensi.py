@@ -10,9 +10,10 @@ import pandas as pd
 def main_screen():
     global screen
     screen=Tk()
-    screen.geometry("300x250")
+    screen.geometry("925x500+300+200")
     screen.title("Presensi Mahasiswa")
-    Label(text="Selamat datang di website presensi Universitas Sorong", bg="green", width="300", height="2", font=("comic sans",12)).pack()
+    screen.configure(bg="#fff")
+    Label(text="Selamat datang di website presensi Universitas Sorong", bg="grey", width="300", height="2", font=("Microsoft YaHei UI Light",14)).pack()
     Label(text="").pack()
     Button(text="Mahasiswa", bg="grey", width="30", height="2", command=mahasiswa_login).pack()
     Label(text="").pack()
@@ -22,47 +23,119 @@ def main_screen():
     screen.mainloop()
 
 def mahasiswa_login():
-    global screen2,nimmahasiswa,namamahasiswa,labelhasil
+    global screen2, namamahasiswa, nimmahasiswa, labelmahasiswa
     screen2=Toplevel(screen)
-    screen2.title("Login Mahasiswa")
-    screen2.geometry("300x250")
-    Label(screen2, text="Please enter details below to login").pack()
-    Label(screen2, text="").pack()
+    screen2.title("Login")
+    screen2.geometry("925x500+300+200")
+    screen2.configure(bg="#fff")
+    screen2.resizable(False,False)
+    
+    img = PhotoImage(file="D:\Kuliah\Tugas_Prokom_Praktikum\ABSENSI-MAHASISWA\login.png")
+    Label(screen2,image=img,bg="white").place(x=50,y=50)
 
-    Label(screen2, text="Nama Lengkap").pack()
-    namamahasiswa=Entry(screen2) #textvariable=login)
-    namamahasiswa.pack()
-    Label(screen2, text="").pack()
-    Label(screen2, text="NIM").pack()
-    nimmahasiswa=Entry(screen2) #textvariable=password_verify)
-    nimmahasiswa.pack()
-    Label(screen2, text="").pack()
-    Button(screen2, text="Login", width=10, height=1, command=loginmahasiswa_verify).pack()
+    frame=Frame(screen2,width=350,height=350,bg="white")
+    frame.place(x=480,y=70)
+    
+    heading=Label(frame,text="Sign In",fg="#57a1f8",bg="white",font=("Microsoft YaHei UI Light",23,"bold"))
+    heading.place(x=119,y=5)
 
-    labelhasil=Label(screen2)
-    labelhasil.pack()
+########--------------------------------------------------------------------------
+    def on_enter(e):
+        namamahasiswa.delete(0, "end")
 
-    namamahasiswa.delete(0,END)
-    nimmahasiswa.delete(0,END)
+    def on_leave(e):
+        name=namamahasiswa.get()
+        if name=="":
+            namamahasiswa.insert(0,"Nama Lengkap")
+
+    namamahasiswa = Entry(frame,width=36,fg="black",border=2,bg="white",font=("Microsoft YaHei UI Light",11))
+    namamahasiswa.place(x=30,y=80)
+    namamahasiswa.insert(0,"Nama Lengkap")
+    namamahasiswa.bind("<FocusIn>", on_enter)
+    namamahasiswa.bind("<FocusOut>", on_leave)
+
+    Frame(frame,width=295,height=2,bg="black").place(x=25,y=107)
+
+########--------------------------------------------------------------------------
+    def on_enter(e):
+        nimmahasiswa.delete(0, "end")
+
+    def on_leave(e):
+        name=nimmahasiswa.get()
+        if name=="":
+            nimmahasiswa.insert(0,"Nomor Induk Mahasiswa")
+
+    nimmahasiswa = Entry(frame,width=36,fg="black",border=2,bg="white",font=("Microsoft YaHei UI Light",11))
+    nimmahasiswa.place(x=30,y=150)
+    nimmahasiswa.insert(0,"Nomor Induk Mahasiswa")
+    nimmahasiswa.bind("<FocusIn>", on_enter)
+    nimmahasiswa.bind("<FocusOut>", on_leave)
+
+    Frame(frame,width=295,height=2,bg="black").place(x=25,y=177)
+
+########___________________________________________________________________________############
+
+    Button(frame,width=39,pady=7,text="Sign In",bg="#57a1f8",fg="white",border=0, command=loginmahasiswa_verify).place(x=35,y=204)
+
+    labelmahasiswa=Label(screen2)
+    labelmahasiswa.pack()
 
 def dosen_login():
-    global screen3,labeldosen,namadosen,niddosen
+    global screen3, namadosen, niddosen, labeldosen
     screen3=Toplevel(screen)
-    screen3.title("Login Dosen")
-    screen3.geometry("300x250")
-    Label(screen3, text="Please enter details below to login").pack()
-    Label(screen3, text="").pack()
-    Label(screen3, text="Nama Lengkap").pack()
-    namadosen=Entry(screen3) #textvariable=)
-    namadosen.pack()
-    Label(screen3, text="").pack()
-    Label(screen3, text="NID").pack()
-    niddosen=Entry(screen3) #textvariable=)
-    niddosen.pack()
-    Label(screen3, text="").pack()
-    Button(screen3, text="Login", width=10, height=1, command=logindosen_verify).pack()
+    screen3.title("Login")
+    screen3.geometry("925x500+300+200")
+    screen3.configure(bg="#fff")
+    screen3.resizable(False,False)
+    
+    img = PhotoImage(file="login.png")
+    Label(screen3,image=img,bg="white").place(x=50,y=50)
 
-    labeldosen=Label(screen3)
+    frame=Frame(screen3,width=350,height=350,bg="white")
+    frame.place(x=480,y=70)
+    
+    heading=Label(frame,text="Sign In",fg="#57a1f8",bg="white",font=("Microsoft YaHei UI Light",23,"bold"))
+    heading.place(x=119,y=5)
+
+########--------------------------------------------------------------------------
+    def on_enter(e):
+        namadosen.delete(0, "end")
+
+    def on_leave(e):
+        name=namadosen.get()
+        if name=="":
+            namadosen.insert(0,"Nama Lengkap")
+
+    namadosen = Entry(frame,width=36,fg="black",border=2,bg="white",font=("Microsoft YaHei UI Light",11))
+    namadosen.place(x=30,y=80)
+    namadosen.insert(0,"Nama Lengkap")
+    namadosen.bind("<FocusIn>", on_enter)
+    namadosen.bind("<FocusOut>", on_leave)
+
+    Frame(frame,width=295,height=2,bg="black").place(x=25,y=107)
+
+########--------------------------------------------------------------------------
+    def on_enter(e):
+        niddosen.delete(0, "end")
+
+    def on_leave(e):
+        name=niddosen.get()
+        if name=="":
+            niddosen.insert(0,"Nomor Induk Dosen")
+
+    niddosen = Entry(frame,width=36,fg="black",border=2,bg="white",font=("Microsoft YaHei UI Light",11))
+    niddosen.place(x=30,y=150)
+    niddosen.insert(0,"Nomor Induk Dosen")
+    niddosen.bind("<FocusIn>", on_enter)
+    niddosen.bind("<FocusOut>", on_leave)
+
+    Frame(frame,width=295,height=2,bg="black").place(x=25,y=177)
+
+########___________________________________________________________________________############
+
+    Button(frame,width=39,pady=7,text="Sign In",bg="#57a1f8",fg="white",border=0, command=loginmahasiswa_verify).place(x=35,y=204)
+
+    labeldosen=Label(screen2)
     labeldosen.pack()
 
 def loginmahasiswa_verify():
@@ -74,10 +147,10 @@ def loginmahasiswa_verify():
 
     mc = (len(df[(df.Nama_Lengkap == inputnama) & (df.NIM == inputnim)]) > 0)
     if mc:
-        labelhasil.configure(text="Berhasil")
+        labelmahasiswa.configure(text="Berhasil")
         menumahasiswa()
     else:
-       labelhasil.configure(text="Gagal")
+        labelmahasiswa.configure(text="Gagal")
 
 def logindosen_verify():
     userData = pd.read_csv('datadosen.csv')
