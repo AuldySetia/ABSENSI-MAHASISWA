@@ -4,7 +4,6 @@ from turtle import Screen, bgcolor
 from tkinter import ttk
 import tkinter.messagebox
 import os
-import csv
 import pandas as pd
 
 def main_screen():
@@ -13,12 +12,25 @@ def main_screen():
     screen.geometry("925x500+300+200")
     screen.title("Presensi Mahasiswa")
     screen.configure(bg="#fff")
-    Label(text="Selamat datang di website presensi Universitas Sorong", bg="grey", width="300", height="2", font=("Microsoft YaHei UI Light",14)).pack()
-    Label(text="").pack()
-    Button(text="Mahasiswa", bg="grey", width="30", height="2", command=mahasiswa_login).pack()
-    Label(text="").pack()
-    Button(text="Dosen", bg="grey", width="30", height="2", command=dosen_login).pack()
-    Label(text="").pack()
+
+    sekolah_bg=PhotoImage(file="sekolah.png")
+    sekolah=Label(screen,image=sekolah_bg,bg="white")
+    sekolah.place(x=0,y=0)  
+
+    Label(screen,text="Selamat Datang di Universitas Internasional", font=("Acumin Variable Concept",20,"bold"),bg="white").place(x=372,y=20)
+    
+    #Frame(screen,width=400, height=2,bg="#f3f5f6").place(x=25,y=80)
+
+    dosen_image=PhotoImage(file="dosen.png")
+    icondosen=Button(screen,image=dosen_image,command=dosen_login)
+    icondosen.place(x=440,y=200)
+
+    mahasiswa_image=PhotoImage(file="student.png")
+    iconmahasiswa=Button(screen,image=mahasiswa_image,command=mahasiswa_login)
+    iconmahasiswa.place(x=785,y=200)
+
+    Label(screen,text="Dosen",font=("Acumin Variable Concept",17,"bold"),bg="white").place(x=452,y=310)
+    Label(screen,text="Mahasiswa",font=("Acumin Variable Concept",17,"bold"),bg="white").place(x=770,y=310)
    
     screen.mainloop()
 
@@ -28,10 +40,11 @@ def mahasiswa_login():
     screen2.title("Login")
     screen2.geometry("925x500+300+200")
     screen2.configure(bg="#fff")
-    screen2.resizable(False,False)
-    
-    img = PhotoImage(file="D:\Kuliah\Tugas_Prokom_Praktikum\ABSENSI-MAHASISWA\login.png")
-    Label(screen2,image=img,bg="white").place(x=50,y=50)
+    #screen2.resizable(False,False)
+
+    #img = PhotoImage(file="login.png")
+    #login=Label(screen2,image=img,bg="white")
+    #login.place(x=50,y=50)
 
     frame=Frame(screen2,width=350,height=350,bg="white")
     frame.place(x=480,y=70)
@@ -54,7 +67,7 @@ def mahasiswa_login():
     namamahasiswa.bind("<FocusIn>", on_enter)
     namamahasiswa.bind("<FocusOut>", on_leave)
 
-    Frame(frame,width=295,height=2,bg="black").place(x=25,y=107)
+    #Frame(frame,width=295,height=2,bg="black").place(x=25,y=107)
 
 ########--------------------------------------------------------------------------
     def on_enter(e):
@@ -71,7 +84,7 @@ def mahasiswa_login():
     nimmahasiswa.bind("<FocusIn>", on_enter)
     nimmahasiswa.bind("<FocusOut>", on_leave)
 
-    Frame(frame,width=295,height=2,bg="black").place(x=25,y=177)
+    #Frame(frame,width=295,height=2,bg="black").place(x=25,y=177)
 
 ########___________________________________________________________________________############
 
@@ -86,10 +99,10 @@ def dosen_login():
     screen3.title("Login")
     screen3.geometry("925x500+300+200")
     screen3.configure(bg="#fff")
-    screen3.resizable(False,False)
+    #screen3.resizable(False,False)
     
-    img = PhotoImage(file="login.png")
-    Label(screen3,image=img,bg="white").place(x=50,y=50)
+    #img = PhotoImage(file="login.png")
+    #Label(screen3,image=img,bg="white").place(x=50,y=50)
 
     frame=Frame(screen3,width=350,height=350,bg="white")
     frame.place(x=480,y=70)
@@ -112,7 +125,7 @@ def dosen_login():
     namadosen.bind("<FocusIn>", on_enter)
     namadosen.bind("<FocusOut>", on_leave)
 
-    Frame(frame,width=295,height=2,bg="black").place(x=25,y=107)
+    #Frame(frame,width=295,height=2,bg="black").place(x=25,y=107)
 
 ########--------------------------------------------------------------------------
     def on_enter(e):
@@ -129,13 +142,13 @@ def dosen_login():
     niddosen.bind("<FocusIn>", on_enter)
     niddosen.bind("<FocusOut>", on_leave)
 
-    Frame(frame,width=295,height=2,bg="black").place(x=25,y=177)
+    #Frame(frame,width=295,height=2,bg="black").place(x=25,y=177)
 
 ########___________________________________________________________________________############
 
-    Button(frame,width=39,pady=7,text="Sign In",bg="#57a1f8",fg="white",border=0, command=loginmahasiswa_verify).place(x=35,y=204)
+    Button(frame,width=39,pady=7,text="Sign In",bg="#57a1f8",fg="white",border=0, command=logindosen_verify).place(x=35,y=204)
 
-    labeldosen=Label(screen2)
+    labeldosen=Label(screen3)
     labeldosen.pack()
 
 def loginmahasiswa_verify():
@@ -156,12 +169,12 @@ def logindosen_verify():
     userData = pd.read_csv('datadosen.csv')
     df = pd.DataFrame(userData)
 
-    inputdosen = namadosen.get().capitalize()
-    inputnid = niddosen.get().capitalize()
+    inputdosen = namadosen.get().upper()
+    inputnid = niddosen.get().upper()
 
     mc = (len(df[(df.Nama_dosen == inputdosen) & (df.NID == inputnid)]) > 0)
     if mc:
-        labeldosen.configure(text="Sukses")
+        labeldosen.configure(text="Berhasil")
         menudosen()
     else:
         labeldosen.configure(text="Gagal")
