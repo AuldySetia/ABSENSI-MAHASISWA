@@ -7,7 +7,6 @@ import tkinter.messagebox
 import os
 from numpy import imag
 import pandas as pd
-from PIL import Image, ImageTk
 
 def main_screen():
     global screen
