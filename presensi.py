@@ -217,14 +217,14 @@ def membuat_presensi():
     Label(screen5, text="").pack()
     Button(screen5, text="Mekanika Teknik", width="30", height="2", command=mekatek).pack()
     Label(screen5, text="").pack()
-    Button(screen5, text="Perancangan dan Desain", width="30", height="2", command=PRD).pack()
+    Button(screen5, text="Pengantar Rekayasa dan Desain", width="30", height="2", command=PRD).pack()
     Label(screen5, text="").pack()
     Button(screen5, text="Psikologi Industri", width="30", height="2", command=psikin).pack()
     Label(screen5, text="").pack()
     Button(screen5, text="Biologi", width="30", height="2", command=bio).pack()
     Label(screen5, text="").pack()
 
-def prokom():
+def membuatprokom():
     print()
     
 def kalkulus():
@@ -271,7 +271,7 @@ def menumahasiswa():
     Label(screen6, text="").pack()
     Button(screen6, text="Mekanika Teknik", width="30", height="2", command=mekatek).pack()
     Label(screen6, text="").pack()
-    Button(screen6, text="Perancangan dan Desain", width="30", height="2", command=PRD).pack()
+    Button(screen6, text="PPengantar Rekayasa dan Desain", width="30", height="2", command=PRD).pack()
     Label(screen6, text="").pack()
     Button(screen6, text="Psikologi Industri", width="30", height="2", command=psikin).pack()
     Label(screen6, text="").pack()
