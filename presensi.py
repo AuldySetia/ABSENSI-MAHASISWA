@@ -1,4 +1,5 @@
 from cProfile import label
+import csv
 import tkinter as Tk
 from tkinter import *
 from turtle import Screen, bgcolor
@@ -205,7 +206,7 @@ def membuat_presensi():
     screen5=Toplevel(screen)
     screen5.geometry("500x550")
     screen5.title("Membuat Presensi")
-    Button(screen5, text="Programa Komputer", width="30", height="2", command=prokom).pack()
+    Button(screen5, text="Programa Komputer", width="30", height="2", command=matkul).pack()
     Label(screen5, text="").pack()
     Button(screen5, text="Kalkulus", width="30", height="2", command=kalkulus).pack()
     Label(screen5, text="").pack()
@@ -224,6 +225,38 @@ def membuat_presensi():
     Button(screen5, text="Biologi", width="30", height="2", command=bio).pack()
     Label(screen5, text="").pack()
 
+def matkul():   
+    global screen7, prokom
+    screen7=Toplevel(screen)
+    screen7.geometry("300x250")
+    Label(screen7, text="").pack()
+    Label(screen7, text="").pack()
+    Label(screen7, text="").pack()
+    Label(screen7, text="Input Pertemuan").pack()
+    screen7.title("Keterangan Pertemuan")
+    prokom=Entry(screen7)
+    prokom.pack()
+    Label(screen7, text="").pack()
+    Button(screen7, text="SUBMIT", width=10, height=1, command=nuliskecsv).pack()
+
+def nuliskecsv():
+    with open(f"{prokom}.csv", "w") as f:
+        Writer=csv.writer(f)
+        #csv.writer(["Date","Time","Glucose"])
+        #csv.writer(newline + main_lst)
+        #messagebox.showinfo("Information","Saved succesfully")
+                
+    return None
+"""
+def nuliskecsv():
+    namafile = prokom
+    with open (namafile, "w",encoding='utf-8', newline="") as csvfile:
+        fieldnames= ['NIP','Nama']
+        thewriter = csv.DictWriter(csvfile, fieldnames=fieldnames)
+
+        #for gaji in listpekerja:
+            #thewriter.writerow({'NIP':gaji[0],'Nama':gaji[1]})
+"""
 def membuatprokom():
     print()
     
