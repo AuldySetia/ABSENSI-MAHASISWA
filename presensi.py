@@ -1,12 +1,13 @@
 from cProfile import label
 import tkinter as Tk
 from tkinter import *
-from turtle import Screen, bgcolor
+from turtle import Screen, bgcolor, clear
 from tkinter import ttk
 import tkinter.messagebox
 import os
 from numpy import imag
 import pandas as pd
+from PIL import ImageTk, Image
 
 def main_screen():
     global screen
@@ -41,22 +42,30 @@ def mahasiswa_login():
     screen2=Toplevel(screen)
     screen2.title("Login SSO Mahasiswa")
     screen2.geometry("925x500+300+200")
-    screen2.configure(bg="grey")
+    screen2.configure(bg="white")
     #screen2.resizable(False,False)
 
-    #img = PhotoImage(file="login.png")
-    #login=Label(screen2,image=img,bg="white")
-    #login.place(x=50,y=50)
+    #framelogin=Frame(screen2, width=400, height=600)
+    #framelogin.pack()
+    #framelogin.place(anchor="center",relx=0.5,rely=0.5)
+    #img=ImageTk.PhotoImage(Image.open("login.png"))
+    #label=Label(framelogin,image=img)
+    #label.pack()
+    
+    img = PhotoImage(file="login.png")
+    bgmahasiswa=Label(screen2,image=img,bg="white")
+    bgmahasiswa.place(x=50,y=50)
 
     frame=Frame(screen2,width=360,height=350,bg="white")
     frame.place(x=480,y=70)
     
     heading=Label(frame,text="Single Sign On (SSO)",fg="black",bg="white",font=("Microsoft YaHei UI Light",23,"bold"))
-    heading.place(x=26,y=25)
+    heading.place(x=20,y=25)
 
     Label(frame,text="Masukkan Nama Lengkap dan Nomor Induk Mahasiswa Anda", font=("times new roman",9),bg="white").place(x=30,y=100)
     Label(frame,text="Enter your full name and Student ID Number", font=("times new roman",9,"italic"),bg="white").place(x=30,y=120)
-
+    
+   
 ########--------------------------------------------------------------------------
     def on_enter(e):
         namamahasiswa.delete(0, "end")
@@ -66,7 +75,7 @@ def mahasiswa_login():
         if name=="":
             namamahasiswa.insert(0,"Nama Lengkap")
 
-    namamahasiswa = Entry(frame,width=36,fg="black",border=2,bg="white",font=("Microsoft YaHei UI Light",11))
+    namamahasiswa = Entry(frame,width=37,fg="black",border=2,bg="white",font=("Microsoft YaHei UI Light",11))
     namamahasiswa.place(x=30,y=150)
     namamahasiswa.insert(0,"Nama Lengkap")
     namamahasiswa.bind("<FocusIn>", on_enter)
@@ -83,7 +92,7 @@ def mahasiswa_login():
         if name=="":
             nimmahasiswa.insert(0,"Nomor Induk Mahasiswa")
 
-    nimmahasiswa = Entry(frame,width=36,fg="black",border=2,bg="white",font=("Microsoft YaHei UI Light",11))
+    nimmahasiswa = Entry(frame,width=37,fg="black",border=2,bg="white",font=("Microsoft YaHei UI Light",11))
     nimmahasiswa.place(x=30,y=200)
     nimmahasiswa.insert(0,"Nomor Induk Mahasiswa")
     nimmahasiswa.bind("<FocusIn>", on_enter)
@@ -93,27 +102,29 @@ def mahasiswa_login():
 
 ########___________________________________________________________________________############
 
-    Button(frame,width=39,pady=7,text="Sign In",bg="#57a1f8",fg="white",border=0, command=loginmahasiswa_verify).place(x=35,y=254)
+    Button(frame,width=40,pady=7,text="Sign In",bg="#57a1f8",fg="white",border=0, command=loginmahasiswa_verify).place(x=35,y=254)
 
     labelmahasiswa=Label(frame, bg="white")
     labelmahasiswa.place(x=152,y=294)
+    screen2.mainloop()
 
 def dosen_login():
     global screen3, namadosen, niddosen, labeldosen
     screen3=Toplevel(screen)
     screen3.title("Login SSO Dosen")
     screen3.geometry("925x500+300+200")
-    screen3.configure(bg="grey")
+    screen3.configure(bg="white")
     #screen3.resizable(False,False)
-    
-    #imgg = PhotoImage(file="login.png")
-    #Label(screen3,image=imgg,bg="white").place(x=50,y=50)
+
+    imgg = PhotoImage(file="vector.png")
+    bgdosen=Label(screen3,image=imgg,bg="white")
+    bgdosen.place(x=50,y=50)
 
     frame1=Frame(screen3,width=360,height=350,bg="white")
     frame1.place(x=480,y=70)
     
     heading=Label(frame1,text="Single Sign On (SSO)",fg="black",bg="white",font=("Microsoft YaHei UI Light",23,"bold"))
-    heading.place(x=26,y=25)
+    heading.place(x=20,y=25)
 
     Label(frame1,text="Masukkan Nama Lengkap dan Nomor Induk Dosen Anda", font=("times new roman",9),bg="white").place(x=30,y=100)
     Label(frame1,text="Enter your full name and Lecturer ID Number", font=("times new roman",9,"italic"),bg="white").place(x=30,y=120)
@@ -127,7 +138,7 @@ def dosen_login():
         if name=="":
             namadosen.insert(0,"Nama Lengkap")
 
-    namadosen = Entry(frame1,width=36,fg="black",border=2,bg="white",font=("Microsoft YaHei UI Light",11))
+    namadosen = Entry(frame1,width=37,fg="black",border=2,bg="white",font=("Microsoft YaHei UI Light",11))
     namadosen.place(x=30,y=150)
     namadosen.insert(0,"Nama Lengkap")
     namadosen.bind("<FocusIn>", on_enter)
@@ -144,7 +155,7 @@ def dosen_login():
         if name=="":
             niddosen.insert(0,"Nomor Induk Dosen")
 
-    niddosen = Entry(frame1,width=36,fg="black",border=2,bg="white",font=("Microsoft YaHei UI Light",11))
+    niddosen = Entry(frame1,width=37,fg="black",border=2,bg="white",font=("Microsoft YaHei UI Light",11))
     niddosen.place(x=30,y=200)
     niddosen.insert(0,"Nomor Induk Dosen")
     niddosen.bind("<FocusIn>", on_enter)
@@ -154,10 +165,11 @@ def dosen_login():
 
 ########___________________________________________________________________________############
 
-    Button(frame1,width=39,pady=7,text="Sign In",bg="#57a1f8",fg="white",border=0, command=logindosen_verify).place(x=35,y=254)
+    Button(frame1,width=40,pady=7,text="Sign In",bg="#57a1f8",fg="white",border=0, command=logindosen_verify).place(x=35,y=254)
 
     labeldosen=Label(frame1, bg="white")
     labeldosen.place(x=152,y=294)
+    screen3.mainloop()
 
 def loginmahasiswa_verify():
     userData = pd.read_csv('datamahasiswa.csv')
@@ -192,20 +204,16 @@ def menudosen():
     screen4=Toplevel(screen)
     screen4.geometry("300x250")
     screen4.title("Menu Dosen")
-    Label(screen4, text="").pack()
-    Label(screen4, text="").pack()
-    Button(screen4, text="Membuat Presensi", bg="grey", width="30", height="2", command=membuat_presensi).pack()
-    Label(screen4, text="").pack()
-    Label(screen4, text="").pack()
-    Button(screen4, text="Melihat Presensi", bg="grey", width="30", height="2", command=melihat_presensi).pack()
-    Label(screen4, text="").pack()
+
+    Button(screen4, text="Membuat Presensi", bg="grey", width="30", height="2", command=membuat_presensi)
+    Button(screen4, text="Melihat Presensi", bg="grey", width="30", height="2", command=melihat_presensi)
     
 def membuat_presensi():
     global screen5
     screen5=Toplevel(screen)
     screen5.geometry("500x550")
     screen5.title("Membuat Presensi")
-    Button(screen5, text="Programa Komputer", width="30", height="2", command=prokom).pack()
+    Button(screen5, text="Programa Komputer", width="30", height="2", command=membuatprokom).pack()
     Label(screen5, text="").pack()
     Button(screen5, text="Kalkulus", width="30", height="2", command=kalkulus).pack()
     Label(screen5, text="").pack()
@@ -259,7 +267,7 @@ def menumahasiswa():
     screen6=Toplevel(screen)
     screen6.geometry("500x550")
     screen6.title("Membuat Presensi")
-    Button(screen6, text="Programa Komputer", width="30", height="2", command=prokom).pack()
+    Button(screen6, text="Programa Komputer", width="30", height="2", command=membuatprokom).pack()
     Label(screen6, text="").pack()
     Button(screen6, text="Kalkulus", width="30", height="2", command=kalkulus).pack()
     Label(screen6, text="").pack()
