@@ -283,6 +283,16 @@ def bio():
 
 def melihat_presensi():
     print()
+root=Tk()
+root.title("")
+root.geometry("925x500+300+200")
+course=["pertemuan 1", "pertemuan 2", "pertemuan 3", "pertemuan 4", "pertemuan 5", "pertemuan 6", "pertemuan 7","pertemuan 8", "pertemuan 9", "pertemuan 10", "pertemuan 11", "pertemuan 12"]
+L1= label(root,text="pilihlah pertemuan")
+L1.grid(row=0,column=0)
+cmb=ttk.Combobox(root,value=course,width=10)
+cmb.grid(row=1, column=0)
+cmb.current(2)
+root.mainloop()    
 
 def menumahasiswa():
     global screen6
