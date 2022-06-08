@@ -7,7 +7,7 @@ import tkinter.messagebox
 import os
 from numpy import imag
 import pandas as pd
-from PIL import ImageTk, Image
+from tkinter import ttk
 
 def main_screen():
     global screen
@@ -243,6 +243,17 @@ def membuat_presensi():
     Button(screen5, text="Biologi", width="30", height="2", command=bio).pack()
     Label(screen5, text="").pack()
 
+root=Tk()
+root.title("pertemuan ke berapa")
+root.geometry("925x500+300+200")
+course=["pertemuan 1", "pertemuan 2", "pertemuan 3", "pertemuan 4", "pertemuan 5", "pertemuan 6", "pertemuan 7","pertemuan 8", "pertemuan 9", "pertemuan 10", "pertemuan 11", "pertemuan 12"]
+L1= label(root,text="pilihlah pertemuan")
+L1.grid(row=0,column=0)
+cmb=ttk.Combobox(root,value=course,width=10)
+cmb.grid(row=1, column=0)
+cmb.current(2)
+root.mainloop()
+
 def membuatprokom():
     print()
     
@@ -296,5 +307,29 @@ def menumahasiswa():
     Label(screen6, text="").pack()
     Button(screen6, text="Biologi", width="30", height="2", command=bio).pack()
     Label(screen6, text="").pack()
+
+def membuat_presensi():
+    global screen7
+    screen7=Toplevel(screen)
+    screen7.geometry("500x550")
+    screen7.title("Membuat Presensi")
+    Button(screen7, text="Programa Komputer", width="30", height="2", command=membuatprokom).pack()
+    Label(screen7, text="").pack()
+    Button(screen7, text="Kalkulus", width="30", height="2", command=kalkulus).pack()
+    Label(screen7, text="").pack()
+    Button(screen7, text="Fisika Dasar", width="30", height="2", command=fisdas).pack()
+    Label(screen7, text="").pack()
+    Button(screen7, text="Anggaran dan Estimasi Biaya", width="30", height="2", command=AEB).pack()
+    Label(screen7, text="").pack()
+    Button(screen7, text="Material Teknik", width="30", height="2", command=mattek).pack()
+    Label(screen7, text="").pack()
+    Button(screen7, text="Mekanika Teknik", width="30", height="2", command=mekatek).pack()
+    Label(screen7, text="").pack()
+    Button(screen7, text="PPengantar Rekayasa dan Desain", width="30", height="2", command=PRD).pack()
+    Label(screen7, text="").pack()
+    Button(screen7, text="Psikologi Industri", width="30", height="2", command=psikin).pack()
+    Label(screen7, text="").pack()
+    Button(screen7, text="Biologi", width="30", height="2", command=bio).pack()
+    Label(screen7, text="").pack()
 
 main_screen()
