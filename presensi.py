@@ -202,12 +202,23 @@ def logindosen_verify():
 def menudosen():
     global screen4
     screen4=Toplevel(screen)
-    screen4.geometry("300x250")
-    screen4.title("Menu Dosen")
+    screen4.geometry("925x500+300+200")
+    screen4.title("SSO Universitas Internasional")
+    screen4.configure(bg="#fff")
 
-    Button(screen4, text="Membuat Presensi", bg="grey", width="30", height="2", command=membuat_presensi)
-    Button(screen4, text="Melihat Presensi", bg="grey", width="30", height="2", command=melihat_presensi)
-    
+    frame2=Frame(screen4,width=400,height=400,bg="grey")
+    frame2.place(x=400,y=70)
+
+    bgdosen=PhotoImage(file="logoui.png")
+    backgroundosen=Label(frame2,image=bgdosen,bg="white")
+    backgroundosen.place(x=0,y=0)
+
+    Button(screen4,text="Membuat Presensi",font=("Acumin Variable Concept",17,"bold"),bg="white", command=membuat_presensi).place(x=400,y=500)
+    Button(screen4,text="Melihat Presensi",font=("Acumin Variable Concept",17,"bold"),bg="white", command=melihat_presensi).place(x=685,y=500)
+    #Button(screen4, text="Membuat Presensi", bg="grey", width="30", height="2", command=membuat_presensi)
+    #Button(screen4, text="Melihat Presensi", bg="grey", width="30", height="2", command=melihat_presensi)
+    screen4.mainloop()
+
 def membuat_presensi():
     global screen5
     screen5=Toplevel(screen)
