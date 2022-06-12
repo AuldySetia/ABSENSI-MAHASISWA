@@ -301,7 +301,7 @@ def savekalkulus():
     global namafile, csvheader, writer, presensi
     #####------------------------------------------PENTING!!!!-----------------------------------------#####
     #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
-    save_path = "D:\Arda\Kuliyah\SMT 2\Praktikum kalkulus\ABSENSI-MAHASISWA\Kalkulus"
+    save_path = "D:\Arda\Kuliyah\SMT 2\Praktikum Prokom\ABSENSI-MAHASISWA\Kalkulus"
     namafile = os.path.join(save_path, f'Pertemuan {defkalkulus.get()}.csv')
     csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
 
@@ -341,7 +341,7 @@ def saveAEB():
     global namafile, csvheader, writer, presensi
     #####------------------------------------------PENTING!!!!-----------------------------------------#####
     #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
-    save_path = "D:\Arda\Kuliyah\SMT 2\Praktikum AEB\ABSENSI-MAHASISWA\AEB"
+    save_path = "D:\Arda\Kuliyah\SMT 2\Praktikum Prokom\ABSENSI-MAHASISWA\AEB"
     namafile = os.path.join(save_path, f'Pertemuan {defAEB.get()}.csv')
     csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
 
@@ -381,7 +381,7 @@ def savePRD():
     global namafile, csvheader, writer, presensi
     #####------------------------------------------PENTING!!!!-----------------------------------------#####
     #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
-    save_path = "D:\Arda\Kuliyah\SMT 2\Praktikum PRD\ABSENSI-MAHASISWA\PRD"
+    save_path = "D:\Arda\Kuliyah\SMT 2\Praktikum Prokom\ABSENSI-MAHASISWA\PRD"
     namafile = os.path.join(save_path, f'Pertemuan {defPRD.get()}.csv')
     csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
 
@@ -421,7 +421,7 @@ def savepsikin():
     global namafile, csvheader, writer, presensi
     #####------------------------------------------PENTING!!!!-----------------------------------------#####
     #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
-    save_path = "D:\Arda\Kuliyah\SMT 2\Praktikum psikin\ABSENSI-MAHASISWA\Psikin"
+    save_path = "D:\Arda\Kuliyah\SMT 2\Praktikum Prokom\ABSENSI-MAHASISWA\Psikin"
     namafile = os.path.join(save_path, f'Pertemuan {defpsikin.get()}.csv')
     csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
 
@@ -461,7 +461,7 @@ def savemekatek():
     global namafile, csvheader, writer, presensi
     #####------------------------------------------PENTING!!!!-----------------------------------------#####
     #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
-    save_path = "D:\Arda\Kuliyah\SMT 2\Praktikum mekatek\ABSENSI-MAHASISWA\Mekatek"
+    save_path = "D:\Arda\Kuliyah\SMT 2\Praktikum Prokom\ABSENSI-MAHASISWA\Mekatek"
     namafile = os.path.join(save_path, f'Pertemuan {defmekatek.get()}.csv')
     csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
 
@@ -501,7 +501,7 @@ def savemattek():
     global namafile, csvheader, writer, presensi
     #####------------------------------------------PENTING!!!!-----------------------------------------#####
     #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
-    save_path = "D:\Arda\Kuliyah\SMT 2\Praktikum mattek\ABSENSI-MAHASISWA\Mattek"
+    save_path = "D:\Arda\Kuliyah\SMT 2\Praktikum Prokom\ABSENSI-MAHASISWA\Mattek"
     namafile = os.path.join(save_path, f'Pertemuan {defmattek.get()}.csv')
     csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
 
@@ -541,7 +541,7 @@ def savefisdas():
     global namafile, csvheader, writer, presensi
     #####------------------------------------------PENTING!!!!-----------------------------------------#####
     #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
-    save_path = "D:\Arda\Kuliyah\SMT 2\Praktikum fisdas\ABSENSI-MAHASISWA\Fisdas"
+    save_path = "D:\Arda\Kuliyah\SMT 2\Praktikum Prokom\ABSENSI-MAHASISWA\Fisdas"
     namafile = os.path.join(save_path, f'Pertemuan {deffisdas.get()}.csv')
     csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
 
@@ -580,7 +580,7 @@ def savebio():
     global namafile, csvheader, writer, presensi
     #####------------------------------------------PENTING!!!!-----------------------------------------#####
     #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
-    save_path = "D:\Arda\Kuliyah\SMT 2\Praktikum bio\ABSENSI-MAHASISWA\Bio"
+    save_path = "D:\Arda\Kuliyah\SMT 2\Praktikum Prokom\ABSENSI-MAHASISWA\Bio"
     namafile = os.path.join(save_path, f'Pertemuan {defbio.get()}.csv')
     csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
 
@@ -654,7 +654,7 @@ def melihat_presensi():
     screen10=Toplevel(screen)
     screen10.geometry("500x550")
     screen10.title("Melihat Presensi")
-    Button(screen10, text="Programa Komputer", width="30", height="2", command=membuatprokom).pack()
+    Button(screen10, text="Programa Komputer", width="30", height="2", command=prokom).pack()
     Label(screen10, text="").pack()
     Button(screen10, text="Kalkulus", width="30", height="2", command=kalkulus).pack()
     Label(screen10, text="").pack()
@@ -680,7 +680,7 @@ def menumahasiswa():
     screen6=Toplevel(screen)
     screen6.geometry("500x550")
     screen6.title("Melakukan Presensi")
-    Button(screen6, text="Programa Komputer", width="30", height="2", command=membuatprokom).pack()
+    Button(screen6, text="Programa Komputer", width="30", height="2", command=prokom).pack()
     Label(screen6, text="").pack()
     Button(screen6, text="Kalkulus", width="30", height="2", command=kalkulus).pack()
     Label(screen6, text="").pack()
@@ -698,5 +698,32 @@ def menumahasiswa():
     Label(screen6, text="").pack()
     Button(screen6, text="Biologi", width="30", height="2", command=bio).pack()
     Label(screen6, text="").pack()
-    
+
+def kalkulus():
+    print()
+
+def AEB():
+    print()
+
+def PRD():
+    print()
+
+def psikin():
+    print()
+
+def mekatek():
+    print()
+
+def mattek():
+    print()
+
+def fisdas():
+    print()
+
+def bio():
+    print()
+
+def prokom():
+    print()
+
 main_screen()
