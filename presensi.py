@@ -320,7 +320,29 @@ def Pertemuan16():
     print()
 
 def melihat_presensi():
-    print()
+    global screen10
+    screen10=Toplevel(screen)
+    screen10.geometry("500x550")
+    screen10.title("Melihat Presensi")
+    Button(screen10, text="Programa Komputer", width="30", height="2", command=membuatprokom).pack()
+    Label(screen10, text="").pack()
+    Button(screen10, text="Kalkulus", width="30", height="2", command=kalkulus).pack()
+    Label(screen10, text="").pack()
+    Button(screen10, text="Fisika Dasar", width="30", height="2", command=fisdas).pack()
+    Label(screen10, text="").pack()
+    Button(screen10, text="Anggaran dan Estimasi Biaya", width="30", height="2", command=AEB).pack()
+    Label(screen10, text="").pack()
+    Button(screen10, text="Material Teknik", width="30", height="2", command=mattek).pack()
+    Label(screen10, text="").pack()
+    Button(screen10, text="Mekanika Teknik", width="30", height="2", command=mekatek).pack()
+    Label(screen10, text="").pack()
+    Button(screen10, text="Pengantar Rekayasa dan Desain", width="30", height="2", command=PRD).pack()
+    Label(screen10, text="").pack()
+    Button(screen10, text="Psikologi Industri", width="30", height="2", command=psikin).pack()
+    Label(screen10, text="").pack()
+    Button(screen10, text="Biologi", width="30", height="2", command=bio).pack()
+    Label(screen10, text="").pack()
+
     
 
 def menumahasiswa():
