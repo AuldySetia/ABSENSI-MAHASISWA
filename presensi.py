@@ -224,52 +224,382 @@ def membuat_presensi():
     screen5=Toplevel(screen)
     screen5.geometry("500x550")
     screen5.title("Membuat Presensi")
-    Button(screen5, text="Programa Komputer", width="30", height="2", command=membuatprokom).pack()
+    Button(screen5, text="Programa Komputer", width="30", height="2", command=mprokom).pack()
     Label(screen5, text="").pack()
-    Button(screen5, text="Kalkulus", width="30", height="2", command=kalkulus).pack()
+    Button(screen5, text="Kalkulus", width="30", height="2", command=mkalkulus).pack()
     Label(screen5, text="").pack()
-    Button(screen5, text="Fisika Dasar", width="30", height="2", command=fisdas).pack()
+    Button(screen5, text="Fisika Dasar", width="30", height="2", command=mfisdas).pack()
     Label(screen5, text="").pack()
-    Button(screen5, text="Anggaran dan Estimasi Biaya", width="30", height="2", command=AEB).pack()
+    Button(screen5, text="Anggaran dan Estimasi Biaya", width="30", height="2", command=mAEB).pack()
     Label(screen5, text="").pack()
-    Button(screen5, text="Material Teknik", width="30", height="2", command=mattek).pack()
+    Button(screen5, text="Material Teknik", width="30", height="2", command=mmattek).pack()
     Label(screen5, text="").pack()
-    Button(screen5, text="Mekanika Teknik", width="30", height="2", command=mekatek).pack()
+    Button(screen5, text="Mekanika Teknik", width="30", height="2", command=mmekatek).pack()
     Label(screen5, text="").pack()
-    Button(screen5, text="Pengantar Rekayasa dan Desain", width="30", height="2", command=PRD).pack()
+    Button(screen5, text="Pengantar Rekayasa dan Desain", width="30", height="2", command=mPRD).pack()
     Label(screen5, text="").pack()
-    Button(screen5, text="Psikologi Industri", width="30", height="2", command=psikin).pack()
+    Button(screen5, text="Psikologi Industri", width="30", height="2", command=mpsikin).pack()
     Label(screen5, text="").pack()
-    Button(screen5, text="Biologi", width="30", height="2", command=bio).pack()
+    Button(screen5, text="Biologi", width="30", height="2", command=mbio).pack()
     Label(screen5, text="").pack()
 
 
-def membuatprokom():
-    print()
+def mprokom():
+    global screen8, defprokom
+    screen8=Toplevel(screen)
+    screen8.geometry("300x250")
+    screen8.title("Keterangan Pertemuan")
+    Label(screen8, text="").pack()
+    Label(screen8, text="").pack()
+    Label(screen8, text="").pack()
+    Label(screen8, text="Input Pertemuan").pack()
+    defprokom=Entry(screen8)
+    defprokom.pack()
+    Label(screen8, text="").pack()
+    Button(screen8, text="SUBMIT", width=10, height=1, command=saveprokom).pack()
+
+def saveprokom():
+    global namafile, csvheader, writer, presensi
+    #####------------------------------------------PENTING!!!!-----------------------------------------#####
+    #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
+    save_path = "D:\Arda\Kuliyah\SMT 2\Praktikum Prokom\ABSENSI-MAHASISWA\Prokom"
+    namafile = os.path.join(save_path, f'Pertemuan {defprokom.get()}.csv')
+    csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
+
+    #Membuka file csv dalam mode append
+    with open(namafile,'a', newline='\n') as filecsv:
+
+        #dictnilai adalah dictionary digunakan untuk writerow.
+        #Mengubah data menjadi dictionary untuk dimasukkan per row
+        presensi = {'Nama': print(), 'NIM': print(), 'Kehadiran': print(), 'Keterangan': print()}
+
+        writer = csv.DictWriter(filecsv, fieldnames = csvheader)
+
+        #Jika file tidak ada, maka auto membuat file dan menambah csvheader di dalamnya
+        if os.stat(namafile).st_size == 0:
+            writer.writeheader()
+        else:
+            None
+
+        writer.writerow(presensi)
     
-def kalkulus():
-    print()
+def mkalkulus():
+    global screen10, defkalkulus
+    screen10=Toplevel(screen)
+    screen10.geometry("300x250")
+    screen10.title("Keterangan Pertemuan")
+    Label(screen10, text="").pack()
+    Label(screen10, text="").pack()
+    Label(screen10, text="").pack()
+    Label(screen10, text="Input Pertemuan").pack()
+    defkalkulus=Entry(screen10)
+    defkalkulus.pack()
+    Label(screen10, text="").pack()
+    Button(screen10, text="SUBMIT", width=10, height=1, command=savekalkulus).pack()
 
-def AEB():
-    print()
+def savekalkulus():
+    global namafile, csvheader, writer, presensi
+    #####------------------------------------------PENTING!!!!-----------------------------------------#####
+    #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
+    save_path = "D:\Arda\Kuliyah\SMT 2\Praktikum kalkulus\ABSENSI-MAHASISWA\Kalkulus"
+    namafile = os.path.join(save_path, f'Pertemuan {defkalkulus.get()}.csv')
+    csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
 
-def PRD():
-    print()
+    #Membuka file csv dalam mode append
+    with open(namafile,'a', newline='\n') as filecsv:
 
-def psikin():
-    print()
+        #dictnilai adalah dictionary digunakan untuk writerow.
+        #Mengubah data menjadi dictionary untuk dimasukkan per row
+        presensi = {'Nama': print(), 'NIM': print(), 'Kehadiran': print(), 'Keterangan': print()}
 
-def mekatek():
-    print()
+        writer = csv.DictWriter(filecsv, fieldnames = csvheader)
 
-def mattek():
-    print()
+        #Jika file tidak ada, maka auto membuat file dan menambah csvheader di dalamnya
+        if os.stat(namafile).st_size == 0:
+            writer.writeheader()
+        else:
+            None
+            
+        writer.writerow(presensi)
 
-def fisdas():
-    print()
 
-def bio():
-    print()
+def mAEB():
+    global screen11, defAEB
+    screen11=Toplevel(screen)
+    screen11.geometry("300x250")
+    screen11.title("Keterangan Pertemuan")
+    Label(screen11, text="").pack()
+    Label(screen11, text="").pack()
+    Label(screen11, text="").pack()
+    Label(screen11, text="Input Pertemuan").pack()
+    defAEB=Entry(screen11)
+    defAEB.pack()
+    Label(screen11, text="").pack()
+    Button(screen11, text="SUBMIT", width=11, height=1, command=saveAEB).pack()
+
+def saveAEB():
+    global namafile, csvheader, writer, presensi
+    #####------------------------------------------PENTING!!!!-----------------------------------------#####
+    #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
+    save_path = "D:\Arda\Kuliyah\SMT 2\Praktikum AEB\ABSENSI-MAHASISWA\AEB"
+    namafile = os.path.join(save_path, f'Pertemuan {defAEB.get()}.csv')
+    csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
+
+    #Membuka file csv dalam mode append
+    with open(namafile,'a', newline='\n') as filecsv:
+
+        #dictnilai adalah dictionary digunakan untuk writerow.
+        #Mengubah data menjadi dictionary untuk dimasukkan per row
+        presensi = {'Nama': print(), 'NIM': print(), 'Kehadiran': print(), 'Keterangan': print()}
+
+        writer = csv.DictWriter(filecsv, fieldnames = csvheader)
+
+        #Jika file tidak ada, maka auto membuat file dan menambah csvheader di dalamnya
+        if os.stat(namafile).st_size == 0:
+            writer.writeheader()
+        else:
+            None
+            
+        writer.writerow(presensi)
+
+
+def mPRD():
+    global screen12, defPRD
+    screen12=Toplevel(screen)
+    screen12.geometry("300x250")
+    screen12.title("Keterangan Pertemuan")
+    Label(screen12, text="").pack()
+    Label(screen12, text="").pack()
+    Label(screen12, text="").pack()
+    Label(screen12, text="Input Pertemuan").pack()
+    defPRD=Entry(screen12)
+    defPRD.pack()
+    Label(screen12, text="").pack()
+    Button(screen12, text="SUBMIT", width=12, height=1, command=savePRD).pack()
+
+def savePRD():
+    global namafile, csvheader, writer, presensi
+    #####------------------------------------------PENTING!!!!-----------------------------------------#####
+    #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
+    save_path = "D:\Arda\Kuliyah\SMT 2\Praktikum PRD\ABSENSI-MAHASISWA\PRD"
+    namafile = os.path.join(save_path, f'Pertemuan {defPRD.get()}.csv')
+    csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
+
+    #Membuka file csv dalam mode append
+    with open(namafile,'a', newline='\n') as filecsv:
+
+        #dictnilai adalah dictionary digunakan untuk writerow.
+        #Mengubah data menjadi dictionary untuk dimasukkan per row
+        presensi = {'Nama': print(), 'NIM': print(), 'Kehadiran': print(), 'Keterangan': print()}
+
+        writer = csv.DictWriter(filecsv, fieldnames = csvheader)
+
+        #Jika file tidak ada, maka auto membuat file dan menambah csvheader di dalamnya
+        if os.stat(namafile).st_size == 0:
+            writer.writeheader()
+        else:
+            None
+            
+        writer.writerow(presensi)
+
+
+def mpsikin():
+    global screen13, defpsikin
+    screen13=Toplevel(screen)
+    screen13.geometry("300x250")
+    screen13.title("Keterangan Pertemuan")
+    Label(screen13, text="").pack()
+    Label(screen13, text="").pack()
+    Label(screen13, text="").pack()
+    Label(screen13, text="Input Pertemuan").pack()
+    defpsikin=Entry(screen13)
+    defpsikin.pack()
+    Label(screen13, text="").pack()
+    Button(screen13, text="SUBMIT", width=13, height=1, command=savepsikin).pack()
+
+def savepsikin():
+    global namafile, csvheader, writer, presensi
+    #####------------------------------------------PENTING!!!!-----------------------------------------#####
+    #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
+    save_path = "D:\Arda\Kuliyah\SMT 2\Praktikum psikin\ABSENSI-MAHASISWA\Psikin"
+    namafile = os.path.join(save_path, f'Pertemuan {defpsikin.get()}.csv')
+    csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
+
+    #Membuka file csv dalam mode append
+    with open(namafile,'a', newline='\n') as filecsv:
+
+        #dictnilai adalah dictionary digunakan untuk writerow.
+        #Mengubah data menjadi dictionary untuk dimasukkan per row
+        presensi = {'Nama': print(), 'NIM': print(), 'Kehadiran': print(), 'Keterangan': print()}
+
+        writer = csv.DictWriter(filecsv, fieldnames = csvheader)
+
+        #Jika file tidak ada, maka auto membuat file dan menambah csvheader di dalamnya
+        if os.stat(namafile).st_size == 0:
+            writer.writeheader()
+        else:
+            None
+            
+        writer.writerow(presensi)
+
+
+def mmekatek():
+    global screen14, defmekatek
+    screen14=Toplevel(screen)
+    screen14.geometry("300x250")
+    screen14.title("Keterangan Pertemuan")
+    Label(screen14, text="").pack()
+    Label(screen14, text="").pack()
+    Label(screen14, text="").pack()
+    Label(screen14, text="Input Pertemuan").pack()
+    defmekatek=Entry(screen14)
+    defmekatek.pack()
+    Label(screen14, text="").pack()
+    Button(screen14, text="SUBMIT", width=14, height=1, command=savemekatek).pack()
+
+def savemekatek():
+    global namafile, csvheader, writer, presensi
+    #####------------------------------------------PENTING!!!!-----------------------------------------#####
+    #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
+    save_path = "D:\Arda\Kuliyah\SMT 2\Praktikum mekatek\ABSENSI-MAHASISWA\Mekatek"
+    namafile = os.path.join(save_path, f'Pertemuan {defmekatek.get()}.csv')
+    csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
+
+    #Membuka file csv dalam mode append
+    with open(namafile,'a', newline='\n') as filecsv:
+
+        #dictnilai adalah dictionary digunakan untuk writerow.
+        #Mengubah data menjadi dictionary untuk dimasukkan per row
+        presensi = {'Nama': print(), 'NIM': print(), 'Kehadiran': print(), 'Keterangan': print()}
+
+        writer = csv.DictWriter(filecsv, fieldnames = csvheader)
+
+        #Jika file tidak ada, maka auto membuat file dan menambah csvheader di dalamnya
+        if os.stat(namafile).st_size == 0:
+            writer.writeheader()
+        else:
+            None
+            
+        writer.writerow(presensi)
+
+
+def mmattek():
+    global screen15, defmattek
+    screen15=Toplevel(screen)
+    screen15.geometry("300x250")
+    screen15.title("Keterangan Pertemuan")
+    Label(screen15, text="").pack()
+    Label(screen15, text="").pack()
+    Label(screen15, text="").pack()
+    Label(screen15, text="Input Pertemuan").pack()
+    defmattek=Entry(screen15)
+    defmattek.pack()
+    Label(screen15, text="").pack()
+    Button(screen15, text="SUBMIT", width=15, height=1, command=savemattek).pack()
+
+def savemattek():
+    global namafile, csvheader, writer, presensi
+    #####------------------------------------------PENTING!!!!-----------------------------------------#####
+    #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
+    save_path = "D:\Arda\Kuliyah\SMT 2\Praktikum mattek\ABSENSI-MAHASISWA\Mattek"
+    namafile = os.path.join(save_path, f'Pertemuan {defmattek.get()}.csv')
+    csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
+
+    #Membuka file csv dalam mode append
+    with open(namafile,'a', newline='\n') as filecsv:
+
+        #dictnilai adalah dictionary digunakan untuk writerow.
+        #Mengubah data menjadi dictionary untuk dimasukkan per row
+        presensi = {'Nama': print(), 'NIM': print(), 'Kehadiran': print(), 'Keterangan': print()}
+
+        writer = csv.DictWriter(filecsv, fieldnames = csvheader)
+
+        #Jika file tidak ada, maka auto membuat file dan menambah csvheader di dalamnya
+        if os.stat(namafile).st_size == 0:
+            writer.writeheader()
+        else:
+            None
+            
+        writer.writerow(presensi)
+
+
+def mfisdas():
+    global screen16, deffisdas
+    screen16=Toplevel(screen)
+    screen16.geometry("300x250")
+    screen16.title("Keterangan Pertemuan")
+    Label(screen16, text="").pack()
+    Label(screen16, text="").pack()
+    Label(screen16, text="").pack()
+    Label(screen16, text="Input Pertemuan").pack()
+    deffisdas=Entry(screen16)
+    deffisdas.pack()
+    Label(screen16, text="").pack()
+    Button(screen16, text="SUBMIT", width=16, height=1, command=savefisdas).pack()
+
+def savefisdas():
+    global namafile, csvheader, writer, presensi
+    #####------------------------------------------PENTING!!!!-----------------------------------------#####
+    #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
+    save_path = "D:\Arda\Kuliyah\SMT 2\Praktikum fisdas\ABSENSI-MAHASISWA\Fisdas"
+    namafile = os.path.join(save_path, f'Pertemuan {deffisdas.get()}.csv')
+    csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
+
+    #Membuka file csv dalam mode append
+    with open(namafile,'a', newline='\n') as filecsv:
+
+        #dictnilai adalah dictionary digunakan untuk writerow.
+        #Mengubah data menjadi dictionary untuk dimasukkan per row
+        presensi = {'Nama': print(), 'NIM': print(), 'Kehadiran': print(), 'Keterangan': print()}
+
+        writer = csv.DictWriter(filecsv, fieldnames = csvheader)
+
+        #Jika file tidak ada, maka auto membuat file dan menambah csvheader di dalamnya
+        if os.stat(namafile).st_size == 0:
+            writer.writeheader()
+        else:
+            None
+            
+        writer.writerow(presensi)
+
+def mbio():
+    global screen16, defbio
+    screen16=Toplevel(screen)
+    screen16.geometry("300x250")
+    screen16.title("Keterangan Pertemuan")
+    Label(screen16, text="").pack()
+    Label(screen16, text="").pack()
+    Label(screen16, text="").pack()
+    Label(screen16, text="Input Pertemuan").pack()
+    defbio=Entry(screen16)
+    defbio.pack()
+    Label(screen16, text="").pack()
+    Button(screen16, text="SUBMIT", width=16, height=1, command=savebio).pack()
+
+def savebio():
+    global namafile, csvheader, writer, presensi
+    #####------------------------------------------PENTING!!!!-----------------------------------------#####
+    #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
+    save_path = "D:\Arda\Kuliyah\SMT 2\Praktikum bio\ABSENSI-MAHASISWA\Bio"
+    namafile = os.path.join(save_path, f'Pertemuan {defbio.get()}.csv')
+    csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
+
+    #Membuka file csv dalam mode append
+    with open(namafile,'a', newline='\n') as filecsv:
+
+        #dictnilai adalah dictionary digunakan untuk writerow.
+        #Mengubah data menjadi dictionary untuk dimasukkan per row
+        presensi = {'Nama': print(), 'NIM': print(), 'Kehadiran': print(), 'Keterangan': print()}
+
+        writer = csv.DictWriter(filecsv, fieldnames = csvheader)
+
+        #Jika file tidak ada, maka auto membuat file dan menambah csvheader di dalamnya
+        if os.stat(namafile).st_size == 0:
+            writer.writeheader()
+        else:
+            None
+            
+        writer.writerow(presensi)
 
 def Pertemuan1():
     print()
@@ -369,7 +699,7 @@ def menumahasiswa():
     Button(screen6, text="Biologi", width="30", height="2", command=bio).pack()
     Label(screen6, text="").pack()
 
-def membuat_presensi():
+def membuat():
     global screen7
     screen7=Toplevel(screen)
     screen7.geometry("500x550")
