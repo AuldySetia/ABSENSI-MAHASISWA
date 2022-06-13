@@ -1,4 +1,5 @@
 from cProfile import label
+import csv
 import tkinter as Tk
 from tkinter import *
 from turtle import Screen, bgcolor, clear
@@ -6,6 +7,7 @@ from tkinter import ttk
 import tkinter.messagebox
 import os
 from numpy import imag
+import csv
 import pandas as pd
 from tkinter import ttk
 
@@ -262,7 +264,7 @@ def saveprokom():
     global namafile, csvheader, writer, presensi
     #####------------------------------------------PENTING!!!!-----------------------------------------#####
     #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
-    save_path = "D:\Arda\Kuliyah\SMT 2\Praktikum Prokom\ABSENSI-MAHASISWA\Prokom"
+    save_path = "D:\Kuliah\Tugas_Prokom_Praktikum\ABSENSI-MAHASISWA\Prokom"
     namafile = os.path.join(save_path, f'Pertemuan {defprokom.get()}.csv')
     csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
 
@@ -301,7 +303,7 @@ def savekalkulus():
     global namafile, csvheader, writer, presensi
     #####------------------------------------------PENTING!!!!-----------------------------------------#####
     #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
-    save_path = "D:\Arda\Kuliyah\SMT 2\Praktikum Prokom\ABSENSI-MAHASISWA\Kalkulus"
+    save_path = "D:\Kuliah\Tugas_Prokom_Praktikum\ABSENSI-MAHASISWA\Kalkulus"
     namafile = os.path.join(save_path, f'Pertemuan {defkalkulus.get()}.csv')
     csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
 
@@ -341,7 +343,7 @@ def saveAEB():
     global namafile, csvheader, writer, presensi
     #####------------------------------------------PENTING!!!!-----------------------------------------#####
     #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
-    save_path = "D:\Arda\Kuliyah\SMT 2\Praktikum Prokom\ABSENSI-MAHASISWA\AEB"
+    save_path = "D:\Kuliah\Tugas_Prokom_Praktikum\ABSENSI-MAHASISWA\AEB"
     namafile = os.path.join(save_path, f'Pertemuan {defAEB.get()}.csv')
     csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
 
@@ -381,7 +383,7 @@ def savePRD():
     global namafile, csvheader, writer, presensi
     #####------------------------------------------PENTING!!!!-----------------------------------------#####
     #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
-    save_path = "D:\Arda\Kuliyah\SMT 2\Praktikum Prokom\ABSENSI-MAHASISWA\PRD"
+    save_path = "D:\Kuliah\Tugas_Prokom_Praktikum\ABSENSI-MAHASISWA\PRD"
     namafile = os.path.join(save_path, f'Pertemuan {defPRD.get()}.csv')
     csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
 
@@ -421,7 +423,7 @@ def savepsikin():
     global namafile, csvheader, writer, presensi
     #####------------------------------------------PENTING!!!!-----------------------------------------#####
     #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
-    save_path = "D:\Arda\Kuliyah\SMT 2\Praktikum Prokom\ABSENSI-MAHASISWA\Psikin"
+    save_path = "D:\Kuliah\Tugas_Prokom_Praktikum\ABSENSI-MAHASISWA\Psikin"
     namafile = os.path.join(save_path, f'Pertemuan {defpsikin.get()}.csv')
     csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
 
@@ -461,7 +463,7 @@ def savemekatek():
     global namafile, csvheader, writer, presensi
     #####------------------------------------------PENTING!!!!-----------------------------------------#####
     #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
-    save_path = "D:\Arda\Kuliyah\SMT 2\Praktikum Prokom\ABSENSI-MAHASISWA\Mekatek"
+    save_path = "D:\Kuliah\Tugas_Prokom_Praktikum\ABSENSI-MAHASISWA\Mekatek"
     namafile = os.path.join(save_path, f'Pertemuan {defmekatek.get()}.csv')
     csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
 
@@ -501,7 +503,7 @@ def savemattek():
     global namafile, csvheader, writer, presensi
     #####------------------------------------------PENTING!!!!-----------------------------------------#####
     #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
-    save_path = "D:\Arda\Kuliyah\SMT 2\Praktikum Prokom\ABSENSI-MAHASISWA\Mattek"
+    save_path = "D:\Kuliah\Tugas_Prokom_Praktikum\ABSENSI-MAHASISWA\Mattek"
     namafile = os.path.join(save_path, f'Pertemuan {defmattek.get()}.csv')
     csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
 
@@ -541,7 +543,7 @@ def savefisdas():
     global namafile, csvheader, writer, presensi
     #####------------------------------------------PENTING!!!!-----------------------------------------#####
     #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
-    save_path = "D:\Arda\Kuliyah\SMT 2\Praktikum Prokom\ABSENSI-MAHASISWA\Fisdas"
+    save_path = "D:\Kuliah\Tugas_Prokom_Praktikum\ABSENSI-MAHASISWA\Fisdas"
     namafile = os.path.join(save_path, f'Pertemuan {deffisdas.get()}.csv')
     csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
 
@@ -580,7 +582,7 @@ def savebio():
     global namafile, csvheader, writer, presensi
     #####------------------------------------------PENTING!!!!-----------------------------------------#####
     #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
-    save_path = "D:\Arda\Kuliyah\SMT 2\Praktikum Prokom\ABSENSI-MAHASISWA\Bio"
+    save_path = "D:\Kuliah\Tugas_Prokom_Praktikum\ABSENSI-MAHASISWA\Bio"
     namafile = os.path.join(save_path, f'Pertemuan {defbio.get()}.csv')
     csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
 
