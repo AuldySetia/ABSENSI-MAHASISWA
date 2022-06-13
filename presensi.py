@@ -675,7 +675,6 @@ def melihat_presensi():
     Button(screen10, text="Biologi", width="30", height="2", command=bio).pack()
     Label(screen10, text="").pack()
 
-    
 
 def menumahasiswa():
     global screen6
@@ -702,30 +701,116 @@ def menumahasiswa():
     Label(screen6, text="").pack()
 
 def kalkulus():
-    print()
+    root=Tk()
+    root.title("Melihat Presensi")
+    root.geometry("300x250")
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5", "Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10", "Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15", "Pertemuan 16"]
+    l1=Label(root,text="Pilih pertemuan ke")
+    l1.grid(row=0,column=0)
+    cmb=ttk.Combobox(root,value=course,width=15)
+    cmb.grid(row=16,column=16)
+    cmb.current(0)
+    root.mainloop()
 
 def AEB():
-    print()
+    root=Tk()
+    root.title("Melihat Presensi")
+    root.geometry("300x250")
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5", "Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10", "Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15", "Pertemuan 16"]
+    l1=Label(root,text="Pilih pertemuan ke")
+    l1.grid(row=0,column=0)
+    cmb=ttk.Combobox(root,value=course,width=15)
+    cmb.grid(row=16,column=16)
+    cmb.current(0)
+    root.mainloop()
 
 def PRD():
-    print()
+    root=Tk()
+    root.title("Melihat Presensi")
+    root.geometry("300x250")
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5", "Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10", "Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15", "Pertemuan 16"]
+    l1=Label(root,text="Pilih pertemuan ke")
+    l1.grid(row=0,column=0)
+    cmb=ttk.Combobox(root,value=course,width=15)
+    cmb.grid(row=16,column=16)
+    cmb.current(0)
+    root.mainloop()
 
 def psikin():
-    print()
+    root=Tk()
+    root.title("Melihat Presensi")
+    root.geometry("300x250")
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5", "Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10", "Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15", "Pertemuan 16"]
+    l1=Label(root,text="Pilih pertemuan ke")
+    l1.grid(row=0,column=0)
+    cmb=ttk.Combobox(root,value=course,width=15)
+    cmb.grid(row=16,column=16)
+    cmb.current(0)
+    root.mainloop()
 
 def mekatek():
-    print()
+    root=Tk()
+    root.title("Melihat Presensi")
+    root.geometry("300x250")
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5", "Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10", "Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15", "Pertemuan 16"]
+    l1=Label(root,text="Pilih pertemuan ke")
+    l1.grid(row=0,column=0)
+    cmb=ttk.Combobox(root,value=course,width=15)
+    cmb.grid(row=16,column=16)
+    cmb.current(0)
+    root.mainloop()
 
 def mattek():
-    print()
+    root=Tk()
+    root.title("Melihat Presensi")
+    root.geometry("300x250")
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5", "Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10", "Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15", "Pertemuan 16"]
+    l1=Label(root,text="Pilih pertemuan ke")
+    l1.grid(row=0,column=0)
+    cmb=ttk.Combobox(root,value=course,width=15)
+    cmb.grid(row=16,column=16)
+    cmb.current(0)
+    root.mainloop()
 
 def fisdas():
-    print()
+    root=Tk()
+    root.title("Melihat Presensi")
+    root.geometry("300x250")
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5", "Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10", "Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15", "Pertemuan 16"]
+    l1=Label(root,text="Pilih pertemuan ke")
+    l1.grid(row=0,column=0)
+    cmb=ttk.Combobox(root,value=course,width=15)
+    cmb.grid(row=16,column=16)
+    cmb.current(0)
+    root.mainloop()
 
 def bio():
-    print()
+    root=Tk()
+    root.title("Melihat Presensi")
+    root.geometry("300x250")
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5", "Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10", "Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15", "Pertemuan 16"]
+    l1=Label(root,text="Pilih pertemuan ke")
+    l1.grid(row=0,column=0)
+    cmb=ttk.Combobox(root,value=course,width=15)
+    cmb.grid(row=16,column=16)
+    cmb.current(0)
+    Button(text="SUBMIT", weidth=10, height=1, command=)
+    root.mainloop()
 
 def prokom():
-    print()
+    root=Tk()
+    root.title("Melihat Presensi")
+    root.geometry("300x250")
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5", "Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10", "Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15", "Pertemuan 16"]
+    l1=Label(root,text="Pilih pertemuan ke")
+    l1.grid(row=0,column=0)
+    cmb=ttk.Combobox(root,value=course,width=15)
+    cmb.grid(row=16,column=16)
+    cmb.current(0)
+    root.mainloop()
+
+def melihat_bio():
+    
+
 
 main_screen()
