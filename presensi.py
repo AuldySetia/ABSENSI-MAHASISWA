@@ -300,7 +300,7 @@ def mkalkulus():
     Button(screen10, text="SUBMIT", width=10, height=1, command=savekalkulus).pack()
 
 def savekalkulus():
-    global namafile, csvheader, writer, presensi
+    global namafile, csvheader, writer, presensi, save_path
     #####------------------------------------------PENTING!!!!-----------------------------------------#####
     #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
     save_path = "D:\Kuliah\Tugas_Prokom_Praktikum\ABSENSI-MAHASISWA\Kalkulus"
@@ -591,7 +591,10 @@ def savebio():
 
         #dictnilai adalah dictionary digunakan untuk writerow.
         #Mengubah data menjadi dictionary untuk dimasukkan per row
-        presensi = {'Nama': print(), 'NIM': print(), 'Kehadiran': print(), 'Keterangan': print()}
+        presensi = {'Nama': [namalengkapentry.get()],
+                    'NIM': [nimentry.get()],
+                    'Kehadiran': [combo_hadir.get()],
+                    'Keterangan': [keteranganentry.get()]}
 
         writer = csv.DictWriter(filecsv, fieldnames = csvheader)
 
@@ -709,6 +712,7 @@ def kalkulus():
     l1.grid(row=0,column=0)
     cmb=ttk.Combobox(root,value=course,width=15)
     cmb.grid(row=16,column=16)
+    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisipresensi).place(x=35,y=254) 
     cmb.current(0)
     root.mainloop()
 
@@ -722,6 +726,7 @@ def AEB():
     cmb=ttk.Combobox(root,value=course,width=15)
     cmb.grid(row=16,column=16)
     cmb.current(0)
+    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisipresensi).place(x=35,y=254)
     root.mainloop()
 
 def PRD():
@@ -734,6 +739,7 @@ def PRD():
     cmb=ttk.Combobox(root,value=course,width=15)
     cmb.grid(row=16,column=16)
     cmb.current(0)
+    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisipresensi).place(x=35,y=254)
     root.mainloop()
 
 def psikin():
@@ -746,6 +752,7 @@ def psikin():
     cmb=ttk.Combobox(root,value=course,width=15)
     cmb.grid(row=16,column=16)
     cmb.current(0)
+    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisipresensi).place(x=35,y=254)
     root.mainloop()
 
 def mekatek():
@@ -758,6 +765,7 @@ def mekatek():
     cmb=ttk.Combobox(root,value=course,width=15)
     cmb.grid(row=16,column=16)
     cmb.current(0)
+    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisipresensi).place(x=35,y=254) 
     root.mainloop()
 
 def mattek():
@@ -770,9 +778,11 @@ def mattek():
     cmb=ttk.Combobox(root,value=course,width=15)
     cmb.grid(row=16,column=16)
     cmb.current(0)
+    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisipresensi).place(x=35,y=254)
     root.mainloop()
 
 def fisdas():
+    global cmb
     root=Tk()
     root.title("Melihat Presensi")
     root.geometry("1280x720")
@@ -782,18 +792,21 @@ def fisdas():
     cmb=ttk.Combobox(root,value=course,width=15)
     cmb.grid(row=16,column=16)
     cmb.current(0)
+    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisipresensi).place(x=35,y=254)
     root.mainloop()
 
 def bio():
     root=Tk()
     root.title("Melihat Presensi")
     root.geometry("1280x720")
+    global cmb
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5", "Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10", "Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15", "Pertemuan 16"]
     l1=Label(root,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
     cmb=ttk.Combobox(root,value=course,width=15)
     cmb.grid(row=16,column=16)
     cmb.current(0)
+    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisipresensi).place(x=35,y=254)
     root.mainloop()
 
 def prokom():
@@ -806,10 +819,67 @@ def prokom():
     cmb=ttk.Combobox(root,value=course,width=15)
     cmb.grid(row=16,column=16)
     cmb.current(0)
+    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisipresensi).place(x=35,y=254)
     root.mainloop()
 
-def melihat_bio():
-    print()
+def mengisipresensi():
+    global screen17, namalengkapentry, nimentry, combo_hadir, keteranganentry
+    screen17=Toplevel(screen)
+    screen17.geometry("1280x720")
+    screen17.title("Mengisi Presensi")
+    bg_color="#990099"
+
+    #======================Heading============#
+    title=Label(screen17,text="PRESENSI MATA KULIAH",bg=bg_color,fg="white",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
+    title.pack(fill=X)
+
+    #====================Left frame============#
+    F1=Frame(screen17, bg=bg_color, relief=RIDGE, bd=15)
+    F1.place(x=10,y=80,width=650,height=530)
+
+    nama=Label(F1,text="Nama Lengkap",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
+    nama.grid(row=0,column=0,padx=30,pady=10)
+    namalengkapentry=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
+    namalengkapentry.grid(row=0,column=1, pady=10, sticky="w")
+
+    nim=Label(F1,text="NIM",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
+    nim.grid(row=1,column=0,padx=30,pady=10)
+    nimentry=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
+    nimentry.grid(row=1,column=1, pady=10, sticky="w")
+
+    hadir=Label(F1,text="Kehadiran",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
+    hadir.grid(row=2,column=0,padx=30,pady=10)
+
+    combo_hadir=ttk.Combobox(F1,font=("times new rommon",20,"bold"),state="readonly")
+    combo_hadir["value"]=("Hadir","Sakit","Izin")
+    combo_hadir.grid(row=2,column=1,pady=10)
+
+    keterangan=Label(F1,text="Keterangan",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
+    keterangan.grid(row=3,column=0,padx=30,pady=10)
+    keteranganentry=Text(F1,width=20,height=3,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
+    keteranganentry.grid(row=3,column=1, pady=10, sticky="w")
+
+    Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=savepresensi(),fg="white",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
+
+    
+    #====================Right frame============#
+    F2=Frame(screen17, bg=bg_color, relief=RIDGE, bd=15)
+    F2.place(x=665,y=80,width=610,height=530)
+
+
+def savepresensi(namafilescsv, pertemuan):
+    variabel = {"Nama Lengkap" : [namalengkapentry.get()],
+                "NIM" : [nimentry.get()],
+                "Kehadiran" : [combo_hadir.get()],
+                "Keterangan" : [keteranganentry.get()]}
+    test = pd.DataFrame(variabel)
+    namafilecsv = os.path.join(f'cmb.get().csv')
+    with open(namafilecsv, "a") as csvfile:
+        csv_writer=csv.DictWriter(csvfile)
+        csv_writer.writerow(variabel)
+
+
+    #test.to_csv(namafilecsv)
 
 
 main_screen()
