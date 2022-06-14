@@ -14,7 +14,7 @@ from tkinter import ttk
 def main_screen():
     global screen
     screen=Tk()
-    screen.geometry("925x500+300+200")
+    screen.geometry("1280x720")
     screen.title("SSO Universitas Internasional")
     screen.configure(bg="#fff")
 
@@ -43,7 +43,7 @@ def mahasiswa_login():
     global screen2, namamahasiswa, nimmahasiswa, labelmahasiswa
     screen2=Toplevel(screen)
     screen2.title("Login SSO Mahasiswa")
-    screen2.geometry("925x500+300+200")
+    screen2.geometry("1280x720")
     screen2.configure(bg="white")
     #screen2.resizable(False,False)
 
@@ -114,7 +114,7 @@ def dosen_login():
     global screen3, namadosen, niddosen, labeldosen
     screen3=Toplevel(screen)
     screen3.title("Login SSO Dosen")
-    screen3.geometry("925x500+300+200")
+    screen3.geometry("1280x720")
     screen3.configure(bg="white")
     #screen3.resizable(False,False)
 
@@ -204,7 +204,7 @@ def logindosen_verify():
 def menudosen():
     global screen4
     screen4=Toplevel(screen)
-    screen4.geometry("925x500+300+200")
+    screen4.geometry("1280x720")
     screen4.title("SSO Universitas Internasional")
     screen4.configure(bg="#fff")
 
@@ -224,7 +224,7 @@ def menudosen():
 def membuat_presensi():
     global screen5
     screen5=Toplevel(screen)
-    screen5.geometry("500x550")
+    screen5.geometry("1280x720")
     screen5.title("Membuat Presensi")
     Button(screen5, text="Programa Komputer", width="30", height="2", command=mprokom).pack()
     Label(screen5, text="").pack()
@@ -249,7 +249,7 @@ def membuat_presensi():
 def mprokom():
     global screen8, defprokom
     screen8=Toplevel(screen)
-    screen8.geometry("300x250")
+    screen8.geometry("1280x720")
     screen8.title("Keterangan Pertemuan")
     Label(screen8, text="").pack()
     Label(screen8, text="").pack()
@@ -288,7 +288,7 @@ def saveprokom():
 def mkalkulus():
     global screen10, defkalkulus
     screen10=Toplevel(screen)
-    screen10.geometry("300x250")
+    screen10.geometry("1280x720")
     screen10.title("Keterangan Pertemuan")
     Label(screen10, text="").pack()
     Label(screen10, text="").pack()
@@ -328,7 +328,7 @@ def savekalkulus():
 def mAEB():
     global screen11, defAEB
     screen11=Toplevel(screen)
-    screen11.geometry("300x250")
+    screen11.geometry("1280x720")
     screen11.title("Keterangan Pertemuan")
     Label(screen11, text="").pack()
     Label(screen11, text="").pack()
@@ -368,7 +368,7 @@ def saveAEB():
 def mPRD():
     global screen12, defPRD
     screen12=Toplevel(screen)
-    screen12.geometry("300x250")
+    screen12.geometry("1280x720")
     screen12.title("Keterangan Pertemuan")
     Label(screen12, text="").pack()
     Label(screen12, text="").pack()
@@ -408,7 +408,7 @@ def savePRD():
 def mpsikin():
     global screen13, defpsikin
     screen13=Toplevel(screen)
-    screen13.geometry("300x250")
+    screen13.geometry("1280x720")
     screen13.title("Keterangan Pertemuan")
     Label(screen13, text="").pack()
     Label(screen13, text="").pack()
@@ -448,7 +448,7 @@ def savepsikin():
 def mmekatek():
     global screen14, defmekatek
     screen14=Toplevel(screen)
-    screen14.geometry("300x250")
+    screen14.geometry("1280x720")
     screen14.title("Keterangan Pertemuan")
     Label(screen14, text="").pack()
     Label(screen14, text="").pack()
@@ -488,7 +488,7 @@ def savemekatek():
 def mmattek():
     global screen15, defmattek
     screen15=Toplevel(screen)
-    screen15.geometry("300x250")
+    screen15.geometry("1280x720")
     screen15.title("Keterangan Pertemuan")
     Label(screen15, text="").pack()
     Label(screen15, text="").pack()
@@ -528,7 +528,7 @@ def savemattek():
 def mfisdas():
     global screen16, deffisdas
     screen16=Toplevel(screen)
-    screen16.geometry("300x250")
+    screen16.geometry("1280x720")
     screen16.title("Keterangan Pertemuan")
     Label(screen16, text="").pack()
     Label(screen16, text="").pack()
@@ -567,7 +567,7 @@ def savefisdas():
 def mbio():
     global screen16, defbio
     screen16=Toplevel(screen)
-    screen16.geometry("300x250")
+    screen16.geometry("1280x720")
     screen16.title("Keterangan Pertemuan")
     Label(screen16, text="").pack()
     Label(screen16, text="").pack()
@@ -654,7 +654,7 @@ def Pertemuan16():
 def melihat_presensi():
     global screen10
     screen10=Toplevel(screen)
-    screen10.geometry("500x550")
+    screen10.geometry("1280x720")
     screen10.title("Melihat Presensi")
     Button(screen10, text="Programa Komputer", width="30", height="2", command=prokom).pack()
     Label(screen10, text="").pack()
@@ -679,7 +679,7 @@ def melihat_presensi():
 def menumahasiswa():
     global screen6
     screen6=Toplevel(screen)
-    screen6.geometry("500x550")
+    screen6.geometry("1280x720")
     screen6.title("Melakukan Presensi")
     Button(screen6, text="Programa Komputer", width="30", height="2", command=prokom).pack()
     Label(screen6, text="").pack()
@@ -703,7 +703,7 @@ def menumahasiswa():
 def kalkulus():
     root=Tk()
     root.title("Melihat Presensi")
-    root.geometry("300x250")
+    root.geometry("1280x720")
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5", "Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10", "Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15", "Pertemuan 16"]
     l1=Label(root,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
@@ -715,7 +715,7 @@ def kalkulus():
 def AEB():
     root=Tk()
     root.title("Melihat Presensi")
-    root.geometry("300x250")
+    root.geometry("1280x720")
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5", "Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10", "Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15", "Pertemuan 16"]
     l1=Label(root,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
@@ -727,7 +727,7 @@ def AEB():
 def PRD():
     root=Tk()
     root.title("Melihat Presensi")
-    root.geometry("300x250")
+    root.geometry("1280x720")
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5", "Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10", "Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15", "Pertemuan 16"]
     l1=Label(root,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
@@ -739,7 +739,7 @@ def PRD():
 def psikin():
     root=Tk()
     root.title("Melihat Presensi")
-    root.geometry("300x250")
+    root.geometry("1280x720")
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5", "Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10", "Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15", "Pertemuan 16"]
     l1=Label(root,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
@@ -751,7 +751,7 @@ def psikin():
 def mekatek():
     root=Tk()
     root.title("Melihat Presensi")
-    root.geometry("300x250")
+    root.geometry("1280x720")
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5", "Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10", "Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15", "Pertemuan 16"]
     l1=Label(root,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
@@ -763,7 +763,7 @@ def mekatek():
 def mattek():
     root=Tk()
     root.title("Melihat Presensi")
-    root.geometry("300x250")
+    root.geometry("1280x720")
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5", "Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10", "Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15", "Pertemuan 16"]
     l1=Label(root,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
@@ -775,7 +775,7 @@ def mattek():
 def fisdas():
     root=Tk()
     root.title("Melihat Presensi")
-    root.geometry("300x250")
+    root.geometry("1280x720")
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5", "Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10", "Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15", "Pertemuan 16"]
     l1=Label(root,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
@@ -787,20 +787,19 @@ def fisdas():
 def bio():
     root=Tk()
     root.title("Melihat Presensi")
-    root.geometry("300x250")
+    root.geometry("1280x720")
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5", "Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10", "Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15", "Pertemuan 16"]
     l1=Label(root,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
     cmb=ttk.Combobox(root,value=course,width=15)
     cmb.grid(row=16,column=16)
     cmb.current(0)
-    Button(text="SUBMIT", weidth=10, height=1, command=)
     root.mainloop()
 
 def prokom():
     root=Tk()
     root.title("Melihat Presensi")
-    root.geometry("300x250")
+    root.geometry("1280x720")
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5", "Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10", "Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15", "Pertemuan 16"]
     l1=Label(root,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
@@ -810,7 +809,7 @@ def prokom():
     root.mainloop()
 
 def melihat_bio():
-    
+    print()
 
 
 main_screen()
