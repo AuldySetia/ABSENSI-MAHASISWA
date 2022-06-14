@@ -264,16 +264,12 @@ def saveprokom():
     global namafile, csvheader, writer, presensi
     #####------------------------------------------PENTING!!!!-----------------------------------------#####
     #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
-    save_path = "D:\Kuliah\Tugas_Prokom_Praktikum\ABSENSI-MAHASISWA\Prokom"
+    save_path = "Prokom"
     namafile = os.path.join(save_path, f'Pertemuan {defprokom.get()}.csv')
-    csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
+    csvheader = ['Nama', 'NIM', 'Kehadiran']
 
     #Membuka file csv dalam mode append
     with open(namafile,'a', newline='\n') as filecsv:
-
-        #dictnilai adalah dictionary digunakan untuk writerow.
-        #Mengubah data menjadi dictionary untuk dimasukkan per row
-        presensi = {'Nama': print(), 'NIM': print(), 'Kehadiran': print(), 'Keterangan': print()}
 
         writer = csv.DictWriter(filecsv, fieldnames = csvheader)
 
@@ -283,8 +279,7 @@ def saveprokom():
         else:
             None
 
-        writer.writerow(presensi)
-    
+        
 def mkalkulus():
     global screen10, defkalkulus
     screen10=Toplevel(screen)
@@ -300,19 +295,15 @@ def mkalkulus():
     Button(screen10, text="SUBMIT", width=10, height=1, command=savekalkulus).pack()
 
 def savekalkulus():
-    global namafile, csvheader, writer, presensi, save_path
+    global namafile, csvheader, writer, presensi
     #####------------------------------------------PENTING!!!!-----------------------------------------#####
     #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
-    save_path = "D:\Kuliah\Tugas_Prokom_Praktikum\ABSENSI-MAHASISWA\Kalkulus"
+    save_path = "Kalkulus"
     namafile = os.path.join(save_path, f'Pertemuan {defkalkulus.get()}.csv')
-    csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
+    csvheader = ['Nama', 'NIM', 'Kehadiran']
 
     #Membuka file csv dalam mode append
     with open(namafile,'a', newline='\n') as filecsv:
-
-        #dictnilai adalah dictionary digunakan untuk writerow.
-        #Mengubah data menjadi dictionary untuk dimasukkan per row
-        presensi = {'Nama': print(), 'NIM': print(), 'Kehadiran': print(), 'Keterangan': print()}
 
         writer = csv.DictWriter(filecsv, fieldnames = csvheader)
 
@@ -321,8 +312,6 @@ def savekalkulus():
             writer.writeheader()
         else:
             None
-            
-        writer.writerow(presensi)
 
 
 def mAEB():
@@ -343,16 +332,12 @@ def saveAEB():
     global namafile, csvheader, writer, presensi
     #####------------------------------------------PENTING!!!!-----------------------------------------#####
     #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
-    save_path = "D:\Kuliah\Tugas_Prokom_Praktikum\ABSENSI-MAHASISWA\AEB"
+    save_path = "AEB"
     namafile = os.path.join(save_path, f'Pertemuan {defAEB.get()}.csv')
-    csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
+    csvheader = ['Nama', 'NIM', 'Kehadiran']
 
     #Membuka file csv dalam mode append
     with open(namafile,'a', newline='\n') as filecsv:
-
-        #dictnilai adalah dictionary digunakan untuk writerow.
-        #Mengubah data menjadi dictionary untuk dimasukkan per row
-        presensi = {'Nama': print(), 'NIM': print(), 'Kehadiran': print(), 'Keterangan': print()}
 
         writer = csv.DictWriter(filecsv, fieldnames = csvheader)
 
@@ -361,8 +346,6 @@ def saveAEB():
             writer.writeheader()
         else:
             None
-            
-        writer.writerow(presensi)
 
 
 def mPRD():
@@ -383,16 +366,12 @@ def savePRD():
     global namafile, csvheader, writer, presensi
     #####------------------------------------------PENTING!!!!-----------------------------------------#####
     #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
-    save_path = "D:\Kuliah\Tugas_Prokom_Praktikum\ABSENSI-MAHASISWA\PRD"
+    save_path = "PRD"
     namafile = os.path.join(save_path, f'Pertemuan {defPRD.get()}.csv')
-    csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
+    csvheader = ['Nama', 'NIM', 'Kehadiran']
 
     #Membuka file csv dalam mode append
     with open(namafile,'a', newline='\n') as filecsv:
-
-        #dictnilai adalah dictionary digunakan untuk writerow.
-        #Mengubah data menjadi dictionary untuk dimasukkan per row
-        presensi = {'Nama': print(), 'NIM': print(), 'Kehadiran': print(), 'Keterangan': print()}
 
         writer = csv.DictWriter(filecsv, fieldnames = csvheader)
 
@@ -401,8 +380,6 @@ def savePRD():
             writer.writeheader()
         else:
             None
-            
-        writer.writerow(presensi)
 
 
 def mpsikin():
@@ -423,16 +400,12 @@ def savepsikin():
     global namafile, csvheader, writer, presensi
     #####------------------------------------------PENTING!!!!-----------------------------------------#####
     #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
-    save_path = "D:\Kuliah\Tugas_Prokom_Praktikum\ABSENSI-MAHASISWA\Psikin"
+    save_path = "Psikin"
     namafile = os.path.join(save_path, f'Pertemuan {defpsikin.get()}.csv')
-    csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
+    csvheader = ['Nama', 'NIM', 'Kehadiran']
 
     #Membuka file csv dalam mode append
     with open(namafile,'a', newline='\n') as filecsv:
-
-        #dictnilai adalah dictionary digunakan untuk writerow.
-        #Mengubah data menjadi dictionary untuk dimasukkan per row
-        presensi = {'Nama': print(), 'NIM': print(), 'Kehadiran': print(), 'Keterangan': print()}
 
         writer = csv.DictWriter(filecsv, fieldnames = csvheader)
 
@@ -441,8 +414,6 @@ def savepsikin():
             writer.writeheader()
         else:
             None
-            
-        writer.writerow(presensi)
 
 
 def mmekatek():
@@ -463,16 +434,12 @@ def savemekatek():
     global namafile, csvheader, writer, presensi
     #####------------------------------------------PENTING!!!!-----------------------------------------#####
     #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
-    save_path = "D:\Kuliah\Tugas_Prokom_Praktikum\ABSENSI-MAHASISWA\Mekatek"
+    save_path = "Mekatek"
     namafile = os.path.join(save_path, f'Pertemuan {defmekatek.get()}.csv')
-    csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
+    csvheader = ['Nama', 'NIM', 'Kehadiran']
 
     #Membuka file csv dalam mode append
     with open(namafile,'a', newline='\n') as filecsv:
-
-        #dictnilai adalah dictionary digunakan untuk writerow.
-        #Mengubah data menjadi dictionary untuk dimasukkan per row
-        presensi = {'Nama': print(), 'NIM': print(), 'Kehadiran': print(), 'Keterangan': print()}
 
         writer = csv.DictWriter(filecsv, fieldnames = csvheader)
 
@@ -481,8 +448,6 @@ def savemekatek():
             writer.writeheader()
         else:
             None
-            
-        writer.writerow(presensi)
 
 
 def mmattek():
@@ -503,16 +468,12 @@ def savemattek():
     global namafile, csvheader, writer, presensi
     #####------------------------------------------PENTING!!!!-----------------------------------------#####
     #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
-    save_path = "D:\Kuliah\Tugas_Prokom_Praktikum\ABSENSI-MAHASISWA\Mattek"
+    save_path = "Mattek"
     namafile = os.path.join(save_path, f'Pertemuan {defmattek.get()}.csv')
-    csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
+    csvheader = ['Nama', 'NIM', 'Kehadiran']
 
     #Membuka file csv dalam mode append
     with open(namafile,'a', newline='\n') as filecsv:
-
-        #dictnilai adalah dictionary digunakan untuk writerow.
-        #Mengubah data menjadi dictionary untuk dimasukkan per row
-        presensi = {'Nama': print(), 'NIM': print(), 'Kehadiran': print(), 'Keterangan': print()}
 
         writer = csv.DictWriter(filecsv, fieldnames = csvheader)
 
@@ -521,8 +482,6 @@ def savemattek():
             writer.writeheader()
         else:
             None
-            
-        writer.writerow(presensi)
 
 
 def mfisdas():
@@ -543,16 +502,12 @@ def savefisdas():
     global namafile, csvheader, writer, presensi
     #####------------------------------------------PENTING!!!!-----------------------------------------#####
     #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
-    save_path = "D:\Kuliah\Tugas_Prokom_Praktikum\ABSENSI-MAHASISWA\Fisdas"
+    save_path = "Fisdas"
     namafile = os.path.join(save_path, f'Pertemuan {deffisdas.get()}.csv')
-    csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
+    csvheader = ['Nama', 'NIM', 'Kehadiran']
 
     #Membuka file csv dalam mode append
     with open(namafile,'a', newline='\n') as filecsv:
-
-        #dictnilai adalah dictionary digunakan untuk writerow.
-        #Mengubah data menjadi dictionary untuk dimasukkan per row
-        presensi = {'Nama': print(), 'NIM': print(), 'Kehadiran': print(), 'Keterangan': print()}
 
         writer = csv.DictWriter(filecsv, fieldnames = csvheader)
 
@@ -562,7 +517,6 @@ def savefisdas():
         else:
             None
             
-        writer.writerow(presensi)
 
 def mbio():
     global screen16, defbio
@@ -582,19 +536,12 @@ def savebio():
     global namafile, csvheader, writer, presensi
     #####------------------------------------------PENTING!!!!-----------------------------------------#####
     #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
-    save_path = "D:\Kuliah\Tugas_Prokom_Praktikum\ABSENSI-MAHASISWA\Bio"
+    save_path = "Bio"
     namafile = os.path.join(save_path, f'Pertemuan {defbio.get()}.csv')
-    csvheader = ['Nama', 'NIM', 'Kehadiran', 'Keterangan']
+    csvheader = ['Nama', 'NIM', 'Kehadiran']
 
     #Membuka file csv dalam mode append
     with open(namafile,'a', newline='\n') as filecsv:
-
-        #dictnilai adalah dictionary digunakan untuk writerow.
-        #Mengubah data menjadi dictionary untuk dimasukkan per row
-        presensi = {'Nama': [namalengkapentry.get()],
-                    'NIM': [nimentry.get()],
-                    'Kehadiran': [combo_hadir.get()],
-                    'Keterangan': [keteranganentry.get()]}
 
         writer = csv.DictWriter(filecsv, fieldnames = csvheader)
 
@@ -603,8 +550,7 @@ def savebio():
             writer.writeheader()
         else:
             None
-            
-        writer.writerow(presensi)
+        
 
 def Pertemuan1():
     print()
@@ -659,23 +605,23 @@ def melihat_presensi():
     screen10=Toplevel(screen)
     screen10.geometry("1280x720")
     screen10.title("Melihat Presensi")
-    Button(screen10, text="Programa Komputer", width="30", height="2", command=prokom).pack()
+    Button(screen10, text="Programa Komputer", width="30", height="2", command=Pertemuan1).pack()
     Label(screen10, text="").pack()
-    Button(screen10, text="Kalkulus", width="30", height="2", command=kalkulus).pack()
+    Button(screen10, text="Kalkulus", width="30", height="2", command=Pertemuan2).pack()
     Label(screen10, text="").pack()
-    Button(screen10, text="Fisika Dasar", width="30", height="2", command=fisdas).pack()
+    Button(screen10, text="Fisika Dasar", width="30", height="2", command=Pertemuan3).pack()
     Label(screen10, text="").pack()
-    Button(screen10, text="Anggaran dan Estimasi Biaya", width="30", height="2", command=AEB).pack()
+    Button(screen10, text="Anggaran dan Estimasi Biaya", width="30", height="2", command=Pertemuan4).pack()
     Label(screen10, text="").pack()
-    Button(screen10, text="Material Teknik", width="30", height="2", command=mattek).pack()
+    Button(screen10, text="Material Teknik", width="30", height="2", command=Pertemuan5).pack()
     Label(screen10, text="").pack()
-    Button(screen10, text="Mekanika Teknik", width="30", height="2", command=mekatek).pack()
+    Button(screen10, text="Mekanika Teknik", width="30", height="2", command=Pertemuan6).pack()
     Label(screen10, text="").pack()
-    Button(screen10, text="Pengantar Rekayasa dan Desain", width="30", height="2", command=PRD).pack()
+    Button(screen10, text="Pengantar Rekayasa dan Desain", width="30", height="2", command=Pertemuan7).pack()
     Label(screen10, text="").pack()
-    Button(screen10, text="Psikologi Industri", width="30", height="2", command=psikin).pack()
+    Button(screen10, text="Psikologi Industri", width="30", height="2", command=Pertemuan8).pack()
     Label(screen10, text="").pack()
-    Button(screen10, text="Biologi", width="30", height="2", command=bio).pack()
+    Button(screen10, text="Biologi", width="30", height="2", command=Pertemuan9).pack()
     Label(screen10, text="").pack()
 
 
@@ -704,19 +650,21 @@ def menumahasiswa():
     Label(screen6, text="").pack()
 
 def kalkulus():
+    global cmb3
     root=Tk()
     root.title("Melihat Presensi")
     root.geometry("1280x720")
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5", "Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10", "Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15", "Pertemuan 16"]
     l1=Label(root,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
-    cmb=ttk.Combobox(root,value=course,width=15)
-    cmb.grid(row=16,column=16)
-    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisipresensi).place(x=35,y=254) 
-    cmb.current(0)
+    cmb3=ttk.Combobox(root,value=course,width=15)
+    cmb3.grid(row=16,column=16)
+    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisikalkulus).place(x=35,y=254) 
+    cmb3.current(0)
     root.mainloop()
 
 def AEB():
+    global cmb
     root=Tk()
     root.title("Melihat Presensi")
     root.geometry("1280x720")
@@ -726,76 +674,81 @@ def AEB():
     cmb=ttk.Combobox(root,value=course,width=15)
     cmb.grid(row=16,column=16)
     cmb.current(0)
-    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisipresensi).place(x=35,y=254)
+    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisiaeb).place(x=35,y=254)
     root.mainloop()
 
 def PRD():
+    global cmb6
     root=Tk()
     root.title("Melihat Presensi")
     root.geometry("1280x720")
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5", "Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10", "Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15", "Pertemuan 16"]
     l1=Label(root,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
-    cmb=ttk.Combobox(root,value=course,width=15)
-    cmb.grid(row=16,column=16)
-    cmb.current(0)
-    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisipresensi).place(x=35,y=254)
+    cmb6=ttk.Combobox(root,value=course,width=15)
+    cmb6.grid(row=16,column=16)
+    cmb6.current(0)
+    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisiprd).place(x=35,y=254)
     root.mainloop()
 
 def psikin():
+    global cmb8
     root=Tk()
     root.title("Melihat Presensi")
     root.geometry("1280x720")
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5", "Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10", "Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15", "Pertemuan 16"]
     l1=Label(root,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
-    cmb=ttk.Combobox(root,value=course,width=15)
-    cmb.grid(row=16,column=16)
-    cmb.current(0)
-    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisipresensi).place(x=35,y=254)
+    cmb8=ttk.Combobox(root,value=course,width=15)
+    cmb8.grid(row=16,column=16)
+    cmb8.current(0)
+    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisipsikin).place(x=35,y=254)
     root.mainloop()
 
 def mekatek():
+    global cmb5
     root=Tk()
     root.title("Melihat Presensi")
     root.geometry("1280x720")
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5", "Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10", "Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15", "Pertemuan 16"]
     l1=Label(root,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
-    cmb=ttk.Combobox(root,value=course,width=15)
-    cmb.grid(row=16,column=16)
-    cmb.current(0)
-    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisipresensi).place(x=35,y=254) 
+    cmb5=ttk.Combobox(root,value=course,width=15)
+    cmb5.grid(row=16,column=16)
+    cmb5.current(0)
+    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisimekatek).place(x=35,y=254) 
     root.mainloop()
 
 def mattek():
+    global cmb4
     root=Tk()
     root.title("Melihat Presensi")
     root.geometry("1280x720")
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5", "Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10", "Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15", "Pertemuan 16"]
     l1=Label(root,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
-    cmb=ttk.Combobox(root,value=course,width=15)
-    cmb.grid(row=16,column=16)
-    cmb.current(0)
-    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisipresensi).place(x=35,y=254)
+    cmb4=ttk.Combobox(root,value=course,width=15)
+    cmb4.grid(row=16,column=16)
+    cmb4.current(0)
+    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisimattek).place(x=35,y=254)
     root.mainloop()
 
 def fisdas():
-    global cmb
+    global cmb2
     root=Tk()
     root.title("Melihat Presensi")
     root.geometry("1280x720")
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5", "Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10", "Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15", "Pertemuan 16"]
     l1=Label(root,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
-    cmb=ttk.Combobox(root,value=course,width=15)
-    cmb.grid(row=16,column=16)
-    cmb.current(0)
-    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisipresensi).place(x=35,y=254)
+    cmb2=ttk.Combobox(root,value=course,width=15)
+    cmb2.grid(row=16,column=16)
+    cmb2.current(0)
+    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisifisdas).place(x=35,y=254)
     root.mainloop()
 
 def bio():
+    global cmb1
     root=Tk()
     root.title("Melihat Presensi")
     root.geometry("1280x720")
@@ -803,27 +756,28 @@ def bio():
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5", "Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10", "Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15", "Pertemuan 16"]
     l1=Label(root,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
-    cmb=ttk.Combobox(root,value=course,width=15)
-    cmb.grid(row=16,column=16)
-    cmb.current(0)
-    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisipresensi).place(x=35,y=254)
+    cmb1=ttk.Combobox(root,value=course,width=15)
+    cmb1.grid(row=16,column=16)
+    cmb1.current(0)
+    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisibio).place(x=35,y=254)
     root.mainloop()
 
 def prokom():
+    global cmb7
     root=Tk()
     root.title("Melihat Presensi")
     root.geometry("1280x720")
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5", "Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10", "Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15", "Pertemuan 16"]
     l1=Label(root,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
-    cmb=ttk.Combobox(root,value=course,width=15)
-    cmb.grid(row=16,column=16)
-    cmb.current(0)
-    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisipresensi).place(x=35,y=254)
+    cmb7=ttk.Combobox(root,value=course,width=15)
+    cmb7.grid(row=16,column=16)
+    cmb7.current(0)
+    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisiprokom).place(x=35,y=254)
     root.mainloop()
 
-def mengisipresensi():
-    global screen17, namalengkapentry, nimentry, combo_hadir, keteranganentry
+def mengisiaeb():
+    global namalengkapentry,nimentry,combo_hadir
     screen17=Toplevel(screen)
     screen17.geometry("1280x720")
     screen17.title("Mengisi Presensi")
@@ -854,32 +808,521 @@ def mengisipresensi():
     combo_hadir["value"]=("Hadir","Sakit","Izin")
     combo_hadir.grid(row=2,column=1,pady=10)
 
-    keterangan=Label(F1,text="Keterangan",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
-    keterangan.grid(row=3,column=0,padx=30,pady=10)
-    keteranganentry=Text(F1,width=20,height=3,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
-    keteranganentry.grid(row=3,column=1, pady=10, sticky="w")
+    Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvaeb,fg="white",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
 
-    Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=savepresensi(),fg="white",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
-
-    
     #====================Right frame============#
     F2=Frame(screen17, bg=bg_color, relief=RIDGE, bd=15)
     F2.place(x=665,y=80,width=610,height=530)
 
+def csvaeb():
+    save_path = 'AEB'
 
-def savepresensi(namafilescsv, pertemuan):
-    variabel = {"Nama Lengkap" : [namalengkapentry.get()],
-                "NIM" : [nimentry.get()],
-                "Kehadiran" : [combo_hadir.get()],
-                "Keterangan" : [keteranganentry.get()]}
-    test = pd.DataFrame(variabel)
-    namafilecsv = os.path.join(f'cmb.get().csv')
-    with open(namafilecsv, "a") as csvfile:
-        csv_writer=csv.DictWriter(csvfile)
-        csv_writer.writerow(variabel)
+    namafile = os.path.join(save_path, f'{cmb.get()}.csv')
+    csvheader = ['Nama', 'NIM', 'Kehadiran']    
 
+    #Membuka file csv dalam mode append
+    with open(namafile,'a', newline='\n') as filecsv:
 
-    #test.to_csv(namafilecsv)
+        #dictnilai adalah dictionary digunakan untuk writerow.
+        #Mengubah data menjadi dictionary untuk dimasukkan per row
+        presensi = {'Nama': namalengkapentry.get(), 'NIM': nimentry.get(), 'Kehadiran': combo_hadir.get()}
 
+        writer = csv.DictWriter(filecsv, fieldnames = csvheader)
+
+        #Jika file tidak ada, maka auto membuat file dan menambah csvheader di dalamnya
+        if os.stat(namafile).st_size == 0:
+            writer.writeheader()
+        else:
+            None
+    
+        writer.writerow(presensi)
+    
+def mengisibio():
+    global namalengkapentry1,nimentry1,combo_hadir1
+    screen18=Toplevel(screen)
+    screen18.geometry("1280x720")
+    screen18.title("Mengisi Presensi")
+    bg_color="#990099"
+
+    #======================Heading============#
+    title=Label(screen18,text="PRESENSI MATA KULIAH",bg=bg_color,fg="white",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
+    title.pack(fill=X)
+
+    #====================Left frame============#
+    F1=Frame(screen18, bg=bg_color, relief=RIDGE, bd=15)
+    F1.place(x=10,y=80,width=650,height=530)
+
+    nama=Label(F1,text="Nama Lengkap",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
+    nama.grid(row=0,column=0,padx=30,pady=10)
+    namalengkapentry1=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
+    namalengkapentry1.grid(row=0,column=1, pady=10, sticky="w")
+
+    nim=Label(F1,text="NIM",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
+    nim.grid(row=1,column=0,padx=30,pady=10)
+    nimentry1=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
+    nimentry1.grid(row=1,column=1, pady=10, sticky="w")
+
+    hadir=Label(F1,text="Kehadiran",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
+    hadir.grid(row=2,column=0,padx=30,pady=10)
+
+    combo_hadir1=ttk.Combobox(F1,font=("times new rommon",20,"bold"),state="readonly")
+    combo_hadir1["value"]=("Hadir","Sakit","Izin")
+    combo_hadir1.grid(row=2,column=1,pady=10)
+
+    Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvbio,fg="white",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
+
+    #====================Right frame============#
+    F2=Frame(screen18, bg=bg_color, relief=RIDGE, bd=15)
+    F2.place(x=665,y=80,width=610,height=530)
+
+def csvbio():
+    save_path = 'Bio'
+
+    namafile = os.path.join(save_path, f'{cmb1.get()}.csv')
+    csvheader = ['Nama', 'NIM', 'Kehadiran']    
+
+    #Membuka file csv dalam mode append
+    with open(namafile,'a', newline='\n') as filecsv:
+
+        #dictnilai adalah dictionary digunakan untuk writerow.
+        #Mengubah data menjadi dictionary untuk dimasukkan per row
+        presensi = {'Nama': namalengkapentry1.get(), 'NIM': nimentry1.get(), 'Kehadiran': combo_hadir1.get()}
+
+        writer = csv.DictWriter(filecsv, fieldnames = csvheader)
+
+        #Jika file tidak ada, maka auto membuat file dan menambah csvheader di dalamnya
+        if os.stat(namafile).st_size == 0:
+            writer.writeheader()
+        else:
+            None
+    
+        writer.writerow(presensi)
+        
+def mengisifisdas():
+    global namalengkapentry2,nimentry2,combo_hadir2
+    screen19=Toplevel(screen)
+    screen19.geometry("1280x720")
+    screen19.title("Mengisi Presensi")
+    bg_color="#990099"
+
+    #======================Heading============#
+    title=Label(screen19,text="PRESENSI MATA KULIAH",bg=bg_color,fg="white",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
+    title.pack(fill=X)
+
+    #====================Left frame============#
+    F1=Frame(screen19, bg=bg_color, relief=RIDGE, bd=15)
+    F1.place(x=10,y=80,width=650,height=530)
+
+    nama=Label(F1,text="Nama Lengkap",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
+    nama.grid(row=0,column=0,padx=30,pady=10)
+    namalengkapentry2=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
+    namalengkapentry2.grid(row=0,column=1, pady=10, sticky="w")
+
+    nim=Label(F1,text="NIM",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
+    nim.grid(row=1,column=0,padx=30,pady=10)
+    nimentry2=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
+    nimentry2.grid(row=1,column=1, pady=10, sticky="w")
+
+    hadir=Label(F1,text="Kehadiran",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
+    hadir.grid(row=2,column=0,padx=30,pady=10)
+
+    combo_hadir2=ttk.Combobox(F1,font=("times new rommon",20,"bold"),state="readonly")
+    combo_hadir2["value"]=("Hadir","Sakit","Izin")
+    combo_hadir2.grid(row=2,column=1,pady=10)
+
+    Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvfisdas,fg="white",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
+
+    #====================Right frame============#
+    F2=Frame(screen19, bg=bg_color, relief=RIDGE, bd=15)
+    F2.place(x=665,y=80,width=610,height=530)
+
+def csvfisdas():
+    save_path = 'Fisdas'
+
+    namafile = os.path.join(save_path, f'{cmb2.get()}.csv')
+    csvheader = ['Nama', 'NIM', 'Kehadiran']    
+
+    #Membuka file csv dalam mode append
+    with open(namafile,'a', newline='\n') as filecsv:
+
+        #dictnilai adalah dictionary digunakan untuk writerow.
+        #Mengubah data menjadi dictionary untuk dimasukkan per row
+        presensi = {'Nama': namalengkapentry2.get(), 'NIM': nimentry2.get(), 'Kehadiran': combo_hadir2.get()}
+
+        writer = csv.DictWriter(filecsv, fieldnames = csvheader)
+
+        #Jika file tidak ada, maka auto membuat file dan menambah csvheader di dalamnya
+        if os.stat(namafile).st_size == 0:
+            writer.writeheader()
+        else:
+            None
+    
+        writer.writerow(presensi)
+
+def mengisikalkulus():
+    global namalengkapentry3,nimentry3,combo_hadir3
+    screen20=Toplevel(screen)
+    screen20.geometry("1280x720")
+    screen20.title("Mengisi Presensi")
+    bg_color="#990099"
+
+    #======================Heading============#
+    title=Label(screen20,text="PRESENSI MATA KULIAH",bg=bg_color,fg="white",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
+    title.pack(fill=X)
+
+    #====================Left frame============#
+    F1=Frame(screen20, bg=bg_color, relief=RIDGE, bd=15)
+    F1.place(x=10,y=80,width=650,height=530)
+
+    nama=Label(F1,text="Nama Lengkap",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
+    nama.grid(row=0,column=0,padx=30,pady=10)
+    namalengkapentry3=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
+    namalengkapentry3.grid(row=0,column=1, pady=10, sticky="w")
+
+    nim=Label(F1,text="NIM",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
+    nim.grid(row=1,column=0,padx=30,pady=10)
+    nimentry3=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
+    nimentry3.grid(row=1,column=1, pady=10, sticky="w")
+
+    hadir=Label(F1,text="Kehadiran",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
+    hadir.grid(row=2,column=0,padx=30,pady=10)
+
+    combo_hadir3=ttk.Combobox(F1,font=("times new rommon",20,"bold"),state="readonly")
+    combo_hadir3["value"]=("Hadir","Sakit","Izin")
+    combo_hadir3.grid(row=2,column=1,pady=10)
+
+    Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvkalkulus,fg="white",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
+
+    #====================Right frame============#
+    F2=Frame(screen20, bg=bg_color, relief=RIDGE, bd=15)
+    F2.place(x=665,y=80,width=610,height=530)
+
+def csvkalkulus():
+    save_path = 'Kalkulus'
+
+    namafile = os.path.join(save_path, f'{cmb3.get()}.csv')
+    csvheader = ['Nama', 'NIM', 'Kehadiran']
+
+    #Membuka file csv dalam mode append
+    with open(namafile,'a', newline='\n') as filecsv:
+
+        #dictnilai adalah dictionary digunakan untuk writerow.
+        #Mengubah data menjadi dictionary untuk dimasukkan per row
+        presensi = {'Nama': namalengkapentry3.get(), 'NIM': nimentry3.get(), 'Kehadiran': combo_hadir3.get()}
+
+        writer = csv.DictWriter(filecsv, fieldnames = csvheader)
+
+        #Jika file tidak ada, maka auto membuat file dan menambah csvheader di dalamnya
+        if os.stat(namafile).st_size == 0:
+            writer.writeheader()
+        else:
+            None
+    
+        writer.writerow(presensi)
+
+def mengisimattek():
+    global namalengkapentry4,nimentry4,combo_hadir4
+    screen21=Toplevel(screen)
+    screen21.geometry("1280x720")
+    screen21.title("Mengisi Presensi")
+    bg_color="#990099"
+
+    #======================Heading============#
+    title=Label(screen21,text="PRESENSI MATA KULIAH",bg=bg_color,fg="white",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
+    title.pack(fill=X)
+
+    #====================Left frame============#
+    F1=Frame(screen21, bg=bg_color, relief=RIDGE, bd=15)
+    F1.place(x=10,y=80,width=650,height=530)
+
+    nama=Label(F1,text="Nama Lengkap",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
+    nama.grid(row=0,column=0,padx=30,pady=10)
+    namalengkapentry4=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
+    namalengkapentry4.grid(row=0,column=1, pady=10, sticky="w")
+
+    nim=Label(F1,text="NIM",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
+    nim.grid(row=1,column=0,padx=30,pady=10)
+    nimentry4=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
+    nimentry4.grid(row=1,column=1, pady=10, sticky="w")
+
+    hadir=Label(F1,text="Kehadiran",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
+    hadir.grid(row=2,column=0,padx=30,pady=10)
+
+    combo_hadir4=ttk.Combobox(F1,font=("times new rommon",20,"bold"),state="readonly")
+    combo_hadir4["value"]=("Hadir","Sakit","Izin")
+    combo_hadir4.grid(row=2,column=1,pady=10)
+
+    Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvmattek,fg="white",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
+
+    #====================Right frame============#
+    F2=Frame(screen21, bg=bg_color, relief=RIDGE, bd=15)
+    F2.place(x=665,y=80,width=610,height=530)
+
+def csvmattek():
+    save_path = 'Mattek'
+
+    namafile = os.path.join(save_path, f'{cmb4.get()}.csv')
+    csvheader = ['Nama', 'NIM', 'Kehadiran']    
+
+    #Membuka file csv dalam mode append
+    with open(namafile,'a', newline='\n') as filecsv:
+
+        #dictnilai adalah dictionary digunakan untuk writerow.
+        #Mengubah data menjadi dictionary untuk dimasukkan per row
+        presensi = {'Nama': namalengkapentry4.get(), 'NIM': nimentry4.get(), 'Kehadiran': combo_hadir4.get()}
+
+        writer = csv.DictWriter(filecsv, fieldnames = csvheader)
+
+        #Jika file tidak ada, maka auto membuat file dan menambah csvheader di dalamnya
+        if os.stat(namafile).st_size == 0:
+            writer.writeheader()
+        else:
+            None
+    
+        writer.writerow(presensi)
+
+def mengisimekatek():
+    global namalengkapentry5,nimentry5,combo_hadir5
+    screen22=Toplevel(screen)
+    screen22.geometry("1280x720")
+    screen22.title("Mengisi Presensi")
+    bg_color="#990099"
+
+    #======================Heading============#
+    title=Label(screen22,text="PRESENSI MATA KULIAH",bg=bg_color,fg="white",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
+    title.pack(fill=X)
+
+    #====================Left frame============#
+    F1=Frame(screen22, bg=bg_color, relief=RIDGE, bd=15)
+    F1.place(x=10,y=80,width=650,height=530)
+
+    nama=Label(F1,text="Nama Lengkap",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
+    nama.grid(row=0,column=0,padx=30,pady=10)
+    namalengkapentry5=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
+    namalengkapentry5.grid(row=0,column=1, pady=10, sticky="w")
+
+    nim=Label(F1,text="NIM",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
+    nim.grid(row=1,column=0,padx=30,pady=10)
+    nimentry5=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
+    nimentry5.grid(row=1,column=1, pady=10, sticky="w")
+
+    hadir=Label(F1,text="Kehadiran",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
+    hadir.grid(row=2,column=0,padx=30,pady=10)
+
+    combo_hadir5=ttk.Combobox(F1,font=("times new rommon",20,"bold"),state="readonly")
+    combo_hadir5["value"]=("Hadir","Sakit","Izin")
+    combo_hadir5.grid(row=2,column=1,pady=10)
+
+    Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvmekatek,fg="white",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
+
+    #====================Right frame============#
+    F2=Frame(screen22, bg=bg_color, relief=RIDGE, bd=15)
+    F2.place(x=665,y=80,width=610,height=530)
+
+def csvmekatek():
+    save_path = 'Mekatek'
+
+    namafile = os.path.join(save_path, f'{cmb5.get()}.csv')
+    csvheader = ['Nama', 'NIM', 'Kehadiran']    
+
+    #Membuka file csv dalam mode append
+    with open(namafile,'a', newline='\n') as filecsv:
+
+        #dictnilai adalah dictionary digunakan untuk writerow.
+        #Mengubah data menjadi dictionary untuk dimasukkan per row
+        presensi = {'Nama': namalengkapentry5.get(), 'NIM': nimentry5.get(), 'Kehadiran': combo_hadir5.get()}
+
+        writer = csv.DictWriter(filecsv, fieldnames = csvheader)
+
+        #Jika file tidak ada, maka auto membuat file dan menambah csvheader di dalamnya
+        if os.stat(namafile).st_size == 0:
+            writer.writeheader()
+        else:
+            None
+    
+        writer.writerow(presensi)
+
+def mengisiprd():
+    global namalengkapentry6,nimentry6,combo_hadir6
+    screen23=Toplevel(screen)
+    screen23.geometry("1280x720")
+    screen23.title("Mengisi Presensi")
+    bg_color="#990099"
+
+    #======================Heading============#
+    title=Label(screen23,text="PRESENSI MATA KULIAH",bg=bg_color,fg="white",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
+    title.pack(fill=X)
+
+    #====================Left frame============#
+    F1=Frame(screen23, bg=bg_color, relief=RIDGE, bd=15)
+    F1.place(x=10,y=80,width=650,height=530)
+
+    nama=Label(F1,text="Nama Lengkap",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
+    nama.grid(row=0,column=0,padx=30,pady=10)
+    namalengkapentry6=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
+    namalengkapentry6.grid(row=0,column=1, pady=10, sticky="w")
+
+    nim=Label(F1,text="NIM",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
+    nim.grid(row=1,column=0,padx=30,pady=10)
+    nimentry6=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
+    nimentry6.grid(row=1,column=1, pady=10, sticky="w")
+
+    hadir=Label(F1,text="Kehadiran",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
+    hadir.grid(row=2,column=0,padx=30,pady=10)
+
+    combo_hadir6=ttk.Combobox(F1,font=("times new rommon",20,"bold"),state="readonly")
+    combo_hadir6["value"]=("Hadir","Sakit","Izin")
+    combo_hadir6.grid(row=2,column=1,pady=10)
+
+    Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvprd,fg="white",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
+
+    #====================Right frame============#
+    F2=Frame(screen23, bg=bg_color, relief=RIDGE, bd=15)
+    F2.place(x=665,y=80,width=610,height=530)
+
+def csvprd():
+    save_path = 'PRD'
+
+    namafile = os.path.join(save_path, f'{cmb6.get()}.csv')
+    csvheader = ['Nama', 'NIM', 'Kehadiran']    
+
+    #Membuka file csv dalam mode append
+    with open(namafile,'a', newline='\n') as filecsv:
+
+        #dictnilai adalah dictionary digunakan untuk writerow.
+        #Mengubah data menjadi dictionary untuk dimasukkan per row
+        presensi = {'Nama': namalengkapentry6.get(), 'NIM': nimentry6.get(), 'Kehadiran': combo_hadir6.get()}
+
+        writer = csv.DictWriter(filecsv, fieldnames = csvheader)
+
+        #Jika file tidak ada, maka auto membuat file dan menambah csvheader di dalamnya
+        if os.stat(namafile).st_size == 0:
+            writer.writeheader()
+        else:
+            None
+    
+        writer.writerow(presensi)
+    
+def mengisiprokom():
+    global namalengkapentry7,nimentry7,combo_hadir7
+    screen24=Toplevel(screen)
+    screen24.geometry("1280x720")
+    screen24.title("Mengisi Presensi")
+    bg_color="#990099"
+
+    #======================Heading============#
+    title=Label(screen24,text="PRESENSI MATA KULIAH",bg=bg_color,fg="white",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
+    title.pack(fill=X)
+
+    #====================Left frame============#
+    F1=Frame(screen24, bg=bg_color, relief=RIDGE, bd=15)
+    F1.place(x=10,y=80,width=650,height=530)
+
+    nama=Label(F1,text="Nama Lengkap",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
+    nama.grid(row=0,column=0,padx=30,pady=10)
+    namalengkapentry7=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
+    namalengkapentry7.grid(row=0,column=1, pady=10, sticky="w")
+
+    nim=Label(F1,text="NIM",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
+    nim.grid(row=1,column=0,padx=30,pady=10)
+    nimentry7=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
+    nimentry7.grid(row=1,column=1, pady=10, sticky="w")
+
+    hadir=Label(F1,text="Kehadiran",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
+    hadir.grid(row=2,column=0,padx=30,pady=10)
+
+    combo_hadir7=ttk.Combobox(F1,font=("times new rommon",20,"bold"),state="readonly")
+    combo_hadir7["value"]=("Hadir","Sakit","Izin")
+    combo_hadir7.grid(row=2,column=1,pady=10)
+
+    Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvprokom,fg="white",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
+
+    #====================Right frame============#
+    F2=Frame(screen24, bg=bg_color, relief=RIDGE, bd=15)
+    F2.place(x=665,y=80,width=610,height=530)
+
+def csvprokom():
+    save_path = 'Prokom'
+
+    namafile = os.path.join(save_path, f'{cmb7.get()}.csv')
+    csvheader = ['Nama', 'NIM', 'Kehadiran']    
+
+    #Membuka file csv dalam mode append
+    with open(namafile,'a', newline='\n') as filecsv:
+
+        #dictnilai adalah dictionary digunakan untuk writerow.
+        #Mengubah data menjadi dictionary untuk dimasukkan per row
+        presensi = {'Nama': namalengkapentry7.get(), 'NIM': nimentry7.get(), 'Kehadiran': combo_hadir7.get()}
+
+        writer = csv.DictWriter(filecsv, fieldnames = csvheader)
+
+        #Jika file tidak ada, maka auto membuat file dan menambah csvheader di dalamnya
+        if os.stat(namafile).st_size == 0:
+            writer.writeheader()
+        else:
+            None
+    
+        writer.writerow(presensi)
+
+def mengisipsikin():
+    global namalengkapentry8,nimentry8,combo_hadir8
+    screen25=Toplevel(screen)
+    screen25.geometry("1280x720")
+    screen25.title("Mengisi Presensi")
+    bg_color="#990099"
+
+    #======================Heading============#
+    title=Label(screen25,text="PRESENSI MATA KULIAH",bg=bg_color,fg="white",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
+    title.pack(fill=X)
+
+    #====================Left frame============#
+    F1=Frame(screen25, bg=bg_color, relief=RIDGE, bd=15)
+    F1.place(x=10,y=80,width=650,height=530)
+
+    nama=Label(F1,text="Nama Lengkap",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
+    nama.grid(row=0,column=0,padx=30,pady=10)
+    namalengkapentry8=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
+    namalengkapentry8.grid(row=0,column=1, pady=10, sticky="w")
+
+    nim=Label(F1,text="NIM",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
+    nim.grid(row=1,column=0,padx=30,pady=10)
+    nimentry8=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
+    nimentry8.grid(row=1,column=1, pady=10, sticky="w")
+
+    hadir=Label(F1,text="Kehadiran",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
+    hadir.grid(row=2,column=0,padx=30,pady=10)
+
+    combo_hadir8=ttk.Combobox(F1,font=("times new rommon",20,"bold"),state="readonly")
+    combo_hadir8["value"]=("Hadir","Sakit","Izin")
+    combo_hadir8.grid(row=2,column=1,pady=10)
+
+    Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvpsikin,fg="white",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
+
+    #====================Right frame============#
+    F2=Frame(screen25, bg=bg_color, relief=RIDGE, bd=15)
+    F2.place(x=665,y=80,width=610,height=530)
+
+def csvpsikin():
+    save_path = 'Psikin'
+
+    namafile = os.path.join(save_path, f'{cmb8.get()}.csv')
+    csvheader = ['Nama', 'NIM', 'Kehadiran']    
+
+    #Membuka file csv dalam mode append
+    with open(namafile,'a', newline='\n') as filecsv:
+
+        #dictnilai adalah dictionary digunakan untuk writerow.
+        #Mengubah data menjadi dictionary untuk dimasukkan per row
+        presensi = {'Nama': namalengkapentry8.get(), 'NIM': nimentry8.get(), 'Kehadiran': combo_hadir8.get()}
+
+        writer = csv.DictWriter(filecsv, fieldnames = csvheader)
+
+        #Jika file tidak ada, maka auto membuat file dan menambah csvheader di dalamnya
+        if os.stat(namafile).st_size == 0:
+            writer.writeheader()
+        else:
+            None
+    
+        writer.writerow(presensi)
 
 main_screen()
