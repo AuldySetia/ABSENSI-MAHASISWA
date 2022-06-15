@@ -226,24 +226,25 @@ def membuat_presensi():
     screen5=Toplevel(screen)
     screen5.geometry("1280x720")
     screen5.title("Membuat Presensi")
-    Button(screen5, text="Programa Komputer", width="30", height="2", command=mprokom).pack()
-    Label(screen5, text="").pack()
-    Button(screen5, text="Kalkulus", width="30", height="2", command=mkalkulus).pack()
-    Label(screen5, text="").pack()
-    Button(screen5, text="Fisika Dasar", width="30", height="2", command=mfisdas).pack()
-    Label(screen5, text="").pack()
-    Button(screen5, text="Anggaran dan Estimasi Biaya", width="30", height="2", command=mAEB).pack()
-    Label(screen5, text="").pack()
-    Button(screen5, text="Material Teknik", width="30", height="2", command=mmattek).pack()
-    Label(screen5, text="").pack()
-    Button(screen5, text="Mekanika Teknik", width="30", height="2", command=mmekatek).pack()
-    Label(screen5, text="").pack()
-    Button(screen5, text="Pengantar Rekayasa dan Desain", width="30", height="2", command=mPRD).pack()
-    Label(screen5, text="").pack()
-    Button(screen5, text="Psikologi Industri", width="30", height="2", command=mpsikin).pack()
-    Label(screen5, text="").pack()
-    Button(screen5, text="Biologi", width="30", height="2", command=mbio).pack()
-    Label(screen5, text="").pack()
+
+    screen10_bg=PhotoImage(file="kotak.png")
+    bgscreen10=Label(screen5,image=screen10_bg,bg="white")
+    bgscreen10.place(x=0,y=0)
+
+    title=Label(screen5,text="MATA KULIAH",bg="black",fg="white",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
+    title.pack(fill=X)
+    
+    Button(screen5,text="PROGRAMA KOMPUTER", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=prokom).place(x=20,y=170)
+    Button(screen5,text="KALKULUS", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=kalkulus).place(x=430,y=170)
+    Button(screen5,text="FISIKA DASAR II", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=fisdas).place(x=835,y=170)
+    Button(screen5,text="ANALISIS ESTIMASI & BIAYA", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=AEB).place(x=20,y=320)
+    Button(screen5,text="MATERIAL TEKNIK", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=mattek).place(x=430,y=320)
+    Button(screen5,text="MEKANIKA TEKNIK", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=mekatek).place(x=835,y=320)
+    Button(screen5,text="PENGANTAR REKAYASA DESAIN", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=PRD).place(x=20,y=470)
+    Button(screen5,text="PSIKOLOGI INDUSTRI", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=psikin).place(x=430,y=470)
+    Button(screen5,text="BIOLOGI", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=bio).place(x=835,y=470)
+
+    screen5.mainloop()
 
 
 def mprokom():
@@ -659,50 +660,50 @@ def melihat_presensi():
     screen10=Toplevel(screen)
     screen10.geometry("1280x720")
     screen10.title("Melihat Presensi")
-    Button(screen10, text="Programa Komputer", width="30", height="2", command=prokom).pack()
-    Label(screen10, text="").pack()
-    Button(screen10, text="Kalkulus", width="30", height="2", command=kalkulus).pack()
-    Label(screen10, text="").pack()
-    Button(screen10, text="Fisika Dasar", width="30", height="2", command=fisdas).pack()
-    Label(screen10, text="").pack()
-    Button(screen10, text="Anggaran dan Estimasi Biaya", width="30", height="2", command=AEB).pack()
-    Label(screen10, text="").pack()
-    Button(screen10, text="Material Teknik", width="30", height="2", command=mattek).pack()
-    Label(screen10, text="").pack()
-    Button(screen10, text="Mekanika Teknik", width="30", height="2", command=mekatek).pack()
-    Label(screen10, text="").pack()
-    Button(screen10, text="Pengantar Rekayasa dan Desain", width="30", height="2", command=PRD).pack()
-    Label(screen10, text="").pack()
-    Button(screen10, text="Psikologi Industri", width="30", height="2", command=psikin).pack()
-    Label(screen10, text="").pack()
-    Button(screen10, text="Biologi", width="30", height="2", command=bio).pack()
-    Label(screen10, text="").pack()
 
+    screen10_bg=PhotoImage(file="kotak.png")
+    bgscreen10=Label(screen10,image=screen10_bg,bg="white")
+    bgscreen10.place(x=0,y=0)
+
+    title=Label(screen10,text="MATA KULIAH",bg="black",fg="white",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
+    title.pack(fill=X)
+    
+    Button(screen10,text="PROGRAMA KOMPUTER", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=prokom).place(x=20,y=170)
+    Button(screen10,text="KALKULUS", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=kalkulus).place(x=430,y=170)
+    Button(screen10,text="FISIKA DASAR II", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=fisdas).place(x=835,y=170)
+    Button(screen10,text="ANALISIS ESTIMASI & BIAYA", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=AEB).place(x=20,y=320)
+    Button(screen10,text="MATERIAL TEKNIK", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=mattek).place(x=430,y=320)
+    Button(screen10,text="MEKANIKA TEKNIK", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=mekatek).place(x=835,y=320)
+    Button(screen10,text="PENGANTAR REKAYASA DESAIN", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=PRD).place(x=20,y=470)
+    Button(screen10,text="PSIKOLOGI INDUSTRI", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=psikin).place(x=430,y=470)
+    Button(screen10,text="BIOLOGI", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=bio).place(x=835,y=470)
+
+    screen10.mainloop()
 
 def menumahasiswa():
     global screen6
     screen6=Toplevel(screen)
     screen6.geometry("1280x720")
-    screen6.title("Melakukan Presensi")
-    Button(screen6, text="Programa Komputer", width="30", height="2", command=prokom).pack()
-    Label(screen6, text="").pack()
-    Button(screen6, text="Kalkulus", width="30", height="2", command=kalkulus).pack()
-    Label(screen6, text="").pack()
-    Button(screen6, text="Fisika Dasar", width="30", height="2", command=fisdas).pack()
-    Label(screen6, text="").pack()
-    Button(screen6, text="Anggaran dan Estimasi Biaya", width="30", height="2", command=AEB).pack()
-    Label(screen6, text="").pack()
-    Button(screen6, text="Material Teknik", width="30", height="2", command=mattek).pack()
-    Label(screen6, text="").pack()
-    Button(screen6, text="Mekanika Teknik", width="30", height="2", command=mekatek).pack()
-    Label(screen6, text="").pack()
-    Button(screen6, text="Pengantar Rekayasa dan Desain", width="30", height="2", command=PRD).pack()
-    Label(screen6, text="").pack()
-    Button(screen6, text="Psikologi Industri", width="30", height="2", command=psikin).pack()
-    Label(screen6, text="").pack()
-    Button(screen6, text="Biologi", width="30", height="2", command=bio).pack()
-    Label(screen6, text="").pack()
+    screen6.title("Melihat Presensi")
 
+    screen10_bg=PhotoImage(file="kotak.png")
+    bgscreen10=Label(screen6,image=screen10_bg,bg="white")
+    bgscreen10.place(x=0,y=0)
+
+    title=Label(screen6,text="MATA KULIAH",bg="black",fg="white",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
+    title.pack(fill=X)
+    
+    Button(screen6,text="PROGRAMA KOMPUTER", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=prokom).place(x=20,y=170)
+    Button(screen6,text="KALKULUS", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=kalkulus).place(x=430,y=170)
+    Button(screen6,text="FISIKA DASAR II", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=fisdas).place(x=835,y=170)
+    Button(screen6,text="ANALISIS ESTIMASI & BIAYA", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=AEB).place(x=20,y=320)
+    Button(screen6,text="MATERIAL TEKNIK", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=mattek).place(x=430,y=320)
+    Button(screen6,text="MEKANIKA TEKNIK", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=mekatek).place(x=835,y=320)
+    Button(screen6,text="PENGANTAR REKAYASA DESAIN", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=PRD).place(x=20,y=470)
+    Button(screen6,text="PSIKOLOGI INDUSTRI", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=psikin).place(x=430,y=470)
+    Button(screen6,text="BIOLOGI", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=bio).place(x=835,y=470)
+
+    screen6.mainloop()
 def kalkulus():
     root=Tk()
     root.title("Melihat Presensi")
@@ -859,7 +860,7 @@ def mengisipresensi():
     keteranganentry=Text(F1,width=20,height=3,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
     keteranganentry.grid(row=3,column=1, pady=10, sticky="w")
 
-    Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=savepresensi(),fg="white",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
+    Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=savepresensi,fg="white",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
 
     
     #====================Right frame============#
@@ -867,13 +868,14 @@ def mengisipresensi():
     F2.place(x=665,y=80,width=610,height=530)
 
 
-def savepresensi(namafilescsv, pertemuan):
+def savepresensi(namafilescsv,pertemuan):
     variabel = {"Nama Lengkap" : [namalengkapentry.get()],
                 "NIM" : [nimentry.get()],
                 "Kehadiran" : [combo_hadir.get()],
                 "Keterangan" : [keteranganentry.get()]}
     test = pd.DataFrame(variabel)
-    namafilecsv = os.path.join(f'cmb.get().csv')
+    path = "D:\Kuliah\Tugas_Prokom_Praktikum\ABSENSI-MAHASISWA\Fisdas"
+    namafilecsv = os.path.join(path, f'{cmb.get()}.csv')
     with open(namafilecsv, "a") as csvfile:
         csv_writer=csv.DictWriter(csvfile)
         csv_writer.writerow(variabel)
