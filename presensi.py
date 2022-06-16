@@ -546,17 +546,170 @@ def melihat_presensi():
     title=Label(screen10,text="MATA KULIAH",bg="black",fg="white",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
     title.pack(fill=X)
     
-    Button(screen10,text="PROGRAMA KOMPUTER", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=prokom).place(x=20,y=170)
-    Button(screen10,text="KALKULUS", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=kalkulus).place(x=430,y=170)
-    Button(screen10,text="FISIKA DASAR II", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=fisdas).place(x=835,y=170)
-    Button(screen10,text="ANALISIS & ESTIMASI BIAYA", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=AEB).place(x=20,y=320)
-    Button(screen10,text="MATERIAL TEKNIK", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=mattek).place(x=430,y=320)
-    Button(screen10,text="MEKANIKA TEKNIK", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=mekatek).place(x=835,y=320)
-    Button(screen10,text="PENGANTAR REKAYASA & DESAIN", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=PRD).place(x=20,y=470)
-    Button(screen10,text="PSIKOLOGI INDUSTRI", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=psikin).place(x=430,y=470)
-    Button(screen10,text="BIOLOGI", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=bio).place(x=835,y=470)
+    Button(screen10,text="PROGRAMA KOMPUTER", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=oprokom).place(x=20,y=170)
+    Button(screen10,text="KALKULUS", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=okalkulus).place(x=430,y=170)
+    Button(screen10,text="FISIKA DASAR II", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=ofisdas).place(x=835,y=170)
+    Button(screen10,text="ANALISIS & ESTIMASI BIAYA", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=oAEB).place(x=20,y=320)
+    Button(screen10,text="MATERIAL TEKNIK", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=omattek).place(x=430,y=320)
+    Button(screen10,text="MEKANIKA TEKNIK", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=omekatek).place(x=835,y=320)
+    Button(screen10,text="PENGANTAR REKAYASA & DESAIN", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=oPRD).place(x=20,y=470)
+    Button(screen10,text="PSIKOLOGI INDUSTRI", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=opsikin).place(x=430,y=470)
+    Button(screen10,text="BIOLOGI", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=obio).place(x=835,y=470)
 
     screen10.mainloop()
+
+def oprokom():
+    global m1
+    screen26=Toplevel(screen)
+    screen26.title("Programa Komputer")
+    screen26.geometry("1280x720")
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5"]
+    l1=Label(screen26,text="Pilih pertemuan ke")
+    l1.grid(row=0,column=0)
+    m1=ttk.Combobox(screen26,value=course,width=15)
+    m1.grid(row=16,column=16)
+    m1.current(0)
+    Button(screen26,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=seeprokom).place(x=35,y=254)
+    screen26.mainloop()
+
+def seeprokom():
+    print()
+
+def oAEB():
+    global m2
+    screen27=Toplevel(screen)
+    screen27.title("Analisis & Estimasi Biaya")
+    screen27.geometry("1280x720")
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5"]
+    l1=Label(screen27,text="Pilih pertemuan ke")
+    l1.grid(row=0,column=0)
+    m2=ttk.Combobox(screen27,value=course,width=15)
+    m2.grid(row=16,column=16)
+    m2.current(0)
+    Button(screen27,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=seeAEB).place(x=35,y=254)
+    screen27.mainloop()
+
+def seeAEB():
+    print()
+
+def ofisdas():
+    global m4
+    screen29=Toplevel(screen)
+    screen29.title("Fisika Dasar II")
+    screen29.geometry("1280x720")
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5"]
+    l1=Label(screen29,text="Pilih pertemuan ke")
+    l1.grid(row=0,column=0)
+    m4=ttk.Combobox(screen29,value=course,width=15)
+    m4.grid(row=16,column=16)
+    m4.current(0)
+    Button(screen29,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=seefisdas).place(x=35,y=254)
+    screen29.mainloop()
+
+def seefisdas():
+    print()
+
+def omattek():
+    global m5
+    screen30=Toplevel(screen)
+    screen30.title("Material Teknik")
+    screen30.geometry("1280x720")
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5"]
+    l1=Label(screen30,text="Pilih pertemuan ke")
+    l1.grid(row=0,column=0)
+    m5=ttk.Combobox(screen30,value=course,width=15)
+    m5.grid(row=16,column=16)
+    m5.current(0)
+    Button(screen30,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=seemattek).place(x=35,y=254)
+    screen30.mainloop()
+
+def seemattek():
+    print()
+
+def oPRD():
+    global m7
+    screen32=Toplevel(screen)
+    screen32.title("Pengantar Rekayasa & Desain")
+    screen32.geometry("1280x720")
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5"]
+    l1=Label(screen32,text="Pilih pertemuan ke")
+    l1.grid(row=0,column=0)
+    m7=ttk.Combobox(screen32,value=course,width=15)
+    m7.grid(row=16,column=16)
+    m7.current(0)
+    Button(screen32,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=seePRD).place(x=35,y=254)
+    screen32.mainloop()
+
+def seePRD():
+    print()
+
+def omekatek():
+    global m6
+    screen31=Toplevel(screen)
+    screen31.title("Mekanika Teknik")
+    screen31.geometry("1280x720")
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5"]
+    l1=Label(screen31,text="Pilih pertemuan ke")
+    l1.grid(row=0,column=0)
+    m6=ttk.Combobox(screen31,value=course,width=15)
+    m6.grid(row=16,column=16)
+    m6.current(0)
+    Button(screen31,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=seemekatek).place(x=35,y=254)
+    screen31.mainloop()
+
+def seemekatek():
+    print()
+
+def opsikin():
+    global m0
+    screen34=Toplevel(screen)
+    screen34.title("Psikologi Industri")
+    screen34.geometry("1280x720")
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5"]
+    l1=Label(screen34,text="Pilih pertemuan ke")
+    l1.grid(row=0,column=0)
+    m0=ttk.Combobox(screen34,value=course,width=15)
+    m0.grid(row=16,column=16)
+    m0.current(0)
+    Button(screen34,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=seepsikin).place(x=35,y=254)
+    screen34.mainloop()
+
+def seepsikin():
+    print()
+
+def obio():
+    global m8
+    screen33=Toplevel(screen)
+    screen33.title("Biologi")
+    screen33.geometry("1280x720")
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5"]
+    l1=Label(screen33,text="Pilih pertemuan ke")
+    l1.grid(row=0,column=0)
+    m8=ttk.Combobox(screen33,value=course,width=15)
+    m8.grid(row=16,column=16)
+    m8.current(0)
+    Button(screen33,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=seebio).place(x=35,y=254)
+    screen33.mainloop()
+
+def seebio():
+    print()
+
+def okalkulus():
+    global m3
+    screen28=Toplevel(screen)
+    screen28.title("Kalkulus")
+    screen28.geometry("1280x720")
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5"]
+    l1=Label(screen28,text="Pilih pertemuan ke")
+    l1.grid(row=0,column=0)
+    m3=ttk.Combobox(screen28,value=course,width=15)
+    m3.grid(row=16,column=16)
+    m3.current(0)
+    Button(screen28,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=seekalkulus).place(x=35,y=254)
+    screen28.mainloop()
+
+def seekalkulus():
+    print()
 
 def menumahasiswa():
     global screen6
