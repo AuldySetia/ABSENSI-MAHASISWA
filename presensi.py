@@ -623,7 +623,40 @@ def lkalkulus():
     screen27.mainloop()
 
 def showkalkulus():
-    print()
+    screen36 = Toplevel(screen)
+    screen36.title("SSO UNIVERSITAS INTERNASIONAL")
+    screen36.geometry("1280x720")
+    screen36.resizable(0, 0)
+
+    TableMargin = Frame(screen36, width=500)
+    TableMargin.pack(side=TOP)
+    scrollbarx = Scrollbar(TableMargin, orient=HORIZONTAL)
+    scrollbary = Scrollbar(TableMargin, orient=VERTICAL)
+    tree = ttk.Treeview(TableMargin, columns=("Nama Lengkap", "NIM", "Kehadiran"),
+                        height=300, selectmode="extended", yscrollcommand=scrollbary.set, xscrollcommand=scrollbarx.set)
+    scrollbary.config(command=tree.yview)
+    scrollbary.pack(side=RIGHT, fill=Y)
+    scrollbarx.config(command=tree.xview)
+    scrollbarx.pack(side=BOTTOM, fill=X)
+    tree.heading('Nama Lengkap', text="Nama Lengkap", anchor=W)
+    tree.heading('NIM', text="NIM", anchor=W)
+    tree.heading('Kehadiran', text="Kehadiran", anchor=W)
+    tree.column('#0', stretch=NO, minwidth=0, width=0)
+    tree.column('#1', stretch=NO, minwidth=0, width=200)
+    tree.column('#2', stretch=NO, minwidth=0, width=200)
+    tree.column('#3', stretch=NO, minwidth=0, width=300)
+    tree.pack()
+
+    save_path = "Kalkulus"
+    namafile = os.path.join(save_path, f'{mmb3.get()}.csv')
+    with open(namafile,'r', newline='\n') as f:
+        reader = csv.DictReader(f, delimiter=',')
+        for row in reader:
+            NamaLengkap = row['Nama']
+            nim = row['NIM']
+            Kehadiran = row['Kehadiran']
+            tree.insert("", 0, values=(NamaLengkap, nim, Kehadiran))
+    screen36.mainloop()
 
 def lfisdas():
     global screen28, mmb2
@@ -640,7 +673,40 @@ def lfisdas():
     screen28.mainloop()
 
 def showfisdas():
-    print()
+    screen37 = Toplevel(screen)
+    screen37.title("SSO UNIVERSITAS INTERNASIONAL")
+    screen37.geometry("1280x720")
+    screen37.resizable(0, 0)
+
+    TableMargin = Frame(screen37, width=500)
+    TableMargin.pack(side=TOP)
+    scrollbarx = Scrollbar(TableMargin, orient=HORIZONTAL)
+    scrollbary = Scrollbar(TableMargin, orient=VERTICAL)
+    tree = ttk.Treeview(TableMargin, columns=("Nama Lengkap", "NIM", "Kehadiran"),
+                        height=300, selectmode="extended", yscrollcommand=scrollbary.set, xscrollcommand=scrollbarx.set)
+    scrollbary.config(command=tree.yview)
+    scrollbary.pack(side=RIGHT, fill=Y)
+    scrollbarx.config(command=tree.xview)
+    scrollbarx.pack(side=BOTTOM, fill=X)
+    tree.heading('Nama Lengkap', text="Nama Lengkap", anchor=W)
+    tree.heading('NIM', text="NIM", anchor=W)
+    tree.heading('Kehadiran', text="Kehadiran", anchor=W)
+    tree.column('#0', stretch=NO, minwidth=0, width=0)
+    tree.column('#1', stretch=NO, minwidth=0, width=200)
+    tree.column('#2', stretch=NO, minwidth=0, width=200)
+    tree.column('#3', stretch=NO, minwidth=0, width=300)
+    tree.pack()
+
+    save_path = "Fisdas"
+    namafile = os.path.join(save_path, f'{mmb2.get()}.csv')
+    with open(namafile,'r', newline='\n') as f:
+        reader = csv.DictReader(f, delimiter=',')
+        for row in reader:
+            NamaLengkap = row['Nama']
+            nim = row['NIM']
+            Kehadiran = row['Kehadiran']
+            tree.insert("", 0, values=(NamaLengkap, nim, Kehadiran))
+    screen37.mainloop()
 
 def lAEB():
     global screen29, mmb
@@ -657,7 +723,40 @@ def lAEB():
     screen29.mainloop()
 
 def showAEB():
-    print()
+    screen38 = Toplevel(screen)
+    screen38.title("SSO UNIVERSITAS INTERNASIONAL")
+    screen38.geometry("1280x720")
+    screen38.resizable(0, 0)
+
+    TableMargin = Frame(screen38, width=500)
+    TableMargin.pack(side=TOP)
+    scrollbarx = Scrollbar(TableMargin, orient=HORIZONTAL)
+    scrollbary = Scrollbar(TableMargin, orient=VERTICAL)
+    tree = ttk.Treeview(TableMargin, columns=("Nama Lengkap", "NIM", "Kehadiran"),
+                        height=300, selectmode="extended", yscrollcommand=scrollbary.set, xscrollcommand=scrollbarx.set)
+    scrollbary.config(command=tree.yview)
+    scrollbary.pack(side=RIGHT, fill=Y)
+    scrollbarx.config(command=tree.xview)
+    scrollbarx.pack(side=BOTTOM, fill=X)
+    tree.heading('Nama Lengkap', text="Nama Lengkap", anchor=W)
+    tree.heading('NIM', text="NIM", anchor=W)
+    tree.heading('Kehadiran', text="Kehadiran", anchor=W)
+    tree.column('#0', stretch=NO, minwidth=0, width=0)
+    tree.column('#1', stretch=NO, minwidth=0, width=200)
+    tree.column('#2', stretch=NO, minwidth=0, width=200)
+    tree.column('#3', stretch=NO, minwidth=0, width=300)
+    tree.pack()
+
+    save_path = "AEB"
+    namafile = os.path.join(save_path, f'{mmb.get()}.csv')
+    with open(namafile,'r', newline='\n') as f:
+        reader = csv.DictReader(f, delimiter=',')
+        for row in reader:
+            NamaLengkap = row['Nama']
+            nim = row['NIM']
+            Kehadiran = row['Kehadiran']
+            tree.insert("", 0, values=(NamaLengkap, nim, Kehadiran))
+    screen38.mainloop()
 
 def lmattek():
     global screen30, mmb4
@@ -674,7 +773,40 @@ def lmattek():
     screen30.mainloop()
 
 def showmattek():
-    print()
+    screen39 = Toplevel(screen)
+    screen39.title("SSO UNIVERSITAS INTERNASIONAL")
+    screen39.geometry("1280x720")
+    screen39.resizable(0, 0)
+
+    TableMargin = Frame(screen39, width=500)
+    TableMargin.pack(side=TOP)
+    scrollbarx = Scrollbar(TableMargin, orient=HORIZONTAL)
+    scrollbary = Scrollbar(TableMargin, orient=VERTICAL)
+    tree = ttk.Treeview(TableMargin, columns=("Nama Lengkap", "NIM", "Kehadiran"),
+                        height=300, selectmode="extended", yscrollcommand=scrollbary.set, xscrollcommand=scrollbarx.set)
+    scrollbary.config(command=tree.yview)
+    scrollbary.pack(side=RIGHT, fill=Y)
+    scrollbarx.config(command=tree.xview)
+    scrollbarx.pack(side=BOTTOM, fill=X)
+    tree.heading('Nama Lengkap', text="Nama Lengkap", anchor=W)
+    tree.heading('NIM', text="NIM", anchor=W)
+    tree.heading('Kehadiran', text="Kehadiran", anchor=W)
+    tree.column('#0', stretch=NO, minwidth=0, width=0)
+    tree.column('#1', stretch=NO, minwidth=0, width=200)
+    tree.column('#2', stretch=NO, minwidth=0, width=200)
+    tree.column('#3', stretch=NO, minwidth=0, width=300)
+    tree.pack()
+
+    save_path = "Mattek"
+    namafile = os.path.join(save_path, f'{mmb4.get()}.csv')
+    with open(namafile,'r', newline='\n') as f:
+        reader = csv.DictReader(f, delimiter=',')
+        for row in reader:
+            NamaLengkap = row['Nama']
+            nim = row['NIM']
+            Kehadiran = row['Kehadiran']
+            tree.insert("", 0, values=(NamaLengkap, nim, Kehadiran))
+    screen39.mainloop()
 
 def lmekatek():
     global screen31, mmb5
@@ -691,7 +823,40 @@ def lmekatek():
     screen31.mainloop()
 
 def showmekatek():
-    print()
+    screen40 = Toplevel(screen)
+    screen40.title("SSO UNIVERSITAS INTERNASIONAL")
+    screen40.geometry("1280x720")
+    screen40.resizable(0, 0)
+
+    TableMargin = Frame(screen40, width=500)
+    TableMargin.pack(side=TOP)
+    scrollbarx = Scrollbar(TableMargin, orient=HORIZONTAL)
+    scrollbary = Scrollbar(TableMargin, orient=VERTICAL)
+    tree = ttk.Treeview(TableMargin, columns=("Nama Lengkap", "NIM", "Kehadiran"),
+                        height=300, selectmode="extended", yscrollcommand=scrollbary.set, xscrollcommand=scrollbarx.set)
+    scrollbary.config(command=tree.yview)
+    scrollbary.pack(side=RIGHT, fill=Y)
+    scrollbarx.config(command=tree.xview)
+    scrollbarx.pack(side=BOTTOM, fill=X)
+    tree.heading('Nama Lengkap', text="Nama Lengkap", anchor=W)
+    tree.heading('NIM', text="NIM", anchor=W)
+    tree.heading('Kehadiran', text="Kehadiran", anchor=W)
+    tree.column('#0', stretch=NO, minwidth=0, width=0)
+    tree.column('#1', stretch=NO, minwidth=0, width=200)
+    tree.column('#2', stretch=NO, minwidth=0, width=200)
+    tree.column('#3', stretch=NO, minwidth=0, width=300)
+    tree.pack()
+
+    save_path = "Mekatek"
+    namafile = os.path.join(save_path, f'{mmb5.get()}.csv')
+    with open(namafile,'r', newline='\n') as f:
+        reader = csv.DictReader(f, delimiter=',')
+        for row in reader:
+            NamaLengkap = row['Nama']
+            nim = row['NIM']
+            Kehadiran = row['Kehadiran']
+            tree.insert("", 0, values=(NamaLengkap, nim, Kehadiran))
+    screen40.mainloop()
 
 def lPRD():
     global screen32, mmb6
@@ -708,7 +873,40 @@ def lPRD():
     screen32.mainloop()
 
 def showPRD():
-    print()
+    screen41 = Toplevel(screen)
+    screen41.title("SSO UNIVERSITAS INTERNASIONAL")
+    screen41.geometry("1280x720")
+    screen41.resizable(0, 0)
+
+    TableMargin = Frame(screen41, width=500)
+    TableMargin.pack(side=TOP)
+    scrollbarx = Scrollbar(TableMargin, orient=HORIZONTAL)
+    scrollbary = Scrollbar(TableMargin, orient=VERTICAL)
+    tree = ttk.Treeview(TableMargin, columns=("Nama Lengkap", "NIM", "Kehadiran"),
+                        height=300, selectmode="extended", yscrollcommand=scrollbary.set, xscrollcommand=scrollbarx.set)
+    scrollbary.config(command=tree.yview)
+    scrollbary.pack(side=RIGHT, fill=Y)
+    scrollbarx.config(command=tree.xview)
+    scrollbarx.pack(side=BOTTOM, fill=X)
+    tree.heading('Nama Lengkap', text="Nama Lengkap", anchor=W)
+    tree.heading('NIM', text="NIM", anchor=W)
+    tree.heading('Kehadiran', text="Kehadiran", anchor=W)
+    tree.column('#0', stretch=NO, minwidth=0, width=0)
+    tree.column('#1', stretch=NO, minwidth=0, width=200)
+    tree.column('#2', stretch=NO, minwidth=0, width=200)
+    tree.column('#3', stretch=NO, minwidth=0, width=300)
+    tree.pack()
+
+    save_path = "PRD"
+    namafile = os.path.join(save_path, f'{mmb6.get()}.csv')
+    with open(namafile,'r', newline='\n') as f:
+        reader = csv.DictReader(f, delimiter=',')
+        for row in reader:
+            NamaLengkap = row['Nama']
+            nim = row['NIM']
+            Kehadiran = row['Kehadiran']
+            tree.insert("", 0, values=(NamaLengkap, nim, Kehadiran))
+    screen41.mainloop()
 
 def lpsikin():
     global screen33, mmb8
@@ -725,7 +923,40 @@ def lpsikin():
     screen33.mainloop()
 
 def showpsikin():
-    print()
+    screen42 = Toplevel(screen)
+    screen42.title("SSO UNIVERSITAS INTERNASIONAL")
+    screen42.geometry("1280x720")
+    screen42.resizable(0, 0)
+
+    TableMargin = Frame(screen42, width=500)
+    TableMargin.pack(side=TOP)
+    scrollbarx = Scrollbar(TableMargin, orient=HORIZONTAL)
+    scrollbary = Scrollbar(TableMargin, orient=VERTICAL)
+    tree = ttk.Treeview(TableMargin, columns=("Nama Lengkap", "NIM", "Kehadiran"),
+                        height=300, selectmode="extended", yscrollcommand=scrollbary.set, xscrollcommand=scrollbarx.set)
+    scrollbary.config(command=tree.yview)
+    scrollbary.pack(side=RIGHT, fill=Y)
+    scrollbarx.config(command=tree.xview)
+    scrollbarx.pack(side=BOTTOM, fill=X)
+    tree.heading('Nama Lengkap', text="Nama Lengkap", anchor=W)
+    tree.heading('NIM', text="NIM", anchor=W)
+    tree.heading('Kehadiran', text="Kehadiran", anchor=W)
+    tree.column('#0', stretch=NO, minwidth=0, width=0)
+    tree.column('#1', stretch=NO, minwidth=0, width=200)
+    tree.column('#2', stretch=NO, minwidth=0, width=200)
+    tree.column('#3', stretch=NO, minwidth=0, width=300)
+    tree.pack()
+
+    save_path = "Psikin"
+    namafile = os.path.join(save_path, f'{mmb8.get()}.csv')
+    with open(namafile,'r', newline='\n') as f:
+        reader = csv.DictReader(f, delimiter=',')
+        for row in reader:
+            NamaLengkap = row['Nama']
+            nim = row['NIM']
+            Kehadiran = row['Kehadiran']
+            tree.insert("", 0, values=(NamaLengkap, nim, Kehadiran))
+    screen42.mainloop()
 
 def lbio():
     global screen34, mmb1
@@ -742,7 +973,40 @@ def lbio():
     screen34.mainloop()
 
 def showbio():
-    print()
+    screen43 = Toplevel(screen)
+    screen43.title("SSO UNIVERSITAS INTERNASIONAL")
+    screen43.geometry("1280x720")
+    screen43.resizable(0, 0)
+
+    TableMargin = Frame(screen43, width=500)
+    TableMargin.pack(side=TOP)
+    scrollbarx = Scrollbar(TableMargin, orient=HORIZONTAL)
+    scrollbary = Scrollbar(TableMargin, orient=VERTICAL)
+    tree = ttk.Treeview(TableMargin, columns=("Nama Lengkap", "NIM", "Kehadiran"),
+                        height=300, selectmode="extended", yscrollcommand=scrollbary.set, xscrollcommand=scrollbarx.set)
+    scrollbary.config(command=tree.yview)
+    scrollbary.pack(side=RIGHT, fill=Y)
+    scrollbarx.config(command=tree.xview)
+    scrollbarx.pack(side=BOTTOM, fill=X)
+    tree.heading('Nama Lengkap', text="Nama Lengkap", anchor=W)
+    tree.heading('NIM', text="NIM", anchor=W)
+    tree.heading('Kehadiran', text="Kehadiran", anchor=W)
+    tree.column('#0', stretch=NO, minwidth=0, width=0)
+    tree.column('#1', stretch=NO, minwidth=0, width=200)
+    tree.column('#2', stretch=NO, minwidth=0, width=200)
+    tree.column('#3', stretch=NO, minwidth=0, width=300)
+    tree.pack()
+
+    save_path = "Bio"
+    namafile = os.path.join(save_path, f'{mmb1.get()}.csv')
+    with open(namafile,'r', newline='\n') as f:
+        reader = csv.DictReader(f, delimiter=',')
+        for row in reader:
+            NamaLengkap = row['Nama']
+            nim = row['NIM']
+            Kehadiran = row['Kehadiran']
+            tree.insert("", 0, values=(NamaLengkap, nim, Kehadiran))
+    screen43.mainloop()
 
 def menumahasiswa():
     global screen6
