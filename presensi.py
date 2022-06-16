@@ -559,50 +559,83 @@ def melihat_presensi():
     screen10.mainloop()
 
 def lprokom():
-    global screen26, prokomentry
+    global screen26, mmb7
     screen26=Toplevel(screen)
     screen26.geometry("1280x720")
     screen26.title("SSO UNIVERSITAS INTERNASIONAL")
-    Label(screen26, text="").pack()
-    Label(screen26, text="").pack()
-    Label(screen26, text="").pack()
-    Label(screen26, text="Input Pertemuan").pack()
-    prokomentry=Entry(screen26)
-    prokomentry.pack()
-    Label(screen26, text="").pack()
-    Button(screen26, text="SUBMIT", width=16, height=1, command=showprokom).pack()
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
+    l1=Label(screen26,text="Pilih pertemuan ke")
+    l1.grid(row=0,column=0)
+    mmb7=ttk.Combobox(screen26,value=course,width=15)
+    mmb7.grid(row=16,column=16)
+    mmb7.current(0)
+    Button(screen26,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=showprokom).place(x=35,y=254)
+    screen26.mainloop()
 
 def showprokom():
-    print()
+    screen35 = Toplevel(screen)
+    screen35.title("SSO UNIVERSITAS INTERNASIONAL")
+    screen35.geometry("1280x720")
+    screen35.resizable(0, 0)
+
+    TableMargin = Frame(screen35, width=500)
+    TableMargin.pack(side=TOP)
+    scrollbarx = Scrollbar(TableMargin, orient=HORIZONTAL)
+    scrollbary = Scrollbar(TableMargin, orient=VERTICAL)
+    tree = ttk.Treeview(TableMargin, columns=("Nama Lengkap", "NIM", "Kehadiran"),
+                        height=300, selectmode="extended", yscrollcommand=scrollbary.set, xscrollcommand=scrollbarx.set)
+    scrollbary.config(command=tree.yview)
+    scrollbary.pack(side=RIGHT, fill=Y)
+    scrollbarx.config(command=tree.xview)
+    scrollbarx.pack(side=BOTTOM, fill=X)
+    tree.heading('Nama Lengkap', text="Nama Lengkap", anchor=W)
+    tree.heading('NIM', text="NIM", anchor=W)
+    tree.heading('Kehadiran', text="Kehadiran", anchor=W)
+    tree.column('#0', stretch=NO, minwidth=0, width=0)
+    tree.column('#1', stretch=NO, minwidth=0, width=200)
+    tree.column('#2', stretch=NO, minwidth=0, width=200)
+    tree.column('#3', stretch=NO, minwidth=0, width=300)
+    tree.pack()
+
+    save_path = "Prokom"
+    namafile = os.path.join(save_path, f'{mmb7.get()}.csv')
+    with open(namafile,'r', newline='\n') as f:
+        reader = csv.DictReader(f, delimiter=',')
+        for row in reader:
+            NamaLengkap = row['Nama']
+            nim = row['NIM']
+            Kehadiran = row['Kehadiran']
+            tree.insert("", 0, values=(NamaLengkap, nim, Kehadiran))
+    screen35.mainloop()
 
 def lkalkulus():
-    global screen27,cmb3
+    global screen27,mmb3
     screen27=Toplevel(screen)
     screen27.geometry("1280x720")
     screen27.title("SSO UNIVERSITAS INTERNASIONAL")
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
     l1=Label(screen27,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
-    cmb3=ttk.Combobox(screen27,value=course,width=15)
-    cmb3.grid(row=16,column=16)
+    mmb3=ttk.Combobox(screen27,value=course,width=15)
+    mmb3.grid(row=16,column=16)
     Button(screen27,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=showkalkulus).place(x=35,y=254) 
-    cmb3.current(0)
+    mmb3.current(0)
     screen27.mainloop()
 
 def showkalkulus():
     print()
 
 def lfisdas():
-    global screen28, cmb2
+    global screen28, mmb2
     screen28=Toplevel(screen)
     screen28.geometry("1280x720")
     screen28.title("SSO UNIVERSITAS INTERNASIONAL")
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
     l1=Label(screen28,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
-    cmb2=ttk.Combobox(screen28,value=course,width=15)
-    cmb2.grid(row=16,column=16)
-    cmb2.current(0)
+    mmb2=ttk.Combobox(screen28,value=course,width=15)
+    mmb2.grid(row=16,column=16)
+    mmb2.current(0)
     Button(screen28,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=showfisdas).place(x=35,y=254)
     screen28.mainloop()
 
@@ -610,16 +643,16 @@ def showfisdas():
     print()
 
 def lAEB():
-    global screen29, cmb
+    global screen29, mmb
     screen29=Toplevel(screen)
     screen29.geometry("1280x720")
     screen29.title("SSO UNIVERSITAS INTERNASIONAL")
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
     l1=Label(screen29,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
-    cmb=ttk.Combobox(screen29,value=course,width=15)
-    cmb.grid(row=16,column=16)
-    cmb.current(0)
+    mmb=ttk.Combobox(screen29,value=course,width=15)
+    mmb.grid(row=16,column=16)
+    mmb.current(0)
     Button(screen29,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=showAEB).place(x=35,y=254)
     screen29.mainloop()
 
@@ -627,16 +660,16 @@ def showAEB():
     print()
 
 def lmattek():
-    global screen30, cmb4
+    global screen30, mmb4
     screen30=Toplevel(screen)
     screen30.geometry("1280x720")
     screen30.title("SSO UNIVERSITAS INTERNASIONAL")
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
     l1=Label(screen30,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
-    cmb4=ttk.Combobox(screen30,value=course,width=15)
-    cmb4.grid(row=16,column=16)
-    cmb4.current(0)
+    mmb4=ttk.Combobox(screen30,value=course,width=15)
+    mmb4.grid(row=16,column=16)
+    mmb4.current(0)
     Button(screen30,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=showmattek).place(x=35,y=254)
     screen30.mainloop()
 
@@ -644,16 +677,16 @@ def showmattek():
     print()
 
 def lmekatek():
-    global screen31, cmb5
+    global screen31, mmb5
     screen31=Toplevel(screen)
     screen31.geometry("1280x720")
     screen31.title("SSO UNIVERSITAS INTERNASIONAL")
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
     l1=Label(screen31,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
-    cmb5=ttk.Combobox(screen31,value=course,width=15)
-    cmb5.grid(row=16,column=16)
-    cmb5.current(0)
+    mmb5=ttk.Combobox(screen31,value=course,width=15)
+    mmb5.grid(row=16,column=16)
+    mmb5.current(0)
     Button(screen31,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=showmekatek).place(x=35,y=254) 
     screen31.mainloop()
 
@@ -661,16 +694,16 @@ def showmekatek():
     print()
 
 def lPRD():
-    global screen32, cmb6
+    global screen32, mmb6
     screen32=Toplevel(screen)
     screen32.geometry("1280x720")
     screen32.title("SSO UNIVERSITAS INTERNASIONAL")
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
     l1=Label(screen32,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
-    cmb6=ttk.Combobox(screen32,value=course,width=15)
-    cmb6.grid(row=16,column=16)
-    cmb6.current(0)
+    mmb6=ttk.Combobox(screen32,value=course,width=15)
+    mmb6.grid(row=16,column=16)
+    mmb6.current(0)
     Button(screen32,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=showPRD).place(x=35,y=254)
     screen32.mainloop()
 
@@ -678,16 +711,16 @@ def showPRD():
     print()
 
 def lpsikin():
-    global screen33, cmb8
+    global screen33, mmb8
     screen33=Toplevel(screen)
     screen33.geometry("1280x720")
     screen33.title("SSO UNIVERSITAS INTERNASIONAL")
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
     l1=Label(screen33,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
-    cmb8=ttk.Combobox(screen33,value=course,width=15)
-    cmb8.grid(row=16,column=16)
-    cmb8.current(0)
+    mmb8=ttk.Combobox(screen33,value=course,width=15)
+    mmb8.grid(row=16,column=16)
+    mmb8.current(0)
     Button(screen33,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=showpsikin).place(x=35,y=254)
     screen33.mainloop()
 
@@ -695,22 +728,21 @@ def showpsikin():
     print()
 
 def lbio():
-    global screen34, cmb1
+    global screen34, mmb1
     screen34=Toplevel(screen)
     screen34.geometry("1280x720")
     screen34.title("SSO UNIVERSITAS INTERNASIONAL")
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
     l1=Label(screen34,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
-    cmb1=ttk.Combobox(screen34,value=course,width=15)
-    cmb1.grid(row=16,column=16)
-    cmb1.current(0)
+    mmb1=ttk.Combobox(screen34,value=course,width=15)
+    mmb1.grid(row=16,column=16)
+    mmb1.current(0)
     Button(screen34,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=showbio).place(x=35,y=254)
     screen34.mainloop()
 
 def showbio():
     print()
-
 
 def menumahasiswa():
     global screen6
