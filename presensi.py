@@ -216,7 +216,7 @@ def menudosen():
     backgroundosen.place(x=0,y=0)
 
     Button(screen4,text="Membuat Presensi",font=("Acumin Variable Concept",17,"bold"),bg="white", command=membuat_presensi).place(x=400,y=500)
-    Button(screen4,text="Melihat Presensi",font=("Acumin Variable Concept",17,"bold"),bg="white", command=melihat_presensi).place(x=685,y=500)
+    Button(screen4,text="Melihat Presensi",font=("Acumin Variable Concept",17,"bold"),bg="white", command=melihat_presensimatkul).place(x=685,y=500)
 
     screen4.mainloop()
 
@@ -600,7 +600,7 @@ def Pertemuan15():
 def Pertemuan16():
     print()
 
-def melihat_presensi():
+def melihat_presensimatkul():
     global screen10
     screen10=Toplevel(screen)
     screen10.geometry("1280x720")
@@ -652,9 +652,9 @@ def menumahasiswa():
 def kalkulus():
     global cmb3
     root=Tk()
-    root.title("Melihat Presensi")
+    root.title("SSO UNIVERSITAS INTERNASIONAL")
     root.geometry("1280x720")
-    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5"]
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
     l1=Label(root,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
     cmb3=ttk.Combobox(root,value=course,width=15)
@@ -666,9 +666,9 @@ def kalkulus():
 def AEB():
     global cmb
     root=Tk()
-    root.title("Melihat Presensi")
+    root.title("SSO UNIVERSITAS INTERNASIONAL")
     root.geometry("1280x720")
-    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5"]
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
     l1=Label(root,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
     cmb=ttk.Combobox(root,value=course,width=15)
@@ -680,9 +680,9 @@ def AEB():
 def PRD():
     global cmb6
     root=Tk()
-    root.title("Melihat Presensi")
+    root.title("SSO UNIVERSITAS INTERNASIONAL")
     root.geometry("1280x720")
-    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5"]
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
     l1=Label(root,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
     cmb6=ttk.Combobox(root,value=course,width=15)
@@ -694,9 +694,9 @@ def PRD():
 def psikin():
     global cmb8
     root=Tk()
-    root.title("Melihat Presensi")
+    root.title("SSO UNIVERSITAS INTERNASIONAL")
     root.geometry("1280x720")
-    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5"]
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
     l1=Label(root,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
     cmb8=ttk.Combobox(root,value=course,width=15)
@@ -708,9 +708,9 @@ def psikin():
 def mekatek():
     global cmb5
     root=Tk()
-    root.title("Melihat Presensi")
+    root.title("SSO UNIVERSITAS INTERNASIONAL")
     root.geometry("1280x720")
-    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5"]
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
     l1=Label(root,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
     cmb5=ttk.Combobox(root,value=course,width=15)
@@ -722,9 +722,9 @@ def mekatek():
 def mattek():
     global cmb4
     root=Tk()
-    root.title("Melihat Presensi")
+    root.title("SSO UNIVERSITAS INTERNASIONAL")
     root.geometry("1280x720")
-    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5"]
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
     l1=Label(root,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
     cmb4=ttk.Combobox(root,value=course,width=15)
@@ -736,9 +736,9 @@ def mattek():
 def fisdas():
     global cmb2
     root=Tk()
-    root.title("Melihat Presensi")
+    root.title("SSO UNIVERSITAS INTERNASIONAL")
     root.geometry("1280x720")
-    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5"]
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
     l1=Label(root,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
     cmb2=ttk.Combobox(root,value=course,width=15)
@@ -750,10 +750,10 @@ def fisdas():
 def bio():
     global cmb1
     root=Tk()
-    root.title("Melihat Presensi")
+    root.title("SSO UNIVERSITAS INTERNASIONAL")
     root.geometry("1280x720")
     global cmb
-    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5"]
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
     l1=Label(root,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
     cmb1=ttk.Combobox(root,value=course,width=15)
@@ -765,9 +765,9 @@ def bio():
 def prokom():
     global cmb7
     root=Tk()
-    root.title("Melihat Presensi")
+    root.title("SSO UNIVERSITAS INTERNASIONAL")
     root.geometry("1280x720")
-    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5"]
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
     l1=Label(root,text="Pilih pertemuan ke")
     l1.grid(row=0,column=0)
     cmb7=ttk.Combobox(root,value=course,width=15)
@@ -792,21 +792,21 @@ def mengisiaeb():
     F1.place(x=10,y=80,width=650,height=530)
 
     nama=Label(F1,text="Nama Lengkap",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
-    nama.grid(row=0,column=0,padx=30,pady=10)
+    nama.grid(row=0,column=0,padx=30,pady=10, sticky="w")
     namalengkapentry=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
     namalengkapentry.grid(row=0,column=1, pady=10, sticky="w")
 
     nim=Label(F1,text="NIM",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
-    nim.grid(row=1,column=0,padx=30,pady=10)
+    nim.grid(row=1,column=0,padx=30,pady=10,sticky="w")
     nimentry=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
     nimentry.grid(row=1,column=1, pady=10, sticky="w")
 
     hadir=Label(F1,text="Kehadiran",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
-    hadir.grid(row=2,column=0,padx=30,pady=10)
+    hadir.grid(row=2,column=0,padx=30,pady=10,sticky="w")
 
-    combo_hadir=ttk.Combobox(F1,font=("times new rommon",20,"bold"),state="readonly")
+    combo_hadir=ttk.Combobox(F1,font=("times new rommon",18,"bold"),state="readonly")
     combo_hadir["value"]=("Hadir","Sakit","Izin")
-    combo_hadir.grid(row=2,column=1,pady=10)
+    combo_hadir.grid(row=2,column=1,pady=10,sticky="w")
 
     Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvaeb,fg="black",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
 
@@ -854,21 +854,21 @@ def mengisibio():
     F1.place(x=10,y=80,width=650,height=530)
 
     nama=Label(F1,text="Nama Lengkap",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
-    nama.grid(row=0,column=0,padx=30,pady=10)
+    nama.grid(row=0,column=0,padx=30,pady=10, sticky="w")
     namalengkapentry1=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
     namalengkapentry1.grid(row=0,column=1, pady=10, sticky="w")
 
     nim=Label(F1,text="NIM",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
-    nim.grid(row=1,column=0,padx=30,pady=10)
+    nim.grid(row=1,column=0,padx=30,pady=10,sticky="w")
     nimentry1=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
     nimentry1.grid(row=1,column=1, pady=10, sticky="w")
 
     hadir=Label(F1,text="Kehadiran",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
-    hadir.grid(row=2,column=0,padx=30,pady=10)
+    hadir.grid(row=2,column=0,padx=30,pady=10,sticky="w")
 
-    combo_hadir1=ttk.Combobox(F1,font=("times new rommon",20,"bold"),state="readonly")
+    combo_hadir1=ttk.Combobox(F1,font=("times new rommon",18,"bold"),state="readonly")
     combo_hadir1["value"]=("Hadir","Sakit","Izin")
-    combo_hadir1.grid(row=2,column=1,pady=10)
+    combo_hadir1.grid(row=2,column=1,pady=10,sticky="w")
 
     Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvbio,fg="black",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
 
@@ -915,21 +915,21 @@ def mengisifisdas():
     F1.place(x=10,y=80,width=650,height=530)
 
     nama=Label(F1,text="Nama Lengkap",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
-    nama.grid(row=0,column=0,padx=30,pady=10)
+    nama.grid(row=0,column=0,padx=30,pady=10, sticky="w")
     namalengkapentry2=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
     namalengkapentry2.grid(row=0,column=1, pady=10, sticky="w")
 
     nim=Label(F1,text="NIM",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
-    nim.grid(row=1,column=0,padx=30,pady=10)
+    nim.grid(row=1,column=0,padx=30,pady=10,sticky="w")
     nimentry2=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
     nimentry2.grid(row=1,column=1, pady=10, sticky="w")
 
     hadir=Label(F1,text="Kehadiran",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
-    hadir.grid(row=2,column=0,padx=30,pady=10)
+    hadir.grid(row=2,column=0,padx=30,pady=10,sticky="w")
 
-    combo_hadir2=ttk.Combobox(F1,font=("times new rommon",20,"bold"),state="readonly")
+    combo_hadir2=ttk.Combobox(F1,font=("times new rommon",18,"bold"),state="readonly")
     combo_hadir2["value"]=("Hadir","Sakit","Izin")
-    combo_hadir2.grid(row=2,column=1,pady=10)
+    combo_hadir2.grid(row=2,column=1,pady=10,sticky="w")
 
     Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvfisdas,fg="black",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
 
@@ -976,21 +976,21 @@ def mengisikalkulus():
     F1.place(x=10,y=80,width=650,height=530)
 
     nama=Label(F1,text="Nama Lengkap",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
-    nama.grid(row=0,column=0,padx=30,pady=10)
+    nama.grid(row=0,column=0,padx=30,pady=10, sticky="w")
     namalengkapentry3=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
     namalengkapentry3.grid(row=0,column=1, pady=10, sticky="w")
 
     nim=Label(F1,text="NIM",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
-    nim.grid(row=1,column=0,padx=30,pady=10)
+    nim.grid(row=1,column=0,padx=30,pady=10,sticky="w")
     nimentry3=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
     nimentry3.grid(row=1,column=1, pady=10, sticky="w")
 
     hadir=Label(F1,text="Kehadiran",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
-    hadir.grid(row=2,column=0,padx=30,pady=10)
+    hadir.grid(row=2,column=0,padx=30,pady=10,sticky="w")
 
-    combo_hadir3=ttk.Combobox(F1,font=("times new rommon",20,"bold"),state="readonly")
+    combo_hadir3=ttk.Combobox(F1,font=("times new rommon",18,"bold"),state="readonly")
     combo_hadir3["value"]=("Hadir","Sakit","Izin")
-    combo_hadir3.grid(row=2,column=1,pady=10)
+    combo_hadir3.grid(row=2,column=1,pady=10,sticky="w")
 
     Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvkalkulus,fg="black",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
 
@@ -1037,21 +1037,21 @@ def mengisimattek():
     F1.place(x=10,y=80,width=650,height=530)
 
     nama=Label(F1,text="Nama Lengkap",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
-    nama.grid(row=0,column=0,padx=30,pady=10)
+    nama.grid(row=0,column=0,padx=30,pady=10, sticky="w")
     namalengkapentry4=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
     namalengkapentry4.grid(row=0,column=1, pady=10, sticky="w")
 
     nim=Label(F1,text="NIM",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
-    nim.grid(row=1,column=0,padx=30,pady=10)
+    nim.grid(row=1,column=0,padx=30,pady=10,sticky="w")
     nimentry4=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
     nimentry4.grid(row=1,column=1, pady=10, sticky="w")
 
     hadir=Label(F1,text="Kehadiran",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
-    hadir.grid(row=2,column=0,padx=30,pady=10)
+    hadir.grid(row=2,column=0,padx=30,pady=10,sticky="w")
 
-    combo_hadir4=ttk.Combobox(F1,font=("times new rommon",20,"bold"),state="readonly")
+    combo_hadir4=ttk.Combobox(F1,font=("times new rommon",18,"bold"),state="readonly")
     combo_hadir4["value"]=("Hadir","Sakit","Izin")
-    combo_hadir4.grid(row=2,column=1,pady=10)
+    combo_hadir4.grid(row=2,column=1,pady=10,sticky="w")
 
     Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvmattek,fg="black",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
 
@@ -1098,21 +1098,21 @@ def mengisimekatek():
     F1.place(x=10,y=80,width=650,height=530)
 
     nama=Label(F1,text="Nama Lengkap",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
-    nama.grid(row=0,column=0,padx=30,pady=10)
+    nama.grid(row=0,column=0,padx=30,pady=10, sticky="w")
     namalengkapentry5=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
     namalengkapentry5.grid(row=0,column=1, pady=10, sticky="w")
 
     nim=Label(F1,text="NIM",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
-    nim.grid(row=1,column=0,padx=30,pady=10)
+    nim.grid(row=1,column=0,padx=30,pady=10,sticky="w")
     nimentry5=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
     nimentry5.grid(row=1,column=1, pady=10, sticky="w")
 
     hadir=Label(F1,text="Kehadiran",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
-    hadir.grid(row=2,column=0,padx=30,pady=10)
+    hadir.grid(row=2,column=0,padx=30,pady=10,sticky="w")
 
-    combo_hadir5=ttk.Combobox(F1,font=("times new rommon",20,"bold"),state="readonly")
+    combo_hadir5=ttk.Combobox(F1,font=("times new rommon",18,"bold"),state="readonly")
     combo_hadir5["value"]=("Hadir","Sakit","Izin")
-    combo_hadir5.grid(row=2,column=1,pady=10)
+    combo_hadir5.grid(row=2,column=1,pady=10,sticky="w")
 
     Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvmekatek,fg="black",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
 
@@ -1159,21 +1159,21 @@ def mengisiprd():
     F1.place(x=10,y=80,width=650,height=530)
 
     nama=Label(F1,text="Nama Lengkap",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
-    nama.grid(row=0,column=0,padx=30,pady=10)
+    nama.grid(row=0,column=0,padx=30,pady=10, sticky="w")
     namalengkapentry6=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
     namalengkapentry6.grid(row=0,column=1, pady=10, sticky="w")
 
     nim=Label(F1,text="NIM",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
-    nim.grid(row=1,column=0,padx=30,pady=10)
+    nim.grid(row=1,column=0,padx=30,pady=10,sticky="w")
     nimentry6=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
     nimentry6.grid(row=1,column=1, pady=10, sticky="w")
 
     hadir=Label(F1,text="Kehadiran",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
-    hadir.grid(row=2,column=0,padx=30,pady=10)
+    hadir.grid(row=2,column=0,padx=30,pady=10,sticky="w")
 
-    combo_hadir6=ttk.Combobox(F1,font=("times new rommon",20,"bold"),state="readonly")
+    combo_hadir6=ttk.Combobox(F1,font=("times new rommon",18,"bold"),state="readonly")
     combo_hadir6["value"]=("Hadir","Sakit","Izin")
-    combo_hadir6.grid(row=2,column=1,pady=10)
+    combo_hadir6.grid(row=2,column=1,pady=10,sticky="w")
 
     Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvprd,fg="black",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
 
@@ -1220,21 +1220,21 @@ def mengisiprokom():
     F1.place(x=10,y=80,width=650,height=530)
 
     nama=Label(F1,text="Nama Lengkap",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
-    nama.grid(row=0,column=0,padx=30,pady=10)
+    nama.grid(row=0,column=0,padx=30,pady=10, sticky="w")
     namalengkapentry7=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
     namalengkapentry7.grid(row=0,column=1, pady=10, sticky="w")
 
     nim=Label(F1,text="NIM",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
-    nim.grid(row=1,column=0,padx=30,pady=10)
+    nim.grid(row=1,column=0,padx=30,pady=10,sticky="w")
     nimentry7=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
     nimentry7.grid(row=1,column=1, pady=10, sticky="w")
 
     hadir=Label(F1,text="Kehadiran",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
-    hadir.grid(row=2,column=0,padx=30,pady=10)
+    hadir.grid(row=2,column=0,padx=30,pady=10,sticky="w")
 
-    combo_hadir7=ttk.Combobox(F1,font=("times new rommon",20,"bold"),state="readonly")
+    combo_hadir7=ttk.Combobox(F1,font=("times new rommon",18,"bold"),state="readonly")
     combo_hadir7["value"]=("Hadir","Sakit","Izin")
-    combo_hadir7.grid(row=2,column=1,pady=10)
+    combo_hadir7.grid(row=2,column=1,pady=10,sticky="w")
 
     Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvprokom,fg="black",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
 
@@ -1281,21 +1281,21 @@ def mengisipsikin():
     F1.place(x=10,y=80,width=650,height=530)
 
     nama=Label(F1,text="Nama Lengkap",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
-    nama.grid(row=0,column=0,padx=30,pady=10)
+    nama.grid(row=0,column=0,padx=30,pady=10, sticky="w")
     namalengkapentry8=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
     namalengkapentry8.grid(row=0,column=1, pady=10, sticky="w")
 
     nim=Label(F1,text="NIM",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
-    nim.grid(row=1,column=0,padx=30,pady=10)
+    nim.grid(row=1,column=0,padx=30,pady=10,sticky="w")
     nimentry8=Entry(F1,font=("times new rommon",18,"bold"),relief=RIDGE,bd=7)
     nimentry8.grid(row=1,column=1, pady=10, sticky="w")
 
     hadir=Label(F1,text="Kehadiran",font=("times new rommon",20,"bold"),fg="black",bg=bg_color)
-    hadir.grid(row=2,column=0,padx=30,pady=10)
+    hadir.grid(row=2,column=0,padx=30,pady=10,sticky="w")
 
-    combo_hadir8=ttk.Combobox(F1,font=("times new rommon",20,"bold"),state="readonly")
+    combo_hadir8=ttk.Combobox(F1,font=("times new rommon",18,"bold"),state="readonly")
     combo_hadir8["value"]=("Hadir","Sakit","Izin")
-    combo_hadir8.grid(row=2,column=1,pady=10)
+    combo_hadir8.grid(row=2,column=1,pady=10,sticky="w")
 
     Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvpsikin,fg="black",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
 
@@ -1325,5 +1325,8 @@ def csvpsikin():
             None
     
         writer.writerow(presensi)
+
+def melihatpresensi():
+    print()
 
 main_screen()
