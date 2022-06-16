@@ -217,8 +217,7 @@ def menudosen():
 
     Button(screen4,text="Membuat Presensi",font=("Acumin Variable Concept",17,"bold"),bg="white", command=membuat_presensi).place(x=400,y=500)
     Button(screen4,text="Melihat Presensi",font=("Acumin Variable Concept",17,"bold"),bg="white", command=melihat_presensi).place(x=685,y=500)
-    #Button(screen4, text="Membuat Presensi", bg="grey", width="30", height="2", command=membuat_presensi)
-    #Button(screen4, text="Melihat Presensi", bg="grey", width="30", height="2", command=melihat_presensi)
+
     screen4.mainloop()
 
 def membuat_presensi():
@@ -285,7 +284,7 @@ def mkalkulus():
     global screen10, defkalkulus
     screen10=Toplevel(screen)
     screen10.geometry("1280x720")
-    screen10.title("Keterangan Pertemuan")
+    screen10.title("Kalkulus")
     Label(screen10, text="").pack()
     Label(screen10, text="").pack()
     Label(screen10, text="").pack()
@@ -319,7 +318,7 @@ def mAEB():
     global screen11, defAEB
     screen11=Toplevel(screen)
     screen11.geometry("1280x720")
-    screen11.title("Keterangan Pertemuan")
+    screen11.title("Analisis Estimasi dan Biaya")
     Label(screen11, text="").pack()
     Label(screen11, text="").pack()
     Label(screen11, text="").pack()
@@ -353,7 +352,7 @@ def mPRD():
     global screen12, defPRD
     screen12=Toplevel(screen)
     screen12.geometry("1280x720")
-    screen12.title("Keterangan Pertemuan")
+    screen12.title("Pengantar Rekayasa Desain")
     Label(screen12, text="").pack()
     Label(screen12, text="").pack()
     Label(screen12, text="").pack()
@@ -387,7 +386,7 @@ def mpsikin():
     global screen13, defpsikin
     screen13=Toplevel(screen)
     screen13.geometry("1280x720")
-    screen13.title("Keterangan Pertemuan")
+    screen13.title("Psikologi Industri")
     Label(screen13, text="").pack()
     Label(screen13, text="").pack()
     Label(screen13, text="").pack()
@@ -421,7 +420,7 @@ def mmekatek():
     global screen14, defmekatek
     screen14=Toplevel(screen)
     screen14.geometry("1280x720")
-    screen14.title("Keterangan Pertemuan")
+    screen14.title("Mekanika Teknik")
     Label(screen14, text="").pack()
     Label(screen14, text="").pack()
     Label(screen14, text="").pack()
@@ -455,7 +454,7 @@ def mmattek():
     global screen15, defmattek
     screen15=Toplevel(screen)
     screen15.geometry("1280x720")
-    screen15.title("Keterangan Pertemuan")
+    screen15.title("Material Teknik")
     Label(screen15, text="").pack()
     Label(screen15, text="").pack()
     Label(screen15, text="").pack()
@@ -489,7 +488,7 @@ def mfisdas():
     global screen16, deffisdas
     screen16=Toplevel(screen)
     screen16.geometry("1280x720")
-    screen16.title("Keterangan Pertemuan")
+    screen16.title("Fisika Dasar II")
     Label(screen16, text="").pack()
     Label(screen16, text="").pack()
     Label(screen16, text="").pack()
@@ -523,7 +522,7 @@ def mbio():
     global screen16, defbio
     screen16=Toplevel(screen)
     screen16.geometry("1280x720")
-    screen16.title("Keterangan Pertemuan")
+    screen16.title("Biologi")
     Label(screen16, text="").pack()
     Label(screen16, text="").pack()
     Label(screen16, text="").pack()
@@ -660,7 +659,7 @@ def kalkulus():
     l1.grid(row=0,column=0)
     cmb3=ttk.Combobox(root,value=course,width=15)
     cmb3.grid(row=16,column=16)
-    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisikalkulus).place(x=35,y=254) 
+    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=mengisikalkulus).place(x=35,y=254) 
     cmb3.current(0)
     root.mainloop()
 
@@ -675,7 +674,7 @@ def AEB():
     cmb=ttk.Combobox(root,value=course,width=15)
     cmb.grid(row=16,column=16)
     cmb.current(0)
-    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisiaeb).place(x=35,y=254)
+    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=mengisiaeb).place(x=35,y=254)
     root.mainloop()
 
 def PRD():
@@ -689,7 +688,7 @@ def PRD():
     cmb6=ttk.Combobox(root,value=course,width=15)
     cmb6.grid(row=16,column=16)
     cmb6.current(0)
-    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisiprd).place(x=35,y=254)
+    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=mengisiprd).place(x=35,y=254)
     root.mainloop()
 
 def psikin():
@@ -703,7 +702,7 @@ def psikin():
     cmb8=ttk.Combobox(root,value=course,width=15)
     cmb8.grid(row=16,column=16)
     cmb8.current(0)
-    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisipsikin).place(x=35,y=254)
+    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=mengisipsikin).place(x=35,y=254)
     root.mainloop()
 
 def mekatek():
@@ -717,7 +716,7 @@ def mekatek():
     cmb5=ttk.Combobox(root,value=course,width=15)
     cmb5.grid(row=16,column=16)
     cmb5.current(0)
-    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisimekatek).place(x=35,y=254) 
+    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=mengisimekatek).place(x=35,y=254) 
     root.mainloop()
 
 def mattek():
@@ -731,7 +730,7 @@ def mattek():
     cmb4=ttk.Combobox(root,value=course,width=15)
     cmb4.grid(row=16,column=16)
     cmb4.current(0)
-    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisimattek).place(x=35,y=254)
+    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=mengisimattek).place(x=35,y=254)
     root.mainloop()
 
 def fisdas():
@@ -745,7 +744,7 @@ def fisdas():
     cmb2=ttk.Combobox(root,value=course,width=15)
     cmb2.grid(row=16,column=16)
     cmb2.current(0)
-    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisifisdas).place(x=35,y=254)
+    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=mengisifisdas).place(x=35,y=254)
     root.mainloop()
 
 def bio():
@@ -760,7 +759,7 @@ def bio():
     cmb1=ttk.Combobox(root,value=course,width=15)
     cmb1.grid(row=16,column=16)
     cmb1.current(0)
-    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisibio).place(x=35,y=254)
+    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=mengisibio).place(x=35,y=254)
     root.mainloop()
 
 def prokom():
@@ -774,7 +773,7 @@ def prokom():
     cmb7=ttk.Combobox(root,value=course,width=15)
     cmb7.grid(row=16,column=16)
     cmb7.current(0)
-    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="white",border=0, command=mengisiprokom).place(x=35,y=254)
+    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=mengisiprokom).place(x=35,y=254)
     root.mainloop()
 
 def mengisiaeb():
@@ -782,10 +781,10 @@ def mengisiaeb():
     screen17=Toplevel(screen)
     screen17.geometry("1280x720")
     screen17.title("Mengisi Presensi")
-    bg_color="#990099"
+    bg_color="#c4c4bc"
 
     #======================Heading============#
-    title=Label(screen17,text="PRESENSI MATA KULIAH",bg=bg_color,fg="white",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
+    title=Label(screen17,text="PRESENSI MATA KULIAH",bg=bg_color,fg="black",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
     title.pack(fill=X)
 
     #====================Left frame============#
@@ -809,7 +808,7 @@ def mengisiaeb():
     combo_hadir["value"]=("Hadir","Sakit","Izin")
     combo_hadir.grid(row=2,column=1,pady=10)
 
-    Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvaeb,fg="white",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
+    Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvaeb,fg="black",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
 
     #====================Right frame============#
     F2=Frame(screen17, bg=bg_color, relief=RIDGE, bd=15)
@@ -844,10 +843,10 @@ def mengisibio():
     screen18=Toplevel(screen)
     screen18.geometry("1280x720")
     screen18.title("Mengisi Presensi")
-    bg_color="#990099"
+    bg_color="#c4c4bc"
 
     #======================Heading============#
-    title=Label(screen18,text="PRESENSI MATA KULIAH",bg=bg_color,fg="white",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
+    title=Label(screen18,text="PRESENSI MATA KULIAH",bg=bg_color,fg="black",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
     title.pack(fill=X)
 
     #====================Left frame============#
@@ -871,7 +870,7 @@ def mengisibio():
     combo_hadir1["value"]=("Hadir","Sakit","Izin")
     combo_hadir1.grid(row=2,column=1,pady=10)
 
-    Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvbio,fg="white",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
+    Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvbio,fg="black",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
 
     #====================Right frame============#
     F2=Frame(screen18, bg=bg_color, relief=RIDGE, bd=15)
@@ -905,10 +904,10 @@ def mengisifisdas():
     screen19=Toplevel(screen)
     screen19.geometry("1280x720")
     screen19.title("Mengisi Presensi")
-    bg_color="#990099"
+    bg_color="#c4c4bc"
 
     #======================Heading============#
-    title=Label(screen19,text="PRESENSI MATA KULIAH",bg=bg_color,fg="white",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
+    title=Label(screen19,text="PRESENSI MATA KULIAH",bg=bg_color,fg="black",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
     title.pack(fill=X)
 
     #====================Left frame============#
@@ -932,7 +931,7 @@ def mengisifisdas():
     combo_hadir2["value"]=("Hadir","Sakit","Izin")
     combo_hadir2.grid(row=2,column=1,pady=10)
 
-    Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvfisdas,fg="white",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
+    Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvfisdas,fg="black",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
 
     #====================Right frame============#
     F2=Frame(screen19, bg=bg_color, relief=RIDGE, bd=15)
@@ -966,10 +965,10 @@ def mengisikalkulus():
     screen20=Toplevel(screen)
     screen20.geometry("1280x720")
     screen20.title("Mengisi Presensi")
-    bg_color="#990099"
+    bg_color="#c4c4bc"
 
     #======================Heading============#
-    title=Label(screen20,text="PRESENSI MATA KULIAH",bg=bg_color,fg="white",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
+    title=Label(screen20,text="PRESENSI MATA KULIAH",bg=bg_color,fg="black",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
     title.pack(fill=X)
 
     #====================Left frame============#
@@ -993,7 +992,7 @@ def mengisikalkulus():
     combo_hadir3["value"]=("Hadir","Sakit","Izin")
     combo_hadir3.grid(row=2,column=1,pady=10)
 
-    Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvkalkulus,fg="white",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
+    Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvkalkulus,fg="black",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
 
     #====================Right frame============#
     F2=Frame(screen20, bg=bg_color, relief=RIDGE, bd=15)
@@ -1027,10 +1026,10 @@ def mengisimattek():
     screen21=Toplevel(screen)
     screen21.geometry("1280x720")
     screen21.title("Mengisi Presensi")
-    bg_color="#990099"
+    bg_color="#c4c4bc"
 
     #======================Heading============#
-    title=Label(screen21,text="PRESENSI MATA KULIAH",bg=bg_color,fg="white",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
+    title=Label(screen21,text="PRESENSI MATA KULIAH",bg=bg_color,fg="black",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
     title.pack(fill=X)
 
     #====================Left frame============#
@@ -1054,7 +1053,7 @@ def mengisimattek():
     combo_hadir4["value"]=("Hadir","Sakit","Izin")
     combo_hadir4.grid(row=2,column=1,pady=10)
 
-    Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvmattek,fg="white",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
+    Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvmattek,fg="black",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
 
     #====================Right frame============#
     F2=Frame(screen21, bg=bg_color, relief=RIDGE, bd=15)
@@ -1088,10 +1087,10 @@ def mengisimekatek():
     screen22=Toplevel(screen)
     screen22.geometry("1280x720")
     screen22.title("Mengisi Presensi")
-    bg_color="#990099"
+    bg_color="#c4c4bc"
 
     #======================Heading============#
-    title=Label(screen22,text="PRESENSI MATA KULIAH",bg=bg_color,fg="white",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
+    title=Label(screen22,text="PRESENSI MATA KULIAH",bg=bg_color,fg="black",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
     title.pack(fill=X)
 
     #====================Left frame============#
@@ -1115,7 +1114,7 @@ def mengisimekatek():
     combo_hadir5["value"]=("Hadir","Sakit","Izin")
     combo_hadir5.grid(row=2,column=1,pady=10)
 
-    Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvmekatek,fg="white",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
+    Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvmekatek,fg="black",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
 
     #====================Right frame============#
     F2=Frame(screen22, bg=bg_color, relief=RIDGE, bd=15)
@@ -1149,10 +1148,10 @@ def mengisiprd():
     screen23=Toplevel(screen)
     screen23.geometry("1280x720")
     screen23.title("Mengisi Presensi")
-    bg_color="#990099"
+    bg_color="#c4c4bc"
 
     #======================Heading============#
-    title=Label(screen23,text="PRESENSI MATA KULIAH",bg=bg_color,fg="white",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
+    title=Label(screen23,text="PRESENSI MATA KULIAH",bg=bg_color,fg="black",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
     title.pack(fill=X)
 
     #====================Left frame============#
@@ -1176,7 +1175,7 @@ def mengisiprd():
     combo_hadir6["value"]=("Hadir","Sakit","Izin")
     combo_hadir6.grid(row=2,column=1,pady=10)
 
-    Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvprd,fg="white",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
+    Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvprd,fg="black",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
 
     #====================Right frame============#
     F2=Frame(screen23, bg=bg_color, relief=RIDGE, bd=15)
@@ -1210,10 +1209,10 @@ def mengisiprokom():
     screen24=Toplevel(screen)
     screen24.geometry("1280x720")
     screen24.title("Mengisi Presensi")
-    bg_color="#990099"
+    bg_color="#c4c4bc"
 
     #======================Heading============#
-    title=Label(screen24,text="PRESENSI MATA KULIAH",bg=bg_color,fg="white",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
+    title=Label(screen24,text="PRESENSI MATA KULIAH",bg=bg_color,fg="black",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
     title.pack(fill=X)
 
     #====================Left frame============#
@@ -1237,7 +1236,7 @@ def mengisiprokom():
     combo_hadir7["value"]=("Hadir","Sakit","Izin")
     combo_hadir7.grid(row=2,column=1,pady=10)
 
-    Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvprokom,fg="white",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
+    Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvprokom,fg="black",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
 
     #====================Right frame============#
     F2=Frame(screen24, bg=bg_color, relief=RIDGE, bd=15)
@@ -1271,10 +1270,10 @@ def mengisipsikin():
     screen25=Toplevel(screen)
     screen25.geometry("1280x720")
     screen25.title("Mengisi Presensi")
-    bg_color="#990099"
+    bg_color="#c4c4bc"
 
     #======================Heading============#
-    title=Label(screen25,text="PRESENSI MATA KULIAH",bg=bg_color,fg="white",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
+    title=Label(screen25,text="PRESENSI MATA KULIAH",bg=bg_color,fg="black",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
     title.pack(fill=X)
 
     #====================Left frame============#
@@ -1298,7 +1297,7 @@ def mengisipsikin():
     combo_hadir8["value"]=("Hadir","Sakit","Izin")
     combo_hadir8.grid(row=2,column=1,pady=10)
 
-    Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvpsikin,fg="white",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
+    Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvpsikin,fg="black",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
 
     #====================Right frame============#
     F2=Frame(screen25, bg=bg_color, relief=RIDGE, bd=15)
