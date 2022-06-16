@@ -233,15 +233,15 @@ def membuat_presensi():
     title=Label(screen5,text="MATA KULIAH",bg="black",fg="white",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
     title.pack(fill=X)
     
-    Button(screen5,text="PROGRAMA KOMPUTER", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=prokom).place(x=20,y=170)
-    Button(screen5,text="KALKULUS", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=kalkulus).place(x=430,y=170)
-    Button(screen5,text="FISIKA DASAR II", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=fisdas).place(x=835,y=170)
-    Button(screen5,text="ANALISIS ESTIMASI & BIAYA", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=AEB).place(x=20,y=320)
-    Button(screen5,text="MATERIAL TEKNIK", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=mattek).place(x=430,y=320)
-    Button(screen5,text="MEKANIKA TEKNIK", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=mekatek).place(x=835,y=320)
-    Button(screen5,text="PENGANTAR REKAYASA DESAIN", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=PRD).place(x=20,y=470)
-    Button(screen5,text="PSIKOLOGI INDUSTRI", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=psikin).place(x=430,y=470)
-    Button(screen5,text="BIOLOGI", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=bio).place(x=835,y=470)
+    Button(screen5,text="PROGRAMA KOMPUTER", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=mprokom).place(x=20,y=170)
+    Button(screen5,text="KALKULUS", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=mkalkulus).place(x=430,y=170)
+    Button(screen5,text="FISIKA DASAR II", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=mfisdas).place(x=835,y=170)
+    Button(screen5,text="ANALISIS & ESTIMASI BIAYA", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=mAEB).place(x=20,y=320)
+    Button(screen5,text="MATERIAL TEKNIK", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=mmattek).place(x=430,y=320)
+    Button(screen5,text="MEKANIKA TEKNIK", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=mmekatek).place(x=835,y=320)
+    Button(screen5,text="PENGANTAR REKAYASA & DESAIN", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=mPRD).place(x=20,y=470)
+    Button(screen5,text="PSIKOLOGI INDUSTRI", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=mpsikin).place(x=430,y=470)
+    Button(screen5,text="BIOLOGI", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=mbio).place(x=835,y=470)
 
     screen5.mainloop()
 
@@ -261,9 +261,7 @@ def mprokom():
     Button(screen8, text="SUBMIT", width=10, height=1, command=saveprokom).pack()
 
 def saveprokom():
-    global namafile, csvheader, writer, presensi
-    #####------------------------------------------PENTING!!!!-----------------------------------------#####
-    #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
+    global namafile, csvheader, writer
     save_path = "Prokom"
     namafile = os.path.join(save_path, f'Pertemuan {defprokom.get()}.csv')
     csvheader = ['Nama', 'NIM', 'Kehadiran']
@@ -295,9 +293,7 @@ def mkalkulus():
     Button(screen10, text="SUBMIT", width=10, height=1, command=savekalkulus).pack()
 
 def savekalkulus():
-    global namafile, csvheader, writer, presensi
-    #####------------------------------------------PENTING!!!!-----------------------------------------#####
-    #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
+    global namafile, csvheader, writer
     save_path = "Kalkulus"
     namafile = os.path.join(save_path, f'Pertemuan {defkalkulus.get()}.csv')
     csvheader = ['Nama', 'NIM', 'Kehadiran']
@@ -318,7 +314,7 @@ def mAEB():
     global screen11, defAEB
     screen11=Toplevel(screen)
     screen11.geometry("1280x720")
-    screen11.title("Analisis Estimasi dan Biaya")
+    screen11.title("Analisis dan Estimasi Biaya")
     Label(screen11, text="").pack()
     Label(screen11, text="").pack()
     Label(screen11, text="").pack()
@@ -329,9 +325,7 @@ def mAEB():
     Button(screen11, text="SUBMIT", width=11, height=1, command=saveAEB).pack()
 
 def saveAEB():
-    global namafile, csvheader, writer, presensi
-    #####------------------------------------------PENTING!!!!-----------------------------------------#####
-    #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
+    global namafile, csvheader, writer
     save_path = "AEB"
     namafile = os.path.join(save_path, f'Pertemuan {defAEB.get()}.csv')
     csvheader = ['Nama', 'NIM', 'Kehadiran']
@@ -352,7 +346,7 @@ def mPRD():
     global screen12, defPRD
     screen12=Toplevel(screen)
     screen12.geometry("1280x720")
-    screen12.title("Pengantar Rekayasa Desain")
+    screen12.title("Pengantar Rekayasa dan Desain")
     Label(screen12, text="").pack()
     Label(screen12, text="").pack()
     Label(screen12, text="").pack()
@@ -363,9 +357,7 @@ def mPRD():
     Button(screen12, text="SUBMIT", width=12, height=1, command=savePRD).pack()
 
 def savePRD():
-    global namafile, csvheader, writer, presensi
-    #####------------------------------------------PENTING!!!!-----------------------------------------#####
-    #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
+    global namafile, csvheader, writer
     save_path = "PRD"
     namafile = os.path.join(save_path, f'Pertemuan {defPRD.get()}.csv')
     csvheader = ['Nama', 'NIM', 'Kehadiran']
@@ -397,9 +389,7 @@ def mpsikin():
     Button(screen13, text="SUBMIT", width=13, height=1, command=savepsikin).pack()
 
 def savepsikin():
-    global namafile, csvheader, writer, presensi
-    #####------------------------------------------PENTING!!!!-----------------------------------------#####
-    #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
+    global namafile, csvheader, writer
     save_path = "Psikin"
     namafile = os.path.join(save_path, f'Pertemuan {defpsikin.get()}.csv')
     csvheader = ['Nama', 'NIM', 'Kehadiran']
@@ -431,9 +421,7 @@ def mmekatek():
     Button(screen14, text="SUBMIT", width=14, height=1, command=savemekatek).pack()
 
 def savemekatek():
-    global namafile, csvheader, writer, presensi
-    #####------------------------------------------PENTING!!!!-----------------------------------------#####
-    #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
+    global namafile, csvheader, writer
     save_path = "Mekatek"
     namafile = os.path.join(save_path, f'Pertemuan {defmekatek.get()}.csv')
     csvheader = ['Nama', 'NIM', 'Kehadiran']
@@ -465,9 +453,7 @@ def mmattek():
     Button(screen15, text="SUBMIT", width=15, height=1, command=savemattek).pack()
 
 def savemattek():
-    global namafile, csvheader, writer, presensi
-    #####------------------------------------------PENTING!!!!-----------------------------------------#####
-    #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
+    global namafile, csvheader, writer
     save_path = "Mattek"
     namafile = os.path.join(save_path, f'Pertemuan {defmattek.get()}.csv')
     csvheader = ['Nama', 'NIM', 'Kehadiran']
@@ -499,9 +485,7 @@ def mfisdas():
     Button(screen16, text="SUBMIT", width=16, height=1, command=savefisdas).pack()
 
 def savefisdas():
-    global namafile, csvheader, writer, presensi
-    #####------------------------------------------PENTING!!!!-----------------------------------------#####
-    #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
+    global namafile, csvheader, writer
     save_path = "Fisdas"
     namafile = os.path.join(save_path, f'Pertemuan {deffisdas.get()}.csv')
     csvheader = ['Nama', 'NIM', 'Kehadiran']
@@ -533,9 +517,7 @@ def mbio():
     Button(screen16, text="SUBMIT", width=16, height=1, command=savebio).pack()
 
 def savebio():
-    global namafile, csvheader, writer, presensi
-    #####------------------------------------------PENTING!!!!-----------------------------------------#####
-    #####-----------------------------KALO MAU RUN SAVE_PATH DIUBAH DULU-----------------------------------------#####
+    global namafile, csvheader, writer
     save_path = "Bio"
     namafile = os.path.join(save_path, f'Pertemuan {defbio.get()}.csv')
     csvheader = ['Nama', 'NIM', 'Kehadiran']
@@ -551,55 +533,6 @@ def savebio():
         else:
             None
         
-
-def Pertemuan1():
-    print()
-
-def Pertemuan2():
-    print()
-
-def Pertemuan3():
-    print()
-
-def Pertemuan4():
-    print()
-
-def Pertemuan5():
-    print()
-
-def Pertemuan6():
-    print()
-
-def Pertemuan7():
-    print()
-
-def Pertemuan8():
-    print()
-
-def Pertemuan9():
-    print()
-
-def Pertemuan10():
-    print()
-
-def Pertemuan11():
-    print()
-
-def Pertemuan12():
-    print()
-
-def Pertemuan13():
-    print()
-
-def Pertemuan14():
-    print()
-
-def Pertemuan15():
-    print()
-
-def Pertemuan16():
-    print()
-
 def melihat_presensi():
     global screen10
     screen10=Toplevel(screen)
@@ -616,10 +549,10 @@ def melihat_presensi():
     Button(screen10,text="PROGRAMA KOMPUTER", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=prokom).place(x=20,y=170)
     Button(screen10,text="KALKULUS", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=kalkulus).place(x=430,y=170)
     Button(screen10,text="FISIKA DASAR II", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=fisdas).place(x=835,y=170)
-    Button(screen10,text="ANALISIS ESTIMASI & BIAYA", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=AEB).place(x=20,y=320)
+    Button(screen10,text="ANALISIS & ESTIMASI BIAYA", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=AEB).place(x=20,y=320)
     Button(screen10,text="MATERIAL TEKNIK", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=mattek).place(x=430,y=320)
     Button(screen10,text="MEKANIKA TEKNIK", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=mekatek).place(x=835,y=320)
-    Button(screen10,text="PENGANTAR REKAYASA DESAIN", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=PRD).place(x=20,y=470)
+    Button(screen10,text="PENGANTAR REKAYASA & DESAIN", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=PRD).place(x=20,y=470)
     Button(screen10,text="PSIKOLOGI INDUSTRI", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=psikin).place(x=430,y=470)
     Button(screen10,text="BIOLOGI", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=bio).place(x=835,y=470)
 
@@ -629,7 +562,7 @@ def menumahasiswa():
     global screen6
     screen6=Toplevel(screen)
     screen6.geometry("1280x720")
-    screen6.title("Melihat Presensi")
+    screen6.title("Menu Mahasiswa")
 
     screen10_bg=PhotoImage(file="kotak.png")
     bgscreen10=Label(screen6,image=screen10_bg,bg="white")
@@ -641,10 +574,10 @@ def menumahasiswa():
     Button(screen6,text="PROGRAMA KOMPUTER", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=prokom).place(x=20,y=170)
     Button(screen6,text="KALKULUS", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=kalkulus).place(x=430,y=170)
     Button(screen6,text="FISIKA DASAR II", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=fisdas).place(x=835,y=170)
-    Button(screen6,text="ANALISIS ESTIMASI & BIAYA", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=AEB).place(x=20,y=320)
+    Button(screen6,text="ANALISIS & ESTIMASI BIAYA", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=AEB).place(x=20,y=320)
     Button(screen6,text="MATERIAL TEKNIK", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=mattek).place(x=430,y=320)
     Button(screen6,text="MEKANIKA TEKNIK", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=mekatek).place(x=835,y=320)
-    Button(screen6,text="PENGANTAR REKAYASA DESAIN", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=PRD).place(x=20,y=470)
+    Button(screen6,text="PENGANTAR REKAYASA & DESAIN", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=PRD).place(x=20,y=470)
     Button(screen6,text="PSIKOLOGI INDUSTRI", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=psikin).place(x=430,y=470)
     Button(screen6,text="BIOLOGI", width=30, height=5,font=("times new rommon",16,"bold"),relief=RIDGE,bd=7,command=bio).place(x=835,y=470)
 
@@ -652,7 +585,7 @@ def menumahasiswa():
 def kalkulus():
     global cmb3
     root=Tk()
-    root.title("Melihat Presensi")
+    root.title("Kalkulus")
     root.geometry("1280x720")
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5"]
     l1=Label(root,text="Pilih pertemuan ke")
@@ -666,7 +599,7 @@ def kalkulus():
 def AEB():
     global cmb
     root=Tk()
-    root.title("Melihat Presensi")
+    root.title("Anggaran & Estimasi Biaya")
     root.geometry("1280x720")
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5"]
     l1=Label(root,text="Pilih pertemuan ke")
@@ -680,7 +613,7 @@ def AEB():
 def PRD():
     global cmb6
     root=Tk()
-    root.title("Melihat Presensi")
+    root.title("Pengantar Rekayasa & Desain")
     root.geometry("1280x720")
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5"]
     l1=Label(root,text="Pilih pertemuan ke")
@@ -694,7 +627,7 @@ def PRD():
 def psikin():
     global cmb8
     root=Tk()
-    root.title("Melihat Presensi")
+    root.title("Psikologi Industri")
     root.geometry("1280x720")
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5"]
     l1=Label(root,text="Pilih pertemuan ke")
@@ -708,7 +641,7 @@ def psikin():
 def mekatek():
     global cmb5
     root=Tk()
-    root.title("Melihat Presensi")
+    root.title("Mekanika Teknik")
     root.geometry("1280x720")
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5"]
     l1=Label(root,text="Pilih pertemuan ke")
@@ -722,7 +655,7 @@ def mekatek():
 def mattek():
     global cmb4
     root=Tk()
-    root.title("Melihat Presensi")
+    root.title("Material Teknik")
     root.geometry("1280x720")
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5"]
     l1=Label(root,text="Pilih pertemuan ke")
@@ -736,7 +669,7 @@ def mattek():
 def fisdas():
     global cmb2
     root=Tk()
-    root.title("Melihat Presensi")
+    root.title("Fisika Dasar II")
     root.geometry("1280x720")
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5"]
     l1=Label(root,text="Pilih pertemuan ke")
@@ -750,7 +683,7 @@ def fisdas():
 def bio():
     global cmb1
     root=Tk()
-    root.title("Melihat Presensi")
+    root.title("Biologi")
     root.geometry("1280x720")
     global cmb
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5"]
@@ -765,7 +698,7 @@ def bio():
 def prokom():
     global cmb7
     root=Tk()
-    root.title("Melihat Presensi")
+    root.title("Programa Komputer")
     root.geometry("1280x720")
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5"]
     l1=Label(root,text="Pilih pertemuan ke")
