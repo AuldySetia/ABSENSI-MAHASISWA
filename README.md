@@ -1,2 +1,2 @@
 # ABSENSI-MAHASISWA
-Membuat dan melakukan absensi kehadiran mahasiswa
+Aplikasi Absensi Mahasiswa Berbasis Online merupakan sebuah sarana presensi bagi mahasiswa Universitas Internasional untuk mendata kehadiran dalam mata kuliah yang dilakukan. User dalam aplikasi ini ada 2 yaitu sebagai Dosen dan sebagai Mahasiswa. Dosen mampu membuat dan melihat absensi mahasiswa sesuai dengan mata kuliah dan pertemuan ke berapa. Mahasiswa pun juga dapat mengisi absensi yang telah dibuat oleh dosen tersebut. Dalam hal ini perlu digaris bawahi bahwa project ini belum sepenuhnya sempurna dan masih banyak kekurangan. Oleh karena itu, adanya kesalahan dan kekurangan di aplikasi ini mohon untuk dimaklumi dan diberikan saran untuk kesempurnaan proyek absensi mahasiswa ini.

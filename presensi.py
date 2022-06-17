@@ -45,15 +45,7 @@ def mahasiswa_login():
     screen2.title("Login SSO Mahasiswa")
     screen2.geometry("1280x720")
     screen2.configure(bg="white")
-    #screen2.resizable(False,False)
 
-    #framelogin=Frame(screen2, width=400, height=600)
-    #framelogin.pack()
-    #framelogin.place(anchor="center",relx=0.5,rely=0.5)
-    #img=ImageTk.PhotoImage(Image.open("login.png"))
-    #label=Label(framelogin,image=img)
-    #label.pack()
-    
     img = PhotoImage(file="login.png")
     bgmahasiswa=Label(screen2,image=img,bg="white")
     bgmahasiswa.place(x=50,y=50)
@@ -563,20 +555,36 @@ def lprokom():
     screen26=Toplevel(screen)
     screen26.geometry("1280x720")
     screen26.title("SSO UNIVERSITAS INTERNASIONAL")
-    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
-    l1=Label(screen26,text="Pilih pertemuan ke")
-    l1.grid(row=0,column=0)
-    mmb7=ttk.Combobox(screen26,value=course,width=15)
-    mmb7.grid(row=16,column=16)
-    mmb7.current(0)
-    Button(screen26,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=showprokom).place(x=35,y=254)
-    screen26.mainloop()
+    screen26.configure(bg="white")
 
+    screen10_bg=PhotoImage(file="kotak.png")
+    bgscreen10=Label(screen26,image=screen10_bg,bg="white")
+    bgscreen10.place(x=0,y=0)
+    frame=Frame(screen26,width=360,height=350,bg="white")
+    frame.place(x=480,y=70)
+
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
+    heading=Label(frame,text="PILIH PERTEMUAN",fg="black",bg="white",font=("Acumin Variable Concept",20,"bold"))
+    heading.place(x=52,y=25)
+    mmb7=ttk.Combobox(frame,value=course,width=15)
+    mmb7.place(x=125,y=100)
+    Button(frame,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=showprokom).place(x=35,y=254) 
+    mmb7.current(0)
+
+    screen26.mainloop()
 def showprokom():
     screen35 = Toplevel(screen)
     screen35.title("SSO UNIVERSITAS INTERNASIONAL")
     screen35.geometry("1280x720")
     screen35.resizable(0, 0)
+
+    screen10_bg=PhotoImage(file="kotak.png")
+    bgscreen10=Label(screen35,image=screen10_bg,bg="white")
+    bgscreen10.place(x=0,y=0)
+
+
+    title=Label(screen35,text="Hasil Presensi Mata Kuliah Programa Komputer",bg="black",fg="white",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
+    title.pack(fill=X)
 
     TableMargin = Frame(screen35, width=100)
     TableMargin.pack(side=TOP)
@@ -614,13 +622,22 @@ def lkalkulus():
     screen27=Toplevel(screen)
     screen27.geometry("1280x720")
     screen27.title("SSO UNIVERSITAS INTERNASIONAL")
+    screen27.configure(bg="white")
+
+    screen10_bg=PhotoImage(file="kotak.png")
+    bgscreen10=Label(screen27,image=screen10_bg,bg="white")
+    bgscreen10.place(x=0,y=0)
+    frame=Frame(screen27,width=360,height=350,bg="white")
+    frame.place(x=480,y=70)
+
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
-    l1=Label(screen27,text="Pilih pertemuan ke")
-    l1.grid(row=0,column=0)
-    mmb3=ttk.Combobox(screen27,value=course,width=15)
-    mmb3.grid(row=16,column=16)
-    Button(screen27,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=showkalkulus).place(x=35,y=254) 
+    heading=Label(frame,text="PILIH PERTEMUAN",fg="black",bg="white",font=("Acumin Variable Concept",20,"bold"))
+    heading.place(x=52,y=25)
+    mmb3=ttk.Combobox(frame,value=course,width=15)
+    mmb3.place(x=125,y=100)
+    Button(frame,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=showkalkulus).place(x=35,y=254) 
     mmb3.current(0)
+
     screen27.mainloop()
 
 def showkalkulus():
@@ -628,6 +645,14 @@ def showkalkulus():
     screen36.title("SSO UNIVERSITAS INTERNASIONAL")
     screen36.geometry("1280x720")
     screen36.resizable(0, 0)
+
+    screen10_bg=PhotoImage(file="kotak.png")
+    bgscreen10=Label(screen36,image=screen10_bg,bg="white")
+    bgscreen10.place(x=0,y=0)
+
+
+    title=Label(screen36,text="Hasil Presensi Mata Kuliah Kalkulus",bg="black",fg="white",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
+    title.pack(fill=X)
 
     TableMargin = Frame(screen36, width=500)
     TableMargin.pack(side=TOP)
@@ -664,13 +689,22 @@ def lfisdas():
     screen28=Toplevel(screen)
     screen28.geometry("1280x720")
     screen28.title("SSO UNIVERSITAS INTERNASIONAL")
+    screen28.configure(bg="white")
+
+    screen10_bg=PhotoImage(file="kotak.png")
+    bgscreen10=Label(screen28,image=screen10_bg,bg="white")
+    bgscreen10.place(x=0,y=0)
+    frame=Frame(screen28,width=360,height=350,bg="white")
+    frame.place(x=480,y=70)
+
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
-    l1=Label(screen28,text="Pilih pertemuan ke")
-    l1.grid(row=0,column=0)
-    mmb2=ttk.Combobox(screen28,value=course,width=15)
-    mmb2.grid(row=16,column=16)
+    heading=Label(frame,text="PILIH PERTEMUAN",fg="black",bg="white",font=("Acumin Variable Concept",20,"bold"))
+    heading.place(x=52,y=25)
+    mmb2=ttk.Combobox(frame,value=course,width=15)
+    mmb2.place(x=125,y=100)
+    Button(frame,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=showfisdas).place(x=35,y=254) 
     mmb2.current(0)
-    Button(screen28,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=showfisdas).place(x=35,y=254)
+
     screen28.mainloop()
 
 def showfisdas():
@@ -678,6 +712,13 @@ def showfisdas():
     screen37.title("SSO UNIVERSITAS INTERNASIONAL")
     screen37.geometry("1280x720")
     screen37.resizable(0, 0)
+
+    screen10_bg=PhotoImage(file="kotak.png")
+    bgscreen10=Label(screen37,image=screen10_bg,bg="white")
+    bgscreen10.place(x=0,y=0)
+
+    title=Label(screen37,text="Hasil Presensi Mata Kuliah Fisika Dasar",bg="black",fg="white",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
+    title.pack(fill=X)
 
     TableMargin = Frame(screen37, width=500)
     TableMargin.pack(side=TOP)
@@ -714,20 +755,36 @@ def lAEB():
     screen29=Toplevel(screen)
     screen29.geometry("1280x720")
     screen29.title("SSO UNIVERSITAS INTERNASIONAL")
-    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
-    l1=Label(screen29,text="Pilih pertemuan ke")
-    l1.grid(row=0,column=0)
-    mmb=ttk.Combobox(screen29,value=course,width=15)
-    mmb.grid(row=16,column=16)
-    mmb.current(0)
-    Button(screen29,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=showAEB).place(x=35,y=254)
-    screen29.mainloop()
+    screen29.configure(bg="white")
 
+    screen10_bg=PhotoImage(file="kotak.png")
+    bgscreen10=Label(screen29,image=screen10_bg,bg="white")
+    bgscreen10.place(x=0,y=0)
+    frame=Frame(screen29,width=360,height=350,bg="white")
+    frame.place(x=480,y=70)
+
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
+    heading=Label(frame,text="PILIH PERTEMUAN",fg="black",bg="white",font=("Acumin Variable Concept",20,"bold"))
+    heading.place(x=52,y=25)
+    mmb=ttk.Combobox(frame,value=course,width=15)
+    mmb.place(x=125,y=100)
+    Button(frame,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=showAEB).place(x=35,y=254) 
+    mmb.current(0)
+
+    screen26.mainloop()
 def showAEB():
     screen38 = Toplevel(screen)
     screen38.title("SSO UNIVERSITAS INTERNASIONAL")
     screen38.geometry("1280x720")
     screen38.resizable(0, 0)
+
+    screen10_bg=PhotoImage(file="kotak.png")
+    bgscreen10=Label(screen38,image=screen10_bg,bg="white")
+    bgscreen10.place(x=0,y=0)
+
+
+    title=Label(screen38,text="Hasil Presensi Mata Kuliah Analisis Estimasi dan Biaya",bg="black",fg="white",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
+    title.pack(fill=X)
 
     TableMargin = Frame(screen38, width=500)
     TableMargin.pack(side=TOP)
@@ -764,20 +821,35 @@ def lmattek():
     screen30=Toplevel(screen)
     screen30.geometry("1280x720")
     screen30.title("SSO UNIVERSITAS INTERNASIONAL")
-    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
-    l1=Label(screen30,text="Pilih pertemuan ke")
-    l1.grid(row=0,column=0)
-    mmb4=ttk.Combobox(screen30,value=course,width=15)
-    mmb4.grid(row=16,column=16)
-    mmb4.current(0)
-    Button(screen30,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=showmattek).place(x=35,y=254)
-    screen30.mainloop()
+    screen30.configure(bg="white")
 
+    screen10_bg=PhotoImage(file="kotak.png")
+    bgscreen10=Label(screen30,image=screen10_bg,bg="white")
+    bgscreen10.place(x=0,y=0)
+    frame=Frame(screen30,width=360,height=350,bg="white")
+    frame.place(x=480,y=70)
+
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
+    heading=Label(frame,text="PILIH PERTEMUAN",fg="black",bg="white",font=("Acumin Variable Concept",20,"bold"))
+    heading.place(x=52,y=25)
+    mmb4=ttk.Combobox(frame,value=course,width=15)
+    mmb4.place(x=125,y=100)
+    Button(frame,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=showmattek).place(x=35,y=254) 
+    mmb4.current(0)
+
+    screen30.mainloop()
 def showmattek():
     screen39 = Toplevel(screen)
     screen39.title("SSO UNIVERSITAS INTERNASIONAL")
     screen39.geometry("1280x720")
     screen39.resizable(0, 0)
+
+    screen10_bg=PhotoImage(file="kotak.png")
+    bgscreen10=Label(screen39,image=screen10_bg,bg="white")
+    bgscreen10.place(x=0,y=0)
+
+    title=Label(screen39,text="Hasil Presensi Mata Kuliah Material Teknik",bg="black",fg="white",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
+    title.pack(fill=X)
 
     TableMargin = Frame(screen39, width=500)
     TableMargin.pack(side=TOP)
@@ -814,13 +886,22 @@ def lmekatek():
     screen31=Toplevel(screen)
     screen31.geometry("1280x720")
     screen31.title("SSO UNIVERSITAS INTERNASIONAL")
+    screen31.configure(bg="white")
+
+    screen10_bg=PhotoImage(file="kotak.png")
+    bgscreen10=Label(screen31,image=screen10_bg,bg="white")
+    bgscreen10.place(x=0,y=0)
+    frame=Frame(screen31,width=360,height=350,bg="white")
+    frame.place(x=480,y=70)
+
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
-    l1=Label(screen31,text="Pilih pertemuan ke")
-    l1.grid(row=0,column=0)
-    mmb5=ttk.Combobox(screen31,value=course,width=15)
-    mmb5.grid(row=16,column=16)
+    heading=Label(frame,text="PILIH PERTEMUAN",fg="black",bg="white",font=("Acumin Variable Concept",20,"bold"))
+    heading.place(x=52,y=25)
+    mmb5=ttk.Combobox(frame,value=course,width=15)
+    mmb5.place(x=125,y=100)
+    Button(frame,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=showmekatek).place(x=35,y=254) 
     mmb5.current(0)
-    Button(screen31,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=showmekatek).place(x=35,y=254) 
+
     screen31.mainloop()
 
 def showmekatek():
@@ -828,6 +909,14 @@ def showmekatek():
     screen40.title("SSO UNIVERSITAS INTERNASIONAL")
     screen40.geometry("1280x720")
     screen40.resizable(0, 0)
+
+    screen10_bg=PhotoImage(file="kotak.png")
+    bgscreen10=Label(screen40,image=screen10_bg,bg="white")
+    bgscreen10.place(x=0,y=0)
+
+
+    title=Label(screen40,text="Hasil Presensi Mata Kuliah Mekanika Teknik",bg="black",fg="white",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
+    title.pack(fill=X)
 
     TableMargin = Frame(screen40, width=500)
     TableMargin.pack(side=TOP)
@@ -864,20 +953,35 @@ def lPRD():
     screen32=Toplevel(screen)
     screen32.geometry("1280x720")
     screen32.title("SSO UNIVERSITAS INTERNASIONAL")
-    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
-    l1=Label(screen32,text="Pilih pertemuan ke")
-    l1.grid(row=0,column=0)
-    mmb6=ttk.Combobox(screen32,value=course,width=15)
-    mmb6.grid(row=16,column=16)
-    mmb6.current(0)
-    Button(screen32,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=showPRD).place(x=35,y=254)
-    screen32.mainloop()
+    screen32.configure(bg="white")
 
+    screen10_bg=PhotoImage(file="kotak.png")
+    bgscreen10=Label(screen32,image=screen10_bg,bg="white")
+    bgscreen10.place(x=0,y=0)
+    frame=Frame(screen32,width=360,height=350,bg="white")
+    frame.place(x=480,y=70)
+
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
+    heading=Label(frame,text="PILIH PERTEMUAN",fg="black",bg="white",font=("Acumin Variable Concept",20,"bold"))
+    heading.place(x=52,y=25)
+    mmb6=ttk.Combobox(frame,value=course,width=15)
+    mmb6.place(x=125,y=100)
+    Button(frame,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=showPRD).place(x=35,y=254) 
+    mmb6.current(0)
+
+    screen32.mainloop()
 def showPRD():
     screen41 = Toplevel(screen)
     screen41.title("SSO UNIVERSITAS INTERNASIONAL")
     screen41.geometry("1280x720")
     screen41.resizable(0, 0)
+
+    screen10_bg=PhotoImage(file="kotak.png")
+    bgscreen10=Label(screen41,image=screen10_bg,bg="white")
+    bgscreen10.place(x=0,y=0)
+
+    title=Label(screen41,text="Hasil Presensi Mata Kuliah Pengantar Rekayasa Desain",bg="black",fg="white",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
+    title.pack(fill=X)    
 
     TableMargin = Frame(screen41, width=500)
     TableMargin.pack(side=TOP)
@@ -914,20 +1018,35 @@ def lpsikin():
     screen33=Toplevel(screen)
     screen33.geometry("1280x720")
     screen33.title("SSO UNIVERSITAS INTERNASIONAL")
-    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
-    l1=Label(screen33,text="Pilih pertemuan ke")
-    l1.grid(row=0,column=0)
-    mmb8=ttk.Combobox(screen33,value=course,width=15)
-    mmb8.grid(row=16,column=16)
-    mmb8.current(0)
-    Button(screen33,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=showpsikin).place(x=35,y=254)
-    screen33.mainloop()
+    screen33.configure(bg="white")
 
+    screen10_bg=PhotoImage(file="kotak.png")
+    bgscreen10=Label(screen33,image=screen10_bg,bg="white")
+    bgscreen10.place(x=0,y=0)
+    frame=Frame(screen33,width=360,height=350,bg="white")
+    frame.place(x=480,y=70)
+
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
+    heading=Label(frame,text="PILIH PERTEMUAN",fg="black",bg="white",font=("Acumin Variable Concept",20,"bold"))
+    heading.place(x=52,y=25)
+    mmb8=ttk.Combobox(frame,value=course,width=15)
+    mmb8.place(x=125,y=100)
+    Button(frame,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=showpsikin).place(x=35,y=254) 
+    mmb8.current(0)
+
+    screen33.mainloop()
 def showpsikin():
     screen42 = Toplevel(screen)
     screen42.title("SSO UNIVERSITAS INTERNASIONAL")
     screen42.geometry("1280x720")
     screen42.resizable(0, 0)
+
+    screen10_bg=PhotoImage(file="kotak.png")
+    bgscreen10=Label(screen42,image=screen10_bg,bg="white")
+    bgscreen10.place(x=0,y=0)
+
+    title=Label(screen42,text="Hasil Presensi Mata Kuliah Psikologi Industri",bg="black",fg="white",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
+    title.pack(fill=X)
 
     TableMargin = Frame(screen42, width=500)
     TableMargin.pack(side=TOP)
@@ -964,13 +1083,22 @@ def lbio():
     screen34=Toplevel(screen)
     screen34.geometry("1280x720")
     screen34.title("SSO UNIVERSITAS INTERNASIONAL")
+    screen34.configure(bg="white")
+
+    screen10_bg=PhotoImage(file="kotak.png")
+    bgscreen10=Label(screen34,image=screen10_bg,bg="white")
+    bgscreen10.place(x=0,y=0)
+    frame=Frame(screen34,width=360,height=350,bg="white")
+    frame.place(x=480,y=70)
+
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
-    l1=Label(screen34,text="Pilih pertemuan ke")
-    l1.grid(row=0,column=0)
-    mmb1=ttk.Combobox(screen34,value=course,width=15)
-    mmb1.grid(row=16,column=16)
+    heading=Label(frame,text="PILIH PERTEMUAN",fg="black",bg="white",font=("Acumin Variable Concept",20,"bold"))
+    heading.place(x=52,y=25)
+    mmb1=ttk.Combobox(frame,value=course,width=15)
+    mmb1.place(x=125,y=100)
+    Button(frame,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=showbio).place(x=35,y=254) 
     mmb1.current(0)
-    Button(screen34,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=showbio).place(x=35,y=254)
+
     screen34.mainloop()
 
 def showbio():
@@ -978,6 +1106,13 @@ def showbio():
     screen43.title("SSO UNIVERSITAS INTERNASIONAL")
     screen43.geometry("1280x720")
     screen43.resizable(0, 0)
+
+    screen10_bg=PhotoImage(file="kotak.png")
+    bgscreen10=Label(screen43,image=screen10_bg,bg="white")
+    bgscreen10.place(x=0,y=0)
+
+    title=Label(screen43,text="Hasil Presensi Mata Kuliah Biologi",bg="black",fg="white",font=("times new rommon",35,"bold"),relief=GROOVE,bd=12)
+    title.pack(fill=X)
 
     TableMargin = Frame(screen43, width=500)
     TableMargin.pack(side=TOP)
@@ -1038,13 +1173,19 @@ def kalkulus():
     root=Tk()
     root.title("SSO UNIVERSITAS INTERNASIONAL")
     root.geometry("1280x720")
+    root.configure(bg="white")
+
+    frame=Frame(root,width=360,height=350,bg="white")
+    frame.place(x=480,y=70)
+
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
-    l1=Label(root,text="Pilih pertemuan ke")
-    l1.grid(row=0,column=0)
-    cmb3=ttk.Combobox(root,value=course,width=15)
-    cmb3.grid(row=16,column=16)
-    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=mengisikalkulus).place(x=35,y=254) 
+    heading=Label(frame,text="PILIH PERTEMUAN",fg="black",bg="white",font=("Acumin Variable Concept",20,"bold"))
+    heading.place(x=52,y=25)
+    cmb3=ttk.Combobox(frame,value=course,width=15)
+    cmb3.place(x=125,y=100)
+    Button(frame,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=mengisikalkulus).place(x=35,y=254) 
     cmb3.current(0)
+
     root.mainloop()
 
 def AEB():
@@ -1052,41 +1193,57 @@ def AEB():
     root=Tk()
     root.title("SSO UNIVERSITAS INTERNASIONAL")
     root.geometry("1280x720")
+    root.configure(bg="white")
+
+    frame=Frame(root,width=360,height=350,bg="white")
+    frame.place(x=480,y=70)
+
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
-    l1=Label(root,text="Pilih pertemuan ke")
-    l1.grid(row=0,column=0)
-    cmb=ttk.Combobox(root,value=course,width=15)
-    cmb.grid(row=16,column=16)
+    heading=Label(frame,text="PILIH PERTEMUAN",fg="black",bg="white",font=("Acumin Variable Concept",20,"bold"))
+    heading.place(x=52,y=25)
+    cmb=ttk.Combobox(frame,value=course,width=15)
+    cmb.place(x=125,y=100)
+    Button(frame,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=mengisiaeb).place(x=35,y=254) 
     cmb.current(0)
-    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=mengisiaeb).place(x=35,y=254)
-    root.mainloop()
+
 
 def PRD():
     global cmb6
     root=Tk()
     root.title("SSO UNIVERSITAS INTERNASIONAL")
     root.geometry("1280x720")
-    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
-    l1=Label(root,text="Pilih pertemuan ke")
-    l1.grid(row=0,column=0)
-    cmb6=ttk.Combobox(root,value=course,width=15)
-    cmb6.grid(row=16,column=16)
-    cmb6.current(0)
-    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=mengisiprd).place(x=35,y=254)
-    root.mainloop()
+    root.configure(bg="white")
 
+    frame=Frame(root,width=360,height=350,bg="white")
+    frame.place(x=480,y=70)
+
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
+    heading=Label(frame,text="PILIH PERTEMUAN",fg="black",bg="white",font=("Acumin Variable Concept",20,"bold"))
+    heading.place(x=52,y=25)
+    cmb6=ttk.Combobox(frame,value=course,width=15)
+    cmb6.place(x=125,y=100)
+    Button(frame,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=mengisiprd).place(x=35,y=254) 
+    cmb6.current(0)
+
+    root.mainloop()
 def psikin():
     global cmb8
     root=Tk()
     root.title("SSO UNIVERSITAS INTERNASIONAL")
     root.geometry("1280x720")
+    root.configure(bg="white")
+
+    frame=Frame(root,width=360,height=350,bg="white")
+    frame.place(x=480,y=70)
+
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
-    l1=Label(root,text="Pilih pertemuan ke")
-    l1.grid(row=0,column=0)
-    cmb8=ttk.Combobox(root,value=course,width=15)
-    cmb8.grid(row=16,column=16)
+    heading=Label(frame,text="PILIH PERTEMUAN",fg="black",bg="white",font=("Acumin Variable Concept",20,"bold"))
+    heading.place(x=52,y=25)
+    cmb8=ttk.Combobox(frame,value=course,width=15)
+    cmb8.place(x=125,y=100)
+    Button(frame,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=mengisipsikin).place(x=35,y=254) 
     cmb8.current(0)
-    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=mengisipsikin).place(x=35,y=254)
+
     root.mainloop()
 
 def mekatek():
@@ -1094,69 +1251,95 @@ def mekatek():
     root=Tk()
     root.title("SSO UNIVERSITAS INTERNASIONAL")
     root.geometry("1280x720")
-    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
-    l1=Label(root,text="Pilih pertemuan ke")
-    l1.grid(row=0,column=0)
-    cmb5=ttk.Combobox(root,value=course,width=15)
-    cmb5.grid(row=16,column=16)
-    cmb5.current(0)
-    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=mengisimekatek).place(x=35,y=254) 
-    root.mainloop()
+    root.configure(bg="white")
 
+    frame=Frame(root,width=360,height=350,bg="white")
+    frame.place(x=480,y=70)
+
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
+    heading=Label(frame,text="PILIH PERTEMUAN",fg="black",bg="white",font=("Acumin Variable Concept",20,"bold"))
+    heading.place(x=52,y=25)
+    cmb5=ttk.Combobox(frame,value=course,width=15)
+    cmb5.place(x=125,y=100)
+    Button(frame,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=mengisimekatek).place(x=35,y=254) 
+    cmb5.current(0)
+
+    root.mainloop()
 def mattek():
     global cmb4
     root=Tk()
     root.title("SSO UNIVERSITAS INTERNASIONAL")
     root.geometry("1280x720")
-    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
-    l1=Label(root,text="Pilih pertemuan ke")
-    l1.grid(row=0,column=0)
-    cmb4=ttk.Combobox(root,value=course,width=15)
-    cmb4.grid(row=16,column=16)
-    cmb4.current(0)
-    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=mengisimattek).place(x=35,y=254)
-    root.mainloop()
+    root.configure(bg="white")
 
+    frame=Frame(root,width=360,height=350,bg="white")
+    frame.place(x=480,y=70)
+
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
+    heading=Label(frame,text="PILIH PERTEMUAN",fg="black",bg="white",font=("Acumin Variable Concept",20,"bold"))
+    heading.place(x=52,y=25)
+    cmb4=ttk.Combobox(frame,value=course,width=15)
+    cmb4.place(x=125,y=100)
+    Button(frame,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=mengisimattek).place(x=35,y=254) 
+    cmb4.current(0)
+
+    root.mainloop()    
 def fisdas():
     global cmb2
     root=Tk()
     root.title("SSO UNIVERSITAS INTERNASIONAL")
     root.geometry("1280x720")
-    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
-    l1=Label(root,text="Pilih pertemuan ke")
-    l1.grid(row=0,column=0)
-    cmb2=ttk.Combobox(root,value=course,width=15)
-    cmb2.grid(row=16,column=16)
-    cmb2.current(0)
-    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=mengisifisdas).place(x=35,y=254)
-    root.mainloop()
+    root.configure(bg="white")
 
+    frame=Frame(root,width=360,height=350,bg="white")
+    frame.place(x=480,y=70)
+
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
+    heading=Label(frame,text="PILIH PERTEMUAN",fg="black",bg="white",font=("Acumin Variable Concept",20,"bold"))
+    heading.place(x=52,y=25)
+    cmb2=ttk.Combobox(frame,value=course,width=15)
+    cmb2.place(x=125,y=100)
+    Button(frame,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=mengisifisdas).place(x=35,y=254) 
+    cmb2.current(0)
+
+    root.mainloop()
 def bio():
     global cmb1
     root=Tk()
     root.title("SSO UNIVERSITAS INTERNASIONAL")
     root.geometry("1280x720")
-    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
-    l1=Label(root,text="Pilih pertemuan ke")
-    l1.grid(row=0,column=0)
-    cmb1=ttk.Combobox(root,value=course,width=15)
-    cmb1.grid(row=16,column=16)
-    cmb1.current(0)
-    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=mengisibio).place(x=35,y=254)
-    root.mainloop()
+    root.configure(bg="white")
 
+    frame=Frame(root,width=360,height=350,bg="white")
+    frame.place(x=480,y=70)
+
+    course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
+    heading=Label(frame,text="PILIH PERTEMUAN",fg="black",bg="white",font=("Acumin Variable Concept",20,"bold"))
+    heading.place(x=52,y=25)
+    cmb1=ttk.Combobox(frame,value=course,width=15)
+    cmb1.place(x=125,y=100)
+    Button(frame,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=mengisibio).place(x=35,y=254) 
+    cmb1.current(0)
+
+    root.mainloop()    
 def prokom():
     global cmb7
     root=Tk()
     root.title("SSO UNIVERSITAS INTERNASIONAL")
     root.geometry("1280x720")
+    root.configure(bg="white")
+
+    frame=Frame(root,width=360,height=350,bg="white")
+    frame.place(x=480,y=70)
+
     course=["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4", "Pertemuan 5","Pertemuan 6", "Pertemuan 7", "Pertemuan 8", "Pertemuan 9", "Pertemuan 10","Pertemuan 11", "Pertemuan 12", "Pertemuan 13", "Pertemuan 14", "Pertemuan 15"]
-    l1=Label(root,text="Pilih pertemuan ke")
-    l1.grid(row=0,column=0)
-    cmb7=ttk.Combobox(root,value=course,width=15)
-    cmb7.grid(row=16,column=16)
+    heading=Label(frame,text="PILIH PERTEMUAN",fg="black",bg="white",font=("Acumin Variable Concept",20,"bold"))
+    heading.place(x=52,y=25)
+    cmb7=ttk.Combobox(frame,value=course,width=15)
+    cmb7.place(x=125,y=100)
+    Button(frame,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=mengisiprokom).place(x=35,y=254) 
     cmb7.current(0)
-    Button(root,width=40,pady=7,text="SUBMIT",bg="#57a1f8",fg="black",border=0, command=mengisiprokom).place(x=35,y=254)
+
     root.mainloop()
 
 def mengisiaeb():
@@ -1194,8 +1377,14 @@ def mengisiaeb():
     Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvaeb,fg="black",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
 
     #====================Right frame============#
-    F2=Frame(screen17, bg=bg_color, relief=RIDGE, bd=15)
+    F2=Frame(screen17, bg="white")
     F2.place(x=665,y=80,width=610,height=530)
+
+    bgdosen=PhotoImage(file="logoui.png")
+    backgroundosen=Label(F2,image=bgdosen,bg="white")
+    backgroundosen.place(x=45,y=0)
+
+    F2.mainloop()
 
 def csvaeb():
     save_path = 'AEB'
@@ -1256,9 +1445,14 @@ def mengisibio():
     Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvbio,fg="black",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
 
     #====================Right frame============#
-    F2=Frame(screen18, bg=bg_color, relief=RIDGE, bd=15)
+    F2=Frame(screen18, bg="white")
     F2.place(x=665,y=80,width=610,height=530)
 
+    bgdosen=PhotoImage(file="logoui.png")
+    backgroundosen=Label(F2,image=bgdosen,bg="white")
+    backgroundosen.place(x=45,y=0)
+
+    F2.mainloop()
     
 
 def csvbio():
@@ -1319,9 +1513,14 @@ def mengisifisdas():
     Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvfisdas,fg="black",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
 
     #====================Right frame============#
-    F2=Frame(screen19, bg=bg_color, relief=RIDGE, bd=15)
+    F2=Frame(screen19, bg="white")
     F2.place(x=665,y=80,width=610,height=530)
 
+    bgdosen=PhotoImage(file="logoui.png")
+    backgroundosen=Label(F2,image=bgdosen,bg="white")
+    backgroundosen.place(x=45,y=0)
+
+    F2.mainloop()
 def csvfisdas():
     save_path = 'Fisdas'
 
@@ -1380,9 +1579,14 @@ def mengisikalkulus():
     Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvkalkulus,fg="black",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
 
     #====================Right frame============#
-    F2=Frame(screen20, bg=bg_color, relief=RIDGE, bd=15)
+    F2=Frame(screen20, bg="white")
     F2.place(x=665,y=80,width=610,height=530)
 
+    bgdosen=PhotoImage(file="logoui.png")
+    backgroundosen=Label(F2,image=bgdosen,bg="white")
+    backgroundosen.place(x=45,y=0)
+
+    F2.mainloop()
 def csvkalkulus():
     save_path = 'Kalkulus'
 
@@ -1441,9 +1645,14 @@ def mengisimattek():
     Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvmattek,fg="black",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
 
     #====================Right frame============#
-    F2=Frame(screen21, bg=bg_color, relief=RIDGE, bd=15)
+    F2=Frame(screen21, bg="white")
     F2.place(x=665,y=80,width=610,height=530)
 
+    bgdosen=PhotoImage(file="logoui.png")
+    backgroundosen=Label(F2,image=bgdosen,bg="white")
+    backgroundosen.place(x=45,y=0)
+
+    F2.mainloop()
 def csvmattek():
     save_path = 'Mattek'
 
@@ -1502,9 +1711,14 @@ def mengisimekatek():
     Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvmekatek,fg="black",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
 
     #====================Right frame============#
-    F2=Frame(screen22, bg=bg_color, relief=RIDGE, bd=15)
+    F2=Frame(screen22, bg="white")
     F2.place(x=665,y=80,width=610,height=530)
 
+    bgdosen=PhotoImage(file="logoui.png")
+    backgroundosen=Label(F2,image=bgdosen,bg="white")
+    backgroundosen.place(x=45,y=0)
+
+    F2.mainloop()
 def csvmekatek():
     save_path = 'Mekatek'
 
@@ -1563,9 +1777,14 @@ def mengisiprd():
     Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvprd,fg="black",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
 
     #====================Right frame============#
-    F2=Frame(screen23, bg=bg_color, relief=RIDGE, bd=15)
+    F2=Frame(screen23, bg="white")
     F2.place(x=665,y=80,width=610,height=530)
 
+    bgdosen=PhotoImage(file="logoui.png")
+    backgroundosen=Label(F2,image=bgdosen,bg="white")
+    backgroundosen.place(x=45,y=0)
+
+    F2.mainloop()
 def csvprd():
     save_path = 'PRD'
 
@@ -1624,9 +1843,14 @@ def mengisiprokom():
     Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvprokom,fg="black",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
 
     #====================Right frame============#
-    F2=Frame(screen24, bg=bg_color, relief=RIDGE, bd=15)
+    F2=Frame(screen24, bg="white")
     F2.place(x=665,y=80,width=610,height=530)
 
+    bgdosen=PhotoImage(file="logoui.png")
+    backgroundosen=Label(F2,image=bgdosen,bg="white")
+    backgroundosen.place(x=45,y=0)
+
+    F2.mainloop()
 def csvprokom():
     save_path = 'Prokom'
 
@@ -1685,9 +1909,14 @@ def mengisipsikin():
     Button(F1,width=40,pady=7,text="SUBMIT",bg=bg_color,command=csvpsikin,fg="black",font=("times new rommon",10,"bold"),relief=GROOVE,bd=11).grid(row=4,column=1, pady=10)
 
     #====================Right frame============#
-    F2=Frame(screen25, bg=bg_color, relief=RIDGE, bd=15)
+    F2=Frame(screen25, bg="white")
     F2.place(x=665,y=80,width=610,height=530)
 
+    bgdosen=PhotoImage(file="logoui.png")
+    backgroundosen=Label(F2,image=bgdosen,bg="white")
+    backgroundosen.place(x=45,y=0)
+
+    F2.mainloop()
 def csvpsikin():
     save_path = 'Psikin'
 
@@ -1710,8 +1939,5 @@ def csvpsikin():
             None
     
         writer.writerow(presensi)
-
-def melihatpresensi():
-    print()
 
 main_screen()
