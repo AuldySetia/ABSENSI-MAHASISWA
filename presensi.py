@@ -578,12 +578,12 @@ def showprokom():
     screen35.geometry("1280x720")
     screen35.resizable(0, 0)
 
-    TableMargin = Frame(screen35, width=500)
+    TableMargin = Frame(screen35, width=100)
     TableMargin.pack(side=TOP)
     scrollbarx = Scrollbar(TableMargin, orient=HORIZONTAL)
     scrollbary = Scrollbar(TableMargin, orient=VERTICAL)
     tree = ttk.Treeview(TableMargin, columns=("Nama Lengkap", "NIM", "Kehadiran"),
-                        height=300, selectmode="extended", yscrollcommand=scrollbary.set, xscrollcommand=scrollbarx.set)
+                        height=100, selectmode="extended", yscrollcommand=scrollbary.set, xscrollcommand=scrollbarx.set)
     scrollbary.config(command=tree.yview)
     scrollbary.pack(side=RIGHT, fill=Y)
     scrollbarx.config(command=tree.xview)
@@ -595,7 +595,8 @@ def showprokom():
     tree.column('#1', stretch=NO, minwidth=0, width=200)
     tree.column('#2', stretch=NO, minwidth=0, width=200)
     tree.column('#3', stretch=NO, minwidth=0, width=300)
-    tree.pack()
+    tree.pack(expand=None)
+    tree.pack_propagate(0)
 
     save_path = "Prokom"
     namafile = os.path.join(save_path, f'{mmb7.get()}.csv')
@@ -993,6 +994,8 @@ def mengisibio():
     #====================Right frame============#
     F2=Frame(screen18, bg=bg_color, relief=RIDGE, bd=15)
     F2.place(x=665,y=80,width=610,height=530)
+
+    
 
 def csvbio():
     save_path = 'Bio'
